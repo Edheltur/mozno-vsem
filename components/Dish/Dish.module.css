@@ -1,0 +1,34 @@
+.Dish {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 150px;
+}
+
+.Dish__image {
+  width: 150px;
+  height: 150px;
+}
+
+.Dish__title {
+  font-family: Tenor Sans, Arial, serif;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.Dish__weight {
+  font-family: Didact Gothic, Arial, serif;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #b1b1b1;
+}
+
+.Dish__price {
+  font-family: Didact Gothic, Arial, serif;
+  font-size: 14px;
+  line-height: 18px;
+}

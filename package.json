@@ -10,17 +10,21 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-less": "1.0.1",
+    "fomantic-ui-css": "2.8.6",
+    "less": "3.12.2",
     "next": "9.5.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "semantic-ui-react": "1.1.0"
   },
   "devDependencies": {
-    "@types/node": "^14.0.27",
-    "@types/react": "^16.9.44",
-    "husky": "^4.2.5",
+    "@types/node": "14.0.27",
+    "@types/react": "16.9.44",
+    "husky": "4.2.5",
     "prettier": "2.0.5",
-    "pretty-quick": "^2.0.1",
-    "typescript": "^3.9.7"
+    "pretty-quick": "2.0.1",
+    "typescript": "3.9.7"
   },
   "husky": {
     "hooks": {

@@ -1,0 +1,14 @@
+.DeliveryInfo {
+}
+.DeliveryInfo__title {
+  font-family: Tenor Sans, Arial, serif;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+.DeliveryInfo__description {
+  font-family: Didact Gothic, Arial, serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}

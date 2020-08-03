@@ -1,0 +1,7 @@
+.Logo {
+  background-image: url("./assets/full-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  height: 45px;
+}
