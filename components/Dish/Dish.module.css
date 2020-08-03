@@ -12,7 +12,6 @@
 }
 
 .Dish__title {
-  font-family: Tenor Sans, Arial, serif;
   font-size: 15px;
   line-height: 18px;
   text-align: center;
@@ -20,7 +19,6 @@
 }
 
 .Dish__weight {
-  font-family: Didact Gothic, Arial, serif;
   font-size: 12px;
   line-height: 16px;
 
@@ -28,7 +26,6 @@
 }
 
 .Dish__price {
-  font-family: Didact Gothic, Arial, serif;
   font-size: 14px;
   line-height: 18px;
 }

@@ -1,5 +1,9 @@
-@import "~fomantic-ui-css/components/button.css";
-@import "~fomantic-ui-css/components/text.css";
-@import "~fomantic-ui-css/components/image.css";
-@import "~fomantic-ui-css/components/sticky.css";
-@import "~fomantic-ui-css/components/header.css";
+@import "~fomantic-ui-css/components/button.min.css";
+@import "~fomantic-ui-css/components/text.min.css";
+@import "~fomantic-ui-css/components/sticky.min.css";
+@import "~fomantic-ui-css/components/header.min.css";
+
+/* Standard */
+.ui.header {
+  font-family: "Tenor Sans", "Helvetica Neue", Helvetica, sans-serif !important;
+}
