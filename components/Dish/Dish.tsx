@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Dish.module.css";
-import { Button, Image } from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 
 interface IProps {
   title: string;
@@ -8,10 +8,11 @@ interface IProps {
   price: number;
   image: string;
   mix?: string;
+  onClick?: React.MouseEventHandler;
 }
 
-export const Dish = ({ title, weight, price, image, mix }: IProps) => (
-  <div className={`${styles.Dish} ${mix}`}>
+export const Dish = ({ title, weight, price, image, mix, onClick }: IProps) => (
+  <div className={`${styles.Dish} ${mix}`} onClick={onClick}>
     <img className={styles.Dish__image} src={image} alt="" />
     <div className={styles.Dish__title}>{title}</div>
     <div className={styles.Dish__weight}>{weight}&nbsp;г</div>

@@ -3,6 +3,7 @@ import Head from "next/head";
 import styles from "./Page.module.css";
 import { Favicons } from "components/Favicons";
 import { PageHeader } from "components/PageHeader";
+import { OrderSuccessModal } from "components/OrderSuccessModal";
 
 export const Page: React.FC = ({ children }) => (
   <>
@@ -12,5 +13,6 @@ export const Page: React.FC = ({ children }) => (
     </Head>
     <PageHeader />
     <main className={styles.Page__main}>{children}</main>
+    <OrderSuccessModal />
   </>
 );
