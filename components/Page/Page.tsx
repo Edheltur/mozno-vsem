@@ -9,6 +9,10 @@ export const Page: React.FC = ({ children }) => (
   <>
     <Head>
       <title>Можно всем</title>
+      <meta
+        name="description"
+        content="Полуфабрикаты «МОЖНО ВСЕМ!» - Магазин здорового питания"
+      />
       <Favicons />
     </Head>
     <PageHeader />
