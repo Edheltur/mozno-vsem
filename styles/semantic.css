@@ -4,6 +4,8 @@
 @import "~fomantic-ui-css/components/icon.min.css";
 @import "~fomantic-ui-css/components/label.min.css";
 @import "~fomantic-ui-css/components/header.min.css";
+@import "~fomantic-ui-css/components/modal.min.css";
+@import "~fomantic-ui-css/components/dimmer.min.css";
 
 /* Standard */
 .ui.header {

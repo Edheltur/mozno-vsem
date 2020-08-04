@@ -1,23 +1,3 @@
-@font-face {
-  font-family: "Tenor Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Tenor Sans"), local("TenorSans"),
-    url("/fonts/tenor-sans-v11-latin_cyrillic-regular.woff2") format("woff2"),
-    url("/fonts/tenor-sans-v11-latin_cyrillic-regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Didact Gothic";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Didact Gothic Regular"), local("DidactGothic-Regular"),
-    url("/fonts/didact-gothic-v13-latin_cyrillic-regular.woff2") format("woff2"),
-    url("/fonts/didact-gothic-v13-latin_cyrillic-regular.woff") format("woff");
-}
-
 /*******************************
              Page
 *******************************/
