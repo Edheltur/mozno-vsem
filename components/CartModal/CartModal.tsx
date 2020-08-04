@@ -1,12 +1,13 @@
 import React from "react";
 import { Button, Modal } from "semantic-ui-react";
 import { useAppState } from "store";
-import { getTotalPrice, getSelectedItems } from "store/selectors/cart";
-import { StoreonDispatch } from "storeon";
-import { Events } from "store/types";
+import { getSelectedItems, getTotalPrice } from "store/selectors/cart";
+import { Icon } from "components/ui/Icon";
+
 interface IProps {
   trigger: React.ReactNode;
 }
+
 export const CartModal = ({ trigger }: IProps) => {
   const { order, cart, dispatch } = useAppState("order", "cart");
   const selectedItems = getSelectedItems(cart);
@@ -27,7 +28,7 @@ export const CartModal = ({ trigger }: IProps) => {
 
   return (
     <Modal
-      closeIcon
+      closeIcon={<Icon icon="times" className="close icon" />}
       onClose={handle.close}
       onOpen={handle.open}
       open={order.status === "cart"}
@@ -41,7 +42,7 @@ export const CartModal = ({ trigger }: IProps) => {
               {cart.countById[id]} x {title}
             </div>
           ))}
-
+          <br />
           <div>Итого: {totalPrice}&nbsp;₽</div>
         </Modal.Description>
       </Modal.Content>
