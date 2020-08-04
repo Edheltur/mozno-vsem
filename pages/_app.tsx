@@ -4,6 +4,7 @@ import { AppStateContext, store } from "store";
 
 import "styles/fonts.css";
 import "styles/globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import "styles/semantic.css";
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
