@@ -20,7 +20,10 @@ export const PageHeader = () => {
           trigger={
             <span className={styles.PageHeader__cart}>
               {totalPrice > 0 && <span>{totalPrice}&nbsp;₽&nbsp;</span>}
-              <Icon icon="shopping-cart" />
+              <Icon
+                icon="shopping-cart"
+                className={styles.PageHeader__cartIcon}
+              />
             </span>
           }
         />
