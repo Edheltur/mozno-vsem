@@ -1,22 +1,35 @@
 import React from "react";
 import { Button, Modal } from "semantic-ui-react";
 import { useAppState } from "store";
-import * as menu from "data/menu";
 import { getTotalPrice, getSelectedItems } from "store/selectors/cart";
+import { StoreonDispatch } from "storeon";
+import { Events } from "store/types";
 interface IProps {
   trigger: React.ReactNode;
 }
-
 export const CartModal = ({ trigger }: IProps) => {
   const { order, cart, dispatch } = useAppState("order", "cart");
   const selectedItems = getSelectedItems(cart);
   const totalPrice = getTotalPrice(cart);
 
+  const handle = React.useMemo(
+    () => ({
+      close: () => dispatch("order/reset"),
+      open: () => dispatch("order/openCart"),
+      clearCart: () => {
+        dispatch("cart/clear");
+        dispatch("order/reset");
+      },
+      confirm: () => dispatch("order/confirm"),
+    }),
+    [dispatch]
+  );
+
   return (
     <Modal
       closeIcon
-      onClose={() => dispatch("order/reset")}
-      onOpen={() => dispatch("order/openCart")}
+      onClose={handle.close}
+      onOpen={handle.open}
       open={order.status === "cart"}
       trigger={trigger}
     >
@@ -35,17 +48,10 @@ export const CartModal = ({ trigger }: IProps) => {
       <Modal.Actions>
         <Button
           content="Очистить корзину"
-          onClick={() => {
-            dispatch("cart/clear");
-            dispatch("order/reset");
-          }}
+          onClick={handle.clearCart}
           color="grey"
         />
-        <Button
-          content="Заказать"
-          onClick={() => dispatch("order/confirm")}
-          positive
-        />
+        <Button content="Заказать" onClick={handle.confirm} positive />
       </Modal.Actions>
     </Modal>
   );

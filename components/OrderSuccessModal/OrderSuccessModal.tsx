@@ -8,6 +8,13 @@ export const OrderSuccessModal = () => {
     `Добрый день! Мой номер заказа - ${order.id}.`
   );
 
+  const handle = React.useMemo(
+    () => ({
+      close: () => dispatch("order/reset"),
+    }),
+    [dispatch]
+  );
+
   return (
     <Modal open={order.status === "confirmed"}>
       <Modal.Header>Ваш заказ №{order.id} создан!</Modal.Header>
@@ -25,7 +32,7 @@ export const OrderSuccessModal = () => {
           as="a"
           target="_blank"
           href={`https://t.me/${config.telegramUsername}?text=${text}`}
-          onClick={() => dispatch("order/reset")}
+          onClick={handle.close}
           color="blue"
         />
         <Button
@@ -33,7 +40,7 @@ export const OrderSuccessModal = () => {
           as="a"
           target="_blank"
           href={`https://wa.me/${config.whatsAppPhoneNumber}/?text=${text}`}
-          onClick={() => dispatch("order/reset")}
+          onClick={handle.close}
           color="green"
         />
       </Modal.Actions>

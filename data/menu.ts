@@ -1,3 +1,12 @@
+export type TItemId = keyof typeof itemsBydId;
+
+export interface IMenuItem {
+  id: TItemId;
+  title: string;
+  price: number;
+  weight: number;
+}
+
 export const itemsBydId = {
   1: {
     id: 1,
@@ -55,9 +64,9 @@ export const itemsBydId = {
   },
 } as const;
 
-export const items = Object.keys(itemsBydId)
-  .map(Number)
+export const items = Object.values(itemsBydId)
+  .map((item) => item.id)
   .sort((a, b) => a - b)
-  .map((id) => itemsBydId[id as keyof typeof itemsBydId]);
+  .map((id) => itemsBydId[id]);
 
 export const title = "Меню";
