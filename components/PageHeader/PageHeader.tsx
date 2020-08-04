@@ -1,5 +1,4 @@
 import React from "react";
-import { Sticky } from "semantic-ui-react";
 
 import styles from "./PageHeader.module.css";
 import { Logo } from "components/Logo";
@@ -13,21 +12,24 @@ export const PageHeader = () => {
   const totalPrice = getTotalPrice(cart);
 
   return (
-    <Sticky>
+    <>
       <header className={styles.PageHeader}>
-        <Logo />
-        <CartModal
-          trigger={
-            <span className={styles.PageHeader__cart}>
-              {totalPrice > 0 && <span>{totalPrice}&nbsp;₽&nbsp;</span>}
-              <Icon
-                icon="shopping-cart"
-                className={styles.PageHeader__cartIcon}
-              />
-            </span>
-          }
-        />
+        <div className={styles.PageHeader__content}>
+          <Logo />
+          <CartModal
+            trigger={
+              <span className={styles.PageHeader__cart}>
+                {totalPrice > 0 && <span>{totalPrice}&nbsp;₽&nbsp;</span>}
+                <Icon
+                  icon="shopping-cart"
+                  className={styles.PageHeader__cartIcon}
+                />
+              </span>
+            }
+          />
+        </div>
       </header>
-    </Sticky>
+      <div className={styles.PageHeader__compensator} />
+    </>
   );
 };

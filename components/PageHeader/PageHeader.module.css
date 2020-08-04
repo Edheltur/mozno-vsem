@@ -1,8 +1,19 @@
 .PageHeader {
   background-color: white;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
-  padding: 5px 10px;
+  position: fixed;
+  width: 100%;
+}
+
+.PageHeader__compensator {
+  height: 55px;
+}
+
+.PageHeader__content {
+  max-width: 690px;
   position: relative;
+  padding: 5px 0;
+  margin: 0 auto;
 }
 
 .PageHeader__cart {
@@ -12,6 +23,7 @@
   transform: translateY(-50%);
   color: #b1b1b1;
 }
+
 .PageHeader__cartIcon {
   display: none;
 }
