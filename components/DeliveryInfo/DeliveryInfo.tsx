@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./DeliveryInfo.module.css";
 import { Header } from "components/ui/Header";
-import delivery from "data/delivery";
+import delivery from "common/data/delivery";
 import cn from "classnames";
 
 interface IProps {

@@ -31,7 +31,7 @@ export const OrderSuccessModal = () => {
           content="Telegram"
           as="a"
           target="_blank"
-          href={`https://t.me/${config.telegramUsername}?text=${text}`}
+          href={`https://t.me/${config.telegramUsername}`}
           onClick={handle.close}
           color="blue"
         />
@@ -39,7 +39,7 @@ export const OrderSuccessModal = () => {
           content="Whats App"
           as="a"
           target="_blank"
-          href={`https://wa.me/${config.whatsAppPhoneNumber}/?text=${text}`}
+          href={`https://wa.me/${config.whatsAppPhoneNumber}?text=${text}`}
           onClick={handle.close}
           color="green"
         />

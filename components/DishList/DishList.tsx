@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./DishList.module.css";
-import * as menu from "data/menu";
+import * as menu from "common/data/menu";
 import { Dish } from "components/Dish";
 import { Header } from "components/ui/Header";
 import cn from "classnames";
@@ -15,7 +15,7 @@ export const DishList = ({ mix }: IProps) => {
       <Header level={2}>{menu.title}</Header>
       <div className={styles.DishList__list}>
         {menu.items.map((item) => (
-          <Dish {...item} mix={styles.DishList__item} key={item.id} />
+          <Dish item={item} mix={styles.DishList__item} key={item.id} />
         ))}
       </div>
     </section>

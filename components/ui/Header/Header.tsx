@@ -10,7 +10,7 @@ interface IProps {
 }
 
 export const Header = ({ mix, level, children }: IProps) => {
-  let props = {
+  const props = {
     children,
     className: cn(styles.Header, mix),
   };

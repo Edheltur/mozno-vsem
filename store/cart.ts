@@ -6,18 +6,16 @@ export const cart: StoreonModule<State, Events> = (store) => {
     cart: { countById: {} },
   }));
 
-  store.on("cart/clear", (state) => ({
-    ...state,
+  store.on("cart/clear", () => ({
     cart: {
       countById: {},
     },
   }));
 
   store.on("cart/add", (state, { id }) => {
-    let previousCount = state.cart.countById[id] || 0;
+    const previousCount = state.cart.countById[id] ?? 0;
 
     return {
-      ...state,
       cart: {
         ...state.cart,
         countById: {

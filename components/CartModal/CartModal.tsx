@@ -1,17 +1,15 @@
 import React from "react";
 import { Button, Modal } from "semantic-ui-react";
 import { useAppState } from "store";
-import { getSelectedItems, getTotalPrice } from "store/selectors/cart";
 import { Icon } from "components/ui/Icon";
+import { Description } from "components/CartModal/Description";
 
 interface IProps {
   trigger: React.ReactNode;
 }
 
 export const CartModal = ({ trigger }: IProps) => {
-  const { order, cart, dispatch } = useAppState("order", "cart");
-  const selectedItems = getSelectedItems(cart);
-  const totalPrice = getTotalPrice(cart);
+  const { order, dispatch } = useAppState("order", "cart");
 
   const handle = React.useMemo(
     () => ({
@@ -21,38 +19,42 @@ export const CartModal = ({ trigger }: IProps) => {
         dispatch("cart/clear");
         dispatch("order/reset");
       },
-      confirm: () => dispatch("order/confirm"),
+      submit: () => dispatch("order/submit"),
     }),
     [dispatch]
   );
 
+  const isSubmitting = order.status === "submitting";
+  const isOpen = order.status === "cart" || isSubmitting;
+  const closeProps = isSubmitting
+    ? null
+    : {
+        closeIcon: <Icon icon="times" className="close icon" />,
+        onClose: handle.close,
+      };
+
   return (
-    <Modal
-      closeIcon={<Icon icon="times" className="close icon" />}
-      onClose={handle.close}
-      onOpen={handle.open}
-      open={order.status === "cart"}
-      trigger={trigger}
-    >
+    <Modal {...closeProps} onOpen={handle.open} open={isOpen} trigger={trigger}>
       <Modal.Header>Корзина</Modal.Header>
       <Modal.Content>
         <Modal.Description>
-          {selectedItems.map(({ id, title }) => (
-            <div key={id}>
-              {cart.countById[id]} x {title}
-            </div>
-          ))}
-          <br />
-          <div>Итого: {totalPrice}&nbsp;₽</div>
+          <Description />
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
         <Button
           content="Очистить корзину"
           onClick={handle.clearCart}
+          disabled={isSubmitting}
           color="grey"
         />
-        <Button content="Заказать" onClick={handle.confirm} positive />
+        <Button
+          content="Заказать"
+          onClick={handle.submit}
+          disabled={isSubmitting}
+          loading={isSubmitting}
+          positive
+        />
       </Modal.Actions>
     </Modal>
   );

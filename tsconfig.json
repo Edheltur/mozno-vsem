@@ -17,7 +17,9 @@
     "paths": {
       "styles/*": ["./styles/*"],
       "components/*": ["./components/*"],
-      "data/*": ["./data/*"],
+      "common/*": ["./common/*"],
+      "server/*": ["./server/*"],
+      "client/*": ["./client/*"],
       "store/*": ["./store/*"],
       "pages/*": ["./pages/*"]
     }

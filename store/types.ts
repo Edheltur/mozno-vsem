@@ -1,9 +1,12 @@
+import { TMenuItemId } from "common/data/menu";
+
+export interface ICart {
+  countById: Record<string, number>;
+}
 export interface State {
-  cart: {
-    countById: Record<number, number>;
-  };
+  cart: ICart;
   order: {
-    status: "new" | "cart" | "confirmed";
+    status: "new" | "cart" | "submitting" | "confirmed";
     id?: number;
   };
   config: {
@@ -14,8 +17,9 @@ export interface State {
 
 export interface Events {
   "order/reset": undefined;
-  "order/confirm": undefined;
+  "order/confirm": { orderId: number };
+  "order/submit": undefined;
   "order/openCart": undefined;
-  "cart/add": { id: number };
+  "cart/add": { id: TMenuItemId };
   "cart/clear": undefined;
 }

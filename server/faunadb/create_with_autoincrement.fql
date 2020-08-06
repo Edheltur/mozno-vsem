@@ -1,0 +1,32 @@
+Query(
+  Lambda(
+    ["collection", "data"],
+    Let(
+      {
+        collection_meta: Get(
+          Match(Index("meta_by_collection"), Var("collection"))
+        )
+      },
+      Let(
+        {
+          last_index: Select(["data", "lastId"], Var("collection_meta")),
+          collection_meta_ref: Select("ref", Var("collection_meta"))
+        },
+        Let(
+          { next_index: Add(Var("last_index"), 1) },
+          Do(
+            Update(Var("collection_meta_ref"), {
+              data: { lastId: Var("next_index") }
+            }),
+            Select(
+              "ref",
+              Create(Ref(Collection(Var("collection")), Var("next_index")), {
+                data: Var("data")
+              })
+            )
+          )
+        )
+      )
+    )
+  )
+)
