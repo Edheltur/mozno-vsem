@@ -11,7 +11,3 @@ export const HttpMethod = {
 } as const;
 
 export type THttpMethod = typeof HttpMethod[keyof typeof HttpMethod];
-
-export function isHttpValidMethod(method?: string): method is THttpMethod {
-  return typeof method === "string" && method in HttpMethod;
-}

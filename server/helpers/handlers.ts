@@ -1,7 +1,8 @@
-import { HttpError, HttpStatus, isHttpValidMethod } from "common/http";
+import { HttpError, HttpStatus } from "common/http";
 import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
 import { responseWithError } from "server/helpers/response";
 import { TApiEndpoint } from "common/api";
+import { isHttpValidMethod } from "common/validators";
 
 function delegateResponseToHandler<T>(
   handler: NextApiHandler<T>,
@@ -19,21 +20,18 @@ function delegateResponseToHandler<T>(
   }
 }
 
-export function createHandler<TEndpointConfig extends TApiEndpoint>(
-  handlers: {
-    [method in keyof TEndpointConfig]: NextApiHandler<TEndpointConfig[method]>;
-  }
+type THandlers<TEndpoint> = {
+  [method in keyof Required<TEndpoint>]: NextApiHandler<TEndpoint[method]>;
+};
+
+export function createHandler<TEndpoint extends TApiEndpoint>(
+  handlers: THandlers<TEndpoint>
 ) {
   return (req: NextApiRequest, res: NextApiResponse) => {
     const { method } = req;
 
-    if (isHttpValidMethod(method)) {
-      const handler = handlers[method];
-      if (typeof handler === "function") {
-        return delegateResponseToHandler(handler, req, res);
-      }
-    }
-
-    return responseWithError(res, HttpStatus.METHOD_NOT_ALLOWED);
+    return isHttpValidMethod(method)
+      ? delegateResponseToHandler(handlers[method], req, res)
+      : responseWithError(res, HttpStatus.METHOD_NOT_ALLOWED);
   };
 }
