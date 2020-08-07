@@ -1,5 +1,8 @@
-import { ICart } from "store/types";
 import * as menu from "common/data/menu";
+
+export interface ICart {
+  countById: Record<string, number>;
+}
 
 export function getTotalPrice(cart: ICart): number {
   const selectedItems = getSelectedItems(cart);

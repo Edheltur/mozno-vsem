@@ -1,5 +1,5 @@
 import { Client, query as q } from "faunadb";
-import { Collection } from "server/faunadb/collection";
+import { Collection } from "server/faunadb";
 import { InternalServerError } from "common/http";
 
 export async function createDocument<T>(
@@ -29,6 +29,6 @@ export function createDbClient() {
   return new Client({
     secret,
     keepAlive: false,
-    timeout: Number(process.env.FAUNA_DB_TIMEOUT) ?? 5,
+    timeout: Number(process.env.FAUNA_DB_TIMEOUT_SEC ?? 5),
   });
 }

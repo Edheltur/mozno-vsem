@@ -1,8 +1,6 @@
 import { TMenuItemId } from "common/data/menu";
+import { ICart } from "store/selectors/cart";
 
-export interface ICart {
-  countById: Record<string, number>;
-}
 export interface State {
   cart: ICart;
   order: {

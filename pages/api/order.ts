@@ -1,11 +1,11 @@
 import { responseWithData } from "server/helpers/response";
 import { BadRequestError, HttpStatus } from "common/http";
 import { query as q } from "faunadb";
-import { createDbClient, createDocument } from "server/faunadb/utils";
-import { Collection } from "server/faunadb/collection";
+import { Collection, createDbClient, createDocument } from "server/faunadb";
 import { createHandler } from "server/helpers/handlers";
 import { isInteger, isMenuItemId, isObject } from "common/validators";
 import { TApiResponseResult } from "common/api";
+import { createTelegramReporter } from "server/telegram";
 
 export type TOrdersEndpoint = {
   POST: TApiResponseResult<{ orderId: number }>;
@@ -25,8 +25,11 @@ export default createHandler<TOrdersEndpoint>({
     };
 
     const db = createDbClient();
+    const reporter = createTelegramReporter();
+
     const orderId = await createDocument(db, Collection.orders, data);
 
+    await reporter.sendReport(orderId, { countById });
     return responseWithData(res, HttpStatus.CREATED, { orderId });
   },
 });
