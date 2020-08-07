@@ -4,7 +4,7 @@ import { useAppState } from "store/index";
 
 export const OrderSuccessModal = () => {
   const { order, config, dispatch } = useAppState("order", "config");
-  const text = encodeURIComponent(
+  const messageText = encodeURIComponent(
     `Добрый день! Мой номер заказа - ${order.id}.`
   );
 
@@ -39,7 +39,7 @@ export const OrderSuccessModal = () => {
           content="Whats App"
           as="a"
           target="_blank"
-          href={`https://wa.me/${config.whatsAppPhoneNumber}?text=${text}`}
+          href={`https://wa.me/${config.whatsAppPhoneNumber}?text=${messageText}`}
           onClick={handle.close}
           color="green"
         />
