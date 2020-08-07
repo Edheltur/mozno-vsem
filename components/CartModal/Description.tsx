@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppState } from "store/index";
-import { getSelectedItems, getTotalPrice } from "store/selectors/cart";
+import { getSelectedItems, getTotalPrice } from "common/data/cart";
 
 export function Description() {
   const { cart } = useAppState("order", "cart");

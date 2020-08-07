@@ -1,4 +1,4 @@
-import { getSelectedItems, getTotalPrice, ICart } from "store/selectors/cart";
+import { getSelectedItems, getTotalPrice, ICart } from "common/data/cart";
 import { TelegramClient } from "server/telegram";
 
 export class TelegramReporter {

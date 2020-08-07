@@ -4,7 +4,7 @@ import styles from "./PageHeader.module.css";
 import { Logo } from "components/Logo";
 import { CartModal } from "components/CartModal";
 import { useAppState } from "store/index";
-import { getTotalPrice } from "store/selectors/cart";
+import { getTotalPrice } from "common/data/cart";
 import { Icon } from "components/ui/Icon";
 
 export const PageHeader = () => {

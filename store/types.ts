@@ -1,5 +1,5 @@
 import { TMenuItemId } from "common/data/menu";
-import { ICart } from "store/selectors/cart";
+import { ICart } from "common/data/cart";
 
 export interface State {
   cart: ICart;
