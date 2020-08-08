@@ -1,5 +1,6 @@
 import { StoreonModule } from "storeon";
 import { Events, State } from "./types";
+import { getItemCountInCart } from "common/data/cart";
 
 export const cart: StoreonModule<State, Events> = (store) => {
   store.on("@init", () => ({
@@ -13,7 +14,7 @@ export const cart: StoreonModule<State, Events> = (store) => {
   }));
 
   store.on("cart/changeCount", (state, { id, delta }) => {
-    const previousCount = state.cart.countById[id] ?? 0;
+    const previousCount = getItemCountInCart(state.cart, id);
 
     return {
       cart: {

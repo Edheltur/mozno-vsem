@@ -1,11 +1,13 @@
 import React from "react";
-import { Box, Image, Text } from "grommet";
+import Link from "next/link";
+import { Anchor, Box, Image, Text } from "grommet";
 import { FormAdd, FormSubtract, StatusGoodSmall } from "grommet-icons";
 
 import { useAppState } from "store";
 import { TMenuItem } from "common/data/menu";
 
 import { RoundButton } from "./RoundButton";
+import { getItemCountInCart } from "common/data/cart";
 
 interface IProps {
   item: TMenuItem;
@@ -14,8 +16,8 @@ interface IProps {
 const Dot = () => <StatusGoodSmall size="4px" color="dark-3" />;
 
 export const Dish = ({ item }: IProps) => {
-  const { title, weight, price, id, previewImage } = item;
-  const image = `/images/dishes/preview/${previewImage}`;
+  const { title, weight, price, id, image } = item;
+  const imageUrl = `/images/dishes/preview/${image}`;
   const { cart, dispatch } = useAppState("cart");
 
   const handle = React.useMemo(
@@ -25,15 +27,19 @@ export const Dish = ({ item }: IProps) => {
     }),
     [dispatch, id]
   );
-  const countInCart = cart.countById[id] ?? 0;
+  const countInCart = getItemCountInCart(cart, id);
 
   const imageMarkup = (
-    <Image style={{ width: 150, height: 150 }} src={image} alt={title} />
+    <Link href="/dish/[id]" as={`/dish/${id}`}>
+      <Image style={{ width: 150, height: 150 }} src={imageUrl} alt={title} />
+    </Link>
   );
   const titleMarkup = (
     <Box flex="grow">
       <Text size="15px" textAlign="center">
-        {title}
+        <Link href="/dish/[id]" as={`/dish/${id}`}>
+          <Anchor color="text">{title}</Anchor>
+        </Link>
       </Text>
     </Box>
   );

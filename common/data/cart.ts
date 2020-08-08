@@ -17,3 +17,7 @@ export function getSelectedItems(cart: ICart) {
     ({ id }) => id in cart.countById && cart.countById[id] !== 0
   );
 }
+
+export function getItemCountInCart(cart: ICart, id: string) {
+  return cart.countById[id] ?? 0;
+}

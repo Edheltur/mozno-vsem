@@ -7,6 +7,7 @@ import { Cart } from "grommet-icons";
 import { Box, Stack, Text } from "grommet";
 
 import styles from "./PageHeader.module.css";
+import Link from "next/link";
 
 export const PageHeader = () => {
   const { cart, dispatch } = useAppState("order", "cart");
@@ -23,7 +24,11 @@ export const PageHeader = () => {
     <>
       <header className={styles.PageHeader}>
         <Stack anchor="right" className={styles.PageHeader__content}>
-          <Logo />
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
+          </Link>
           <Cart className={styles.PageHeader__cart} onClick={handle.open} />
 
           {itemsCount > 0 && (
