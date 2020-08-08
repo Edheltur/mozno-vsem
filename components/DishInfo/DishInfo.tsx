@@ -1,12 +1,10 @@
 import React from "react";
-import { Box, Button, Heading, Image } from "grommet";
+import { Box, Button, Heading, Image, Text } from "grommet";
+import { FormAdd, FormSubtract } from "grommet-icons";
 
 import { TMenuItem } from "common/data/menu";
 import { useAppState } from "store/index";
-import { Text } from "grommet/es6";
 import { RoundButton } from "components/Dish/RoundButton";
-import { FormAdd } from "grommet-icons";
-import { FormSubtract } from "grommet-icons/es6";
 import { getItemCountInCart } from "common/data/cart";
 
 interface IProps {
