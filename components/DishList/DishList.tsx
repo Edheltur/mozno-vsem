@@ -19,7 +19,7 @@ export const DishList = ({ mix }: IProps) => {
       </Heading>
       <div className={styles.DishList__list}>
         {menu.items.map((item) => (
-          <Dish item={item} mix={styles.DishList__item} key={item.id} />
+          <Dish item={item} key={item.id} />
         ))}
       </div>
     </section>

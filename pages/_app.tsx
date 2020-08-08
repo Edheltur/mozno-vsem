@@ -4,7 +4,6 @@ import { AppStateContext, store } from "store";
 import { Grommet, ThemeType } from "grommet";
 
 import "styles/globals.css";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const theme: ThemeType = {
   global: {

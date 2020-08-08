@@ -1,37 +1,88 @@
 import React from "react";
-import cn from "classnames";
+import { Box, Image, Text } from "grommet";
+import { FormAdd, FormSubtract, StatusGoodSmall } from "grommet-icons";
 
-import { Button } from "grommet";
 import { useAppState } from "store";
 import { TMenuItem } from "common/data/menu";
 
-import styles from "./Dish.module.css";
+import { RoundButton } from "./RoundButton";
 
 interface IProps {
   item: TMenuItem;
-  mix?: string;
 }
 
-export const Dish = ({ mix, item }: IProps) => {
+const Dot = () => <StatusGoodSmall size="4px" color="dark-3" />;
+
+export const Dish = ({ item }: IProps) => {
   const { title, weight, price, id, previewImage } = item;
   const image = `/images/dishes/preview/${previewImage}`;
-  const { dispatch } = useAppState("cart");
+  const { cart, dispatch } = useAppState("cart");
 
   const handle = React.useMemo(
     () => ({
-      click: () => dispatch("cart/add", { id }),
+      add: () => dispatch("cart/changeCount", { id, delta: +1 }),
+      remove: () => dispatch("cart/changeCount", { id, delta: -1 }),
     }),
     [dispatch, id]
   );
+  const countInCart = cart.countById[id] ?? 0;
 
+  const imageMarkup = (
+    <Image style={{ width: 150, height: 150 }} src={image} alt={title} />
+  );
+  const titleMarkup = (
+    <Box flex="grow">
+      <Text size="15px" textAlign="center">
+        {title}
+      </Text>
+    </Box>
+  );
+
+  if (countInCart === 0) {
+    return (
+      <Box width="150px">
+        {imageMarkup}
+        {titleMarkup}
+        <Box direction="row" justify="center" align="center" gap="xsmall">
+          <Text size="small" color="dark-3">
+            {weight}&nbsp;г
+          </Text>
+        </Box>
+        <Box direction="row" justify="between" align="end">
+          <Text size="large" margin={{ left: "xsmall" }}>
+            {price}&nbsp;₽
+          </Text>
+          {"amount" in item && (
+            <Text size="small" color="dark-3">
+              за&nbsp;{item.amount}&nbsp;шт
+            </Text>
+          )}
+          <RoundButton onClick={handle.add} icon={<FormAdd color="brand" />} />
+        </Box>
+      </Box>
+    );
+  }
   return (
-    <div className={cn(styles.Dish, mix)} onClick={handle.click}>
-      <img className={styles.Dish__image} src={image} alt="" />
-      <div className={styles.Dish__title}>{title}</div>
-      <div className={styles.Dish__weight}>{weight}&nbsp;г</div>
-      <Button className={styles.Dish__price} size="small">
-        {price}&nbsp;₽
-      </Button>
-    </div>
+    <Box width="150px">
+      {imageMarkup}
+      {titleMarkup}
+      <Box direction="row" justify="center" align="center" gap="xsmall">
+        <Text size="small" color="dark-3">
+          {weight}&nbsp;г
+        </Text>
+        <Dot />
+        <Text size="small" color="dark-3">
+          {price}&nbsp;₽
+        </Text>
+      </Box>
+      <Box direction="row" justify="between" align="center">
+        <RoundButton
+          onClick={handle.remove}
+          icon={<FormSubtract color="brand" />}
+        />
+        <Text>{countInCart}</Text>
+        <RoundButton onClick={handle.add} icon={<FormAdd color="brand" />} />
+      </Box>
+    </Box>
   );
 };

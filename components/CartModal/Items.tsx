@@ -16,8 +16,8 @@ export function Items({ cart }: IProps) {
       <TableBody>
         {selectedItems.map(({ id, title }) => (
           <TableRow key={id}>
-            <TableCell>{cart.countById[id]}</TableCell>
             <TableCell>{title}</TableCell>
+            <TableCell>x&#8239;{cart.countById[id]}</TableCell>
           </TableRow>
         ))}
       </TableBody>

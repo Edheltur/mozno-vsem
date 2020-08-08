@@ -8,6 +8,7 @@ export const itemsBydId = {
     title: "Гречаники",
     price: 280,
     weight: 400,
+    amount: 2,
     previewImage: "grechaniki.jpg",
   },
   "2": {

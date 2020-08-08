@@ -2,14 +2,15 @@ import React from "react";
 
 import { useAppState } from "store";
 import { Logo } from "components/Logo";
-import { Icon } from "components/ui/Icon";
-import { getTotalPrice } from "common/data/cart";
+import { getSelectedItems } from "common/data/cart";
+import { Cart } from "grommet-icons";
+import { Box, Stack, Text } from "grommet";
 
 import styles from "./PageHeader.module.css";
 
 export const PageHeader = () => {
   const { cart, dispatch } = useAppState("order", "cart");
-  const totalPrice = getTotalPrice(cart);
+  const itemsCount = getSelectedItems(cart).length;
 
   const handle = React.useMemo(
     () => ({
@@ -21,16 +22,20 @@ export const PageHeader = () => {
   return (
     <>
       <header className={styles.PageHeader}>
-        <div className={styles.PageHeader__content}>
+        <Stack anchor="right" className={styles.PageHeader__content}>
           <Logo />
-          <span className={styles.PageHeader__cart} onClick={handle.open}>
-            {totalPrice > 0 && <span>{totalPrice}&nbsp;₽&nbsp;</span>}
-            <Icon
-              icon="shopping-cart"
-              className={styles.PageHeader__cartIcon}
-            />
-          </span>
-        </div>
+          <Cart className={styles.PageHeader__cart} onClick={handle.open} />
+
+          {itemsCount > 0 && (
+            <Box
+              background="accent-1"
+              round
+              className={styles.PageHeader__label}
+            >
+              <Text size="11px">{itemsCount}</Text>
+            </Box>
+          )}
+        </Stack>
       </header>
       <div className={styles.PageHeader__compensator} />
     </>

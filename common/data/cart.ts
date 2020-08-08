@@ -13,5 +13,7 @@ export function getTotalPrice(cart: ICart): number {
 }
 
 export function getSelectedItems(cart: ICart) {
-  return menu.items.filter(({ id }) => id in cart.countById);
+  return menu.items.filter(
+    ({ id }) => id in cart.countById && cart.countById[id] !== 0
+  );
 }

@@ -18,6 +18,6 @@ export interface Events {
   "order/confirm": { orderId: number };
   "order/submit": undefined;
   "order/openCart": undefined;
-  "cart/add": { id: TMenuItemId };
+  "cart/changeCount": { id: TMenuItemId; delta: number };
   "cart/clear": undefined;
 }

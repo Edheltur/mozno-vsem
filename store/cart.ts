@@ -12,7 +12,7 @@ export const cart: StoreonModule<State, Events> = (store) => {
     },
   }));
 
-  store.on("cart/add", (state, { id }) => {
+  store.on("cart/changeCount", (state, { id, delta }) => {
     const previousCount = state.cart.countById[id] ?? 0;
 
     return {
@@ -20,7 +20,7 @@ export const cart: StoreonModule<State, Events> = (store) => {
         ...state.cart,
         countById: {
           ...state.cart.countById,
-          [id]: previousCount + 1,
+          [id]: previousCount + delta,
         },
       },
     };
