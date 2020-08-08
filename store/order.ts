@@ -1,5 +1,5 @@
 import { StoreonModule } from "storeon";
-import { Events, State } from "store/types";
+import { Events, State } from "./types";
 import { createOrder } from "client/api";
 
 export const order: StoreonModule<State, Events> = (store) => {

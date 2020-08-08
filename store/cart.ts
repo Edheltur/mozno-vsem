@@ -1,5 +1,5 @@
 import { StoreonModule } from "storeon";
-import { Events, State } from "store/types";
+import { Events, State } from "./types";
 
 export const cart: StoreonModule<State, Events> = (store) => {
   store.on("@init", () => ({

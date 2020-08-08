@@ -1,15 +1,16 @@
 import React from "react";
-import { Button, Modal } from "semantic-ui-react";
+import { Button } from "grommet";
+
 import { useAppState } from "store";
-import { Icon } from "components/ui/Icon";
-import { Description } from "components/CartModal/Description";
+import { Items } from "components/CartModal/Items";
+import { getSelectedItems } from "common/data/cart";
+import { Modal } from "components/ui/Modal";
 
-interface IProps {
-  trigger: React.ReactNode;
-}
-
-export const CartModal = ({ trigger }: IProps) => {
-  const { order, dispatch } = useAppState("order", "cart");
+export const CartModal = () => {
+  const { order, cart, dispatch } = useAppState("order", "cart");
+  const isSubmitting = order.status === "submitting";
+  const isOpen = order.status === "cart" || isSubmitting;
+  const isEmpty = getSelectedItems(cart).length === 0;
 
   const handle = React.useMemo(
     () => ({
@@ -24,38 +25,49 @@ export const CartModal = ({ trigger }: IProps) => {
     [dispatch]
   );
 
-  const isSubmitting = order.status === "submitting";
-  const isOpen = order.status === "cart" || isSubmitting;
-  const closeProps = isSubmitting
-    ? null
-    : {
-        closeIcon: <Icon icon="times" className="close icon" />,
-        onClose: handle.close,
-      };
+  if (!isOpen) {
+    return null;
+  }
+
+  if (isEmpty) {
+    return (
+      <Modal onClose={handle.close}>
+        <Modal.Header>Корзина</Modal.Header>
+        <Modal.Content>Ваша корзина пуста</Modal.Content>
+        <Modal.Controls>
+          <Button
+            secondary
+            label="Закрыть"
+            onClick={handle.close}
+            type="reset"
+          />
+        </Modal.Controls>
+      </Modal>
+    );
+  }
 
   return (
-    <Modal {...closeProps} onOpen={handle.open} open={isOpen} trigger={trigger}>
+    <Modal onClose={handle.close}>
       <Modal.Header>Корзина</Modal.Header>
       <Modal.Content>
-        <Modal.Description>
-          <Description />
-        </Modal.Description>
+        <Items cart={cart} />
       </Modal.Content>
-      <Modal.Actions>
+      <Modal.Controls>
         <Button
-          content="Очистить корзину"
+          secondary
+          label="Очистить корзину"
           onClick={handle.clearCart}
           disabled={isSubmitting}
-          color="grey"
+          type="reset"
         />
         <Button
-          content="Заказать"
+          primary
+          label="Заказать"
           onClick={handle.submit}
           disabled={isSubmitting}
-          loading={isSubmitting}
-          positive
+          type="submit"
         />
-      </Modal.Actions>
+      </Modal.Controls>
     </Modal>
   );
 };

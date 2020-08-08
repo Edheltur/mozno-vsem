@@ -1,9 +1,11 @@
 import React from "react";
 import Head from "next/head";
-import styles from "./Page.module.css";
+import { Main } from "grommet";
+
 import { Favicons } from "components/Favicons";
 import { PageHeader } from "components/PageHeader";
 import { OrderSuccessModal } from "components/OrderSuccessModal";
+import { CartModal } from "components/CartModal";
 
 export const Page: React.FC = ({ children }) => (
   <>
@@ -16,7 +18,10 @@ export const Page: React.FC = ({ children }) => (
       <Favicons />
     </Head>
     <PageHeader />
-    <main className={styles.Page__main}>{children}</main>
+    <Main pad="small" align="center">
+      {children}
+    </Main>
+    <CartModal />
     <OrderSuccessModal />
   </>
 );

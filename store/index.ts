@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { createStoreon } from "storeon";
 import { storeonDevtools } from "storeon/devtools";
 
-import { Events, State } from "store/types";
+import { Events, State } from "./types";
 import { order } from "./order";
 import { cart } from "./cart";
 import { config } from "./config";

@@ -1,17 +1,15 @@
 import React from "react";
-import styles from "./DeliveryInfo.module.css";
-import { Header } from "components/ui/Header";
-import delivery from "common/data/delivery";
-import cn from "classnames";
+import { Box, Heading, Text } from "grommet";
 
-interface IProps {
-  mix?: string;
-}
-export const DeliveryInfo = ({ mix }: IProps) => (
-  <section className={cn(styles.DeliveryInfo, mix)}>
-    <Header mix={styles.DeliveryInfo__title} level={2}>
+import delivery from "common/data/delivery";
+
+export const DeliveryInfo = () => (
+  <Box width={{ max: "medium" }} margin={{ horizontal: "medium" }}>
+    <Heading level="2" textAlign="center" margin="small">
       {delivery.title}
-    </Header>
-    <p className={styles.DeliveryInfo__description}>{delivery.description}</p>
-  </section>
+    </Heading>
+    <Text textAlign="center" size="small">
+      {delivery.description}
+    </Text>
+  </Box>
 );
