@@ -11,10 +11,11 @@ export const order: StoreonModule<State, Events> = (store) => {
     order: { status: "submitting" },
   }));
 
-  store.on("order/submit", async (state) => {
-    const order = await createOrder(state.cart);
-    store.dispatch("order/confirm", order);
-  });
+  store.on("order/submit", (state) =>
+    createOrder(state.cart)
+      .then((order) => store.dispatch("order/confirm", order))
+      .catch(() => store.dispatch("order/openCart"))
+  );
 
   store.on("order/confirm", (state, { orderId }) => ({
     order: {
