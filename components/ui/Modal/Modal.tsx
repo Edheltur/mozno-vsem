@@ -31,7 +31,9 @@ export const ModalHeader = ({ children }: IChildrenProps) => (
 );
 
 export const ModalContent = ({ children }: IChildrenProps) => (
-  <Box as="section">{children}</Box>
+  <Box as="section" fill="horizontal">
+    {children}
+  </Box>
 );
 
 export const ModalControls = ({ children }: IChildrenProps) => (

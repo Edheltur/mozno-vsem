@@ -17,15 +17,18 @@ export function Items({ cart }: IProps) {
         {selectedItems.map(({ id, title }) => (
           <TableRow key={id}>
             <TableCell>{title}</TableCell>
-            <TableCell>x&#8239;{cart.countById[id]}</TableCell>
+            <TableCell align={"end" as any}>
+              x&#8239;{cart.countById[id]}
+            </TableCell>
           </TableRow>
         ))}
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell colSpan={2}>
+          <TableCell>
             <strong>Итого: {totalPrice}&nbsp;₽</strong>
           </TableCell>
+          <TableCell />
         </TableRow>
       </TableFooter>
     </Table>
