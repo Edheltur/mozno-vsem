@@ -1,9 +1,11 @@
 import React from "react";
 import { AppProps } from "next/app";
-import { AppStateContext, store } from "store";
 import { Grommet, ThemeType } from "grommet";
 
+import { AppStateContext, store } from "store";
+
 import "styles/globals.css";
+import { YandexMetrika } from "components/YandexMetrika";
 
 const theme: ThemeType = {
   global: {
@@ -29,12 +31,18 @@ const theme: ThemeType = {
   },
 };
 
-const MyApp = ({ Component, pageProps }: AppProps) => (
-  <AppStateContext.Provider value={store}>
-    <Grommet theme={theme}>
-      <Component {...pageProps} />
-    </Grommet>
-  </AppStateContext.Provider>
+const App = ({ Component, pageProps, router }: AppProps) => (
+  <>
+    <YandexMetrika
+      config={store.get().config.yandexMetrika}
+      path={router.asPath}
+    />
+    <AppStateContext.Provider value={store}>
+      <Grommet theme={theme}>
+        <Component {...pageProps} />
+      </Grommet>
+    </AppStateContext.Provider>
+  </>
 );
 
-export default MyApp;
+export default App;

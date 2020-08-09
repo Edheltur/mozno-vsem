@@ -15,6 +15,7 @@ export const Page: React.FC = ({ children }) => (
         name="description"
         content="Полуфабрикаты «МОЖНО ВСЕМ!» - Магазин здорового питания"
       />
+      <link rel="dns-prefetch" href="https://mc.yandex.ru" />
       <Favicons />
     </Head>
     <PageHeader />
