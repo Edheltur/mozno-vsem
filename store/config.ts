@@ -11,7 +11,7 @@ export const config: StoreonModule<State, Events> = (store) => {
         accounts: [66307693],
         options: {
           defer: true,
-          webvisor: true,
+          webvisor: false,
         },
       },
     },
