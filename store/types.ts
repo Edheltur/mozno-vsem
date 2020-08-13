@@ -1,11 +1,6 @@
 import { TMenuItemId } from "common/data/menu";
 import { ICart } from "common/data/cart";
 
-export interface IYandexMetrikaConfig {
-  accounts: number[];
-  options?: object;
-}
-
 export interface State {
   cart: ICart;
   order: {
@@ -15,7 +10,7 @@ export interface State {
   config: {
     telegramUsername: string;
     whatsAppPhoneNumber: string;
-    yandexMetrika: IYandexMetrikaConfig;
+    yandexMetrikaCounterId: string;
     noindex: boolean;
   };
 }

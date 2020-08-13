@@ -7,13 +7,7 @@ export const config: StoreonModule<State, Events> = (store) => {
       telegramUsername: process.env.NEXT_PUBLIC_TELEGRAM_USER_NAME ?? "",
       whatsAppPhoneNumber: process.env.NEXT_PUBLIC_WHATS_APP_PHONE_NUMBER ?? "",
       noindex: process.env.NEXT_PUBLIC_NO_INDEX !== undefined,
-      yandexMetrika: {
-        accounts: [66307693],
-        options: {
-          defer: true,
-          webvisor: false,
-        },
-      },
+      yandexMetrikaCounterId: "66307693",
     },
   }));
 };

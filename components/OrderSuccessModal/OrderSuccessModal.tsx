@@ -4,6 +4,7 @@ import { Button } from "grommet";
 
 import { useAppState } from "store";
 import { Modal } from "components/ui/Modal";
+import { ExternalLink } from "components/ExternalLink";
 
 export const OrderSuccessModal = () => {
   const { order, config, dispatch } = useAppState("order", "config");
@@ -34,7 +35,7 @@ export const OrderSuccessModal = () => {
       </Modal.Content>
       <Modal.Controls>
         <Button
-          as="a"
+          as={ExternalLink}
           target="_blank"
           children="WhatsApp"
           href={`https://wa.me/${config.whatsAppPhoneNumber}?text=${messageText}`}
@@ -42,7 +43,7 @@ export const OrderSuccessModal = () => {
           color="whatsapp"
         />
         <Button
-          as="a"
+          as={ExternalLink}
           target="_blank"
           children="Telegram"
           href={`https://t.me/${config.telegramUsername}`}

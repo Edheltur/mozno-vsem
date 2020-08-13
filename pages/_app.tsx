@@ -3,9 +3,9 @@ import { AppProps } from "next/app";
 import { Grommet, ThemeType } from "grommet";
 
 import { AppStateContext, store } from "store";
+import { YandexMetrika } from "components/YandexMetrika";
 
 import "styles/globals.css";
-import { YandexMetrika } from "components/YandexMetrika";
 
 const theme: ThemeType = {
   global: {
@@ -32,17 +32,12 @@ const theme: ThemeType = {
 };
 
 const App = ({ Component, pageProps, router }: AppProps) => (
-  <>
-    <YandexMetrika
-      config={store.get().config.yandexMetrika}
-      path={router.asPath}
-    />
-    <AppStateContext.Provider value={store}>
-      <Grommet theme={theme}>
-        <Component {...pageProps} />
-      </Grommet>
-    </AppStateContext.Provider>
-  </>
+  <AppStateContext.Provider value={store}>
+    <YandexMetrika url={router.asPath} />
+    <Grommet theme={theme}>
+      <Component {...pageProps} />
+    </Grommet>
+  </AppStateContext.Provider>
 );
 
 export default App;

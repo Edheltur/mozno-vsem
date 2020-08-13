@@ -6,10 +6,6 @@ interface IProps {
   onClose?: () => void;
 }
 
-interface IChildrenProps {
-  children: React.ReactNode;
-}
-
 export const Modal = ({ onClose, children }: IProps) => (
   <Layer
     position="center"
@@ -24,19 +20,19 @@ export const Modal = ({ onClose, children }: IProps) => (
   </Layer>
 );
 
-export const ModalHeader = ({ children }: IChildrenProps) => (
+export const ModalHeader: React.FC = ({ children }) => (
   <Heading margin="none" level="3">
     {children}
   </Heading>
 );
 
-export const ModalContent = ({ children }: IChildrenProps) => (
+export const ModalContent: React.FC = ({ children }) => (
   <Box as="section" fill="horizontal">
     {children}
   </Box>
 );
 
-export const ModalControls = ({ children }: IChildrenProps) => (
+export const ModalControls: React.FC = ({ children }) => (
   <Box
     as="footer"
     gap="small"
