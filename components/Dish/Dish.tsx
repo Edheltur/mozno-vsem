@@ -6,7 +6,7 @@ import { FormAdd, FormSubtract, StatusGoodSmall } from "grommet-icons";
 import { useAppState } from "store";
 import { TMenuItem } from "common/data/menu";
 
-import { RoundButton } from "./RoundButton";
+import { RoundButton } from "../ui/RoundedButton/RoundButton";
 import { getItemCountInCart } from "common/data/cart";
 
 interface IProps {

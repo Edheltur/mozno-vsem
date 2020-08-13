@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Button, Heading, Image, Text } from "grommet";
+import { Box, Button, Heading, Text } from "grommet";
 import { FormAdd, FormSubtract } from "grommet-icons";
 
 import { TMenuItem } from "common/data/menu";
 import { useAppState } from "store/index";
-import { RoundButton } from "components/Dish/RoundButton";
+import { RoundButton } from "components/ui/RoundedButton";
+import { Image } from "components/ui/Image";
+
 import { getItemCountInCart } from "common/data/cart";
 
 interface IProps {
@@ -27,7 +29,7 @@ export const DishInfo = ({ item }: IProps) => {
 
   return (
     <Box align="center" width={{ max: "500px" }}>
-      <Image src={imageUrl} fill />
+      <Image url={imageUrl} />
       <Heading level="2" textAlign="center">
         {title}
       </Heading>
