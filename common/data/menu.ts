@@ -28,7 +28,7 @@ const rawItemsById = {
     price: 280,
     weight: 400,
     amount: 2,
-    image: "empty.jpg",
+    image: "grechaniki.jpg",
     ingredients,
   },
   "2": {
@@ -36,7 +36,7 @@ const rawItemsById = {
     price: 440,
     weight: 400,
     amount: 4,
-    image: "empty.jpg",
+    image: "kotleti-telyatina-bulgur.jpg",
     ingredients,
   },
   "3": {
