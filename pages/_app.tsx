@@ -10,7 +10,7 @@ import "styles/globals.css";
 const theme: ThemeType = {
   global: {
     font: {
-      family: "Didact Gothic",
+      family: "Montserrat",
     },
     colors: {
       brand: "#D9B07B",

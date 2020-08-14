@@ -15,16 +15,26 @@ body {
   font-weight: 400;
   font-display: swap;
   src: local("Tenor Sans"), local("TenorSans"),
-    url("/fonts/tenor-sans.woff2") format("woff2"),
-    url("/fonts/tenor-sans.woff") format("woff");
+    url("/fonts/tenor-sans-regular.woff2") format("woff2"),
+    url("/fonts/tenor-sans-regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Didact Gothic";
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Didact Gothic Regular"), local("DidactGothic-Regular"),
-    url("/fonts/didact-gothic.woff2") format("woff2"),
-    url("/fonts/didact-gothic.woff") format("woff");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("/fonts/montserrat-regular.woff2") format("woff2"),
+    url("/fonts/montserrat-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("Montserrat Medium"), local("Montserrat-Medium"),
+    url("/fonts/montserrat-medium.woff2") format("woff2"),
+    url("/fonts/montserrat-medium.woff") format("woff");
 }

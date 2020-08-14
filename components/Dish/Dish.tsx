@@ -51,16 +51,16 @@ export const Dish = ({ item }: IProps) => {
         {titleMarkup}
         <Box direction="row" justify="center" align="center" gap="xsmall">
           <Text size="small" color="dark-3">
-            {weight}&nbsp;г
+            {weight}&#8239;г
           </Text>
         </Box>
         <Box direction="row" justify="between" align="end">
           <Text size="large" margin={{ left: "xsmall" }}>
-            {price}&nbsp;₽
+            {price}&#8239;₽
           </Text>
           {"amount" in item && (
-            <Text size="small" color="dark-3">
-              за&nbsp;{item.amount}&nbsp;шт
+            <Text size="xsmall" color="dark-3">
+              за&#8239;{item.amount}&#8239;шт
             </Text>
           )}
           <RoundButton onClick={handle.add} icon={<FormAdd color="brand" />} />
@@ -74,11 +74,11 @@ export const Dish = ({ item }: IProps) => {
       {titleMarkup}
       <Box direction="row" justify="center" align="center" gap="xsmall">
         <Text size="small" color="dark-3">
-          {weight}&nbsp;г
+          {weight}&#8239;г
         </Text>
         <Dot />
         <Text size="small" color="dark-3">
-          {price}&nbsp;₽
+          {price}&#8239;₽
         </Text>
       </Box>
       <Box direction="row" justify="between" align="center">

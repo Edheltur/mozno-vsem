@@ -46,7 +46,7 @@ export const DishInfo = ({ item }: IProps) => {
             direction="row"
             justify="between"
             align="center"
-            width={{ min: "130px" }}
+            width={{ min: "150px" }}
           >
             <RoundButton
               onClick={handle.remove}
@@ -59,7 +59,7 @@ export const DishInfo = ({ item }: IProps) => {
             />
           </Box>
         ) : (
-          <Box width={{ min: "130px" }}>
+          <Box width={{ min: "150px" }}>
             <Button label="В корзину" onClick={handle.add} />
           </Box>
         )}
