@@ -24,10 +24,14 @@ const theme: ThemeType = {
       focus: "accent-2",
     },
   },
+  anchor: {
+    fontWeight: 500,
+  },
   heading: {
     font: {
       family: "Tenor Sans",
     },
+    weight: 400,
   },
 };
 
