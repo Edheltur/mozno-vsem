@@ -30,7 +30,7 @@ const WeightText = ({ weight }: { weight: number }) => {
   );
 };
 
-export const Dish = ({ item }: IProps) => {
+export const DishCard = ({ item }: IProps) => {
   const { title, weight, price, id, image } = item;
   const imageUrl = `/images/dishes/preview/${image}`;
   const { cart, dispatch } = useAppState("cart");

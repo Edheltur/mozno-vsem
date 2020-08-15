@@ -3,7 +3,7 @@ import cn from "classnames";
 import { Heading } from "grommet";
 
 import * as menu from "common/data/menu";
-import { Dish } from "components/Dish";
+import { DishCard } from "components/DishCard";
 
 import styles from "./DishList.module.css";
 
@@ -19,7 +19,7 @@ export const DishList = ({ mix }: IProps) => {
       </Heading>
       <div className={styles.DishList__list}>
         {menu.items.map((item) => (
-          <Dish item={item} key={item.id} />
+          <DishCard item={item} key={item.id} />
         ))}
       </div>
     </section>
