@@ -1,10 +1,9 @@
 import React from "react";
 
-import { Button } from "grommet";
+import { Button, Text } from "grommet";
 
 import { useAppState } from "store";
 import { Modal } from "components/ui/Modal";
-import { ExternalLink } from "components/ExternalLink";
 import { GOALS, useYandexMetrika } from "client/helpers/yandex-metrika";
 
 export const OrderSuccessModal = () => {
@@ -34,12 +33,13 @@ export const OrderSuccessModal = () => {
     <Modal>
       <Modal.Header>Ваш заказ №&#8239;{order.id} создан!</Modal.Header>
       <Modal.Content>
-        Мы получили информацию о вашем заказе! Чтобы перейти к оформлению,
-        сообщите нам номер заказа в любом из мессенджеров.
+        <Text size="small">
+          Мы получили информацию о вашем заказе! Чтобы перейти к оформлению,
+          сообщите нам номер заказа в любом из мессенджеров.
+        </Text>
       </Modal.Content>
       <Modal.Controls>
         <Button
-          as={ExternalLink}
           target="_blank"
           children="WhatsApp"
           href={`https://wa.me/${config.whatsAppPhoneNumber}?text=${messageText}`}
@@ -47,7 +47,6 @@ export const OrderSuccessModal = () => {
           color="whatsapp"
         />
         <Button
-          as={ExternalLink}
           target="_blank"
           children="Telegram"
           href={`https://t.me/${config.telegramUsername}`}

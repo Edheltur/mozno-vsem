@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "grommet";
+import { Trash } from "grommet-icons";
 
 import { useAppState } from "store";
 import { Items } from "components/CartModal/Items";
@@ -55,7 +56,7 @@ export const CartModal = () => {
       <Modal.Controls>
         <Button
           secondary
-          label="Очистить корзину"
+          icon={<Trash />}
           onClick={handle.clearCart}
           disabled={isSubmitting}
           type="reset"

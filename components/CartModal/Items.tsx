@@ -23,9 +23,11 @@ export function Items({ cart }: IProps) {
       <TableBody>
         {selectedItems.map(({ id, title }) => (
           <TableRow key={id}>
-            <TableCell>{title}</TableCell>
+            <TableCell>
+              <Text size="small">{title}</Text>
+            </TableCell>
             <TableCell align={"end" as any}>
-              x&#8239;{cart.countById[id]}
+              <Text size="small">x&#8239;{cart.countById[id]}</Text>
             </TableCell>
           </TableRow>
         ))}
@@ -33,7 +35,9 @@ export function Items({ cart }: IProps) {
       <TableFooter>
         <TableRow>
           <TableCell>
-            <Text weight={500}>Итого: {totalPrice}&nbsp;₽</Text>
+            <Text size="small" weight={500}>
+              Итого: {totalPrice}&nbsp;₽
+            </Text>
           </TableCell>
           <TableCell />
         </TableRow>

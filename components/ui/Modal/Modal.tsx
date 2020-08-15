@@ -21,13 +21,13 @@ export const Modal = ({ onClose, children }: IProps) => (
 );
 
 export const ModalHeader: React.FC = ({ children }) => (
-  <Heading margin="none" level="3">
+  <Heading margin={{ bottom: "medium", top: "none" }} level="3">
     {children}
   </Heading>
 );
 
 export const ModalContent: React.FC = ({ children }) => (
-  <Box as="section" fill="horizontal">
+  <Box as="section" fill="horizontal" style={{ overflowY: "auto" }}>
     {children}
   </Box>
 );
@@ -39,7 +39,9 @@ export const ModalControls: React.FC = ({ children }) => (
     direction="row"
     align="center"
     justify="end"
-    pad={{ top: "medium", bottom: "small" }}
+    margin={{ top: "medium" }}
+    background="white"
+    flex="grow"
   >
     {children}
   </Box>
