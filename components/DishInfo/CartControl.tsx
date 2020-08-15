@@ -11,7 +11,10 @@ interface IProps {
   id: TMenuItemId;
 }
 
-const WIDTH = { min: "150px" };
+const SIZES = {
+  width: { min: "150px" },
+  height: { min: "36px" },
+} as const;
 
 export const CartControl = ({ id }: IProps) => {
   const { cart, dispatch } = useAppState("cart");
@@ -27,7 +30,7 @@ export const CartControl = ({ id }: IProps) => {
 
   if (countInCart > 0) {
     return (
-      <Box direction="row" justify="between" align="center" width={WIDTH}>
+      <Box direction="row" justify="between" align="center" {...SIZES}>
         <RoundButton
           onClick={handle.remove}
           icon={<FormSubtract color="brand" />}
@@ -38,7 +41,7 @@ export const CartControl = ({ id }: IProps) => {
     );
   }
   return (
-    <Box width={WIDTH}>
+    <Box {...SIZES}>
       <Button label="В корзину" onClick={handle.add} />
     </Box>
   );

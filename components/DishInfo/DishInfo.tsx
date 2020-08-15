@@ -14,20 +14,20 @@ export const DishInfo = ({ item }: IProps) => {
   const imageUrl = `/images/dishes/full/${image}`;
 
   return (
-    <Box align="center" width={{ max: "500px" }}>
+    <Box align="stretch" width="600px" pad="small">
       <Image url={imageUrl} />
       <Heading level="2" textAlign="center">
         {title}
       </Heading>
-      <Box direction="row" align="start" as="ul">
-        <Box as="ul">
-          {ingredients.map((ingredient, index) => (
-            <Text key={index} as="li">
-              {ingredient}
-            </Text>
-          ))}
-        </Box>
+      <Box direction="row" justify="center">
         <CartControl id={id} />
+      </Box>
+      <Box as="ul">
+        {ingredients.map((ingredient, index) => (
+          <Text key={index} as="li">
+            {ingredient}
+          </Text>
+        ))}
       </Box>
     </Box>
   );
