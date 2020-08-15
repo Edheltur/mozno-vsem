@@ -4,9 +4,8 @@ import { Anchor, Box, Image, Text } from "grommet";
 import { FormAdd, FormSubtract, StatusGoodSmall } from "grommet-icons";
 
 import { useAppState } from "store";
+import { RoundButton } from "components/ui/RoundedButton/RoundButton";
 import { TMenuItem } from "common/data/menu";
-
-import { RoundButton } from "../ui/RoundedButton/RoundButton";
 import { getItemCountInCart } from "common/data/cart";
 
 interface IProps {
@@ -14,6 +13,22 @@ interface IProps {
 }
 
 const Dot = () => <StatusGoodSmall size="4px" color="dark-3" />;
+
+const WeightText = ({ weight }: { weight: number }) => {
+  if (weight < 1000) {
+    return (
+      <Text size="small" color="dark-3">
+        {weight}&nbsp;г
+      </Text>
+    );
+  }
+
+  return (
+    <Text size="small" color="dark-3">
+      {weight / 1000}&nbsp;кг
+    </Text>
+  );
+};
 
 export const Dish = ({ item }: IProps) => {
   const { title, weight, price, id, image } = item;
@@ -50,19 +65,18 @@ export const Dish = ({ item }: IProps) => {
         {imageMarkup}
         {titleMarkup}
         <Box direction="row" justify="center" align="center" gap="xsmall">
-          <Text size="small" color="dark-3">
-            {weight}&nbsp;г
-          </Text>
+          <WeightText weight={weight} />
+          {"amount" in item && [
+            <Dot />,
+            <Text size="small" color="dark-3">
+              {item.amount}&nbsp;шт
+            </Text>,
+          ]}
         </Box>
         <Box direction="row" justify="between" align="end">
           <Text size="large" margin={{ left: "xsmall" }}>
             {price}&nbsp;₽
           </Text>
-          {"amount" in item && (
-            <Text size="xsmall" color="dark-3">
-              за&nbsp;{item.amount}&nbsp;шт
-            </Text>
-          )}
           <RoundButton onClick={handle.add} icon={<FormAdd color="brand" />} />
         </Box>
       </Box>
@@ -73,9 +87,7 @@ export const Dish = ({ item }: IProps) => {
       {imageMarkup}
       {titleMarkup}
       <Box direction="row" justify="center" align="center" gap="xsmall">
-        <Text size="small" color="dark-3">
-          {weight}&nbsp;г
-        </Text>
+        <WeightText weight={weight} />
         <Dot />
         <Text size="small" color="dark-3">
           {price}&nbsp;₽
