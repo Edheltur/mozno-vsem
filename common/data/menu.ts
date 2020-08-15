@@ -116,14 +116,14 @@ const rawItemsById = {
     title: "Фарш говядина-курица",
     price: 500,
     weight: 1000,
-    image: "empty.jpg",
+    image: "farsh-govyadina-kurtisa.jpg",
     ingredients,
   },
   "13": {
     title: "Фарш говядина-курица",
     price: 300,
     weight: 500,
-    image: "empty.jpg",
+    image: "farsh-govyadina-kurtisa.jpg",
     ingredients,
   },
   "14": {
@@ -181,20 +181,6 @@ const rawItemsById = {
     price: 300,
     weight: 500,
     image: "empty.jpg",
-    ingredients,
-  },
-  "22": {
-    title: "Фарш говядина",
-    price: 500,
-    weight: 1000,
-    image: "farsh-govyadina.jpg",
-    ingredients,
-  },
-  "23": {
-    title: "Фарш говядина",
-    price: 300,
-    weight: 500,
-    image: "farsh-govyadina.jpg",
     ingredients,
   },
 } as const;
