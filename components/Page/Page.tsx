@@ -6,15 +6,12 @@ import { Favicons } from "components/Favicons";
 import { PageHeader } from "components/PageHeader";
 import { OrderSuccessModal } from "components/OrderSuccessModal";
 import { CartModal } from "components/CartModal";
-import { useAppState } from "store";
 
 export const Page: React.FC = ({ children }) => {
-  const { config } = useAppState("config");
   return (
     <>
       <Head>
         <title>Можно всем</title>
-        {config.noindex && <meta name="robots" content="noindex" />}
         <meta
           name="description"
           content="Полуфабрикаты «МОЖНО ВСЕМ!» - Магазин здорового питания"

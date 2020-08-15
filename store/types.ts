@@ -11,7 +11,6 @@ export interface State {
     telegramUsername: string;
     whatsAppPhoneNumber: string;
     yandexMetrikaCounterId: string;
-    noindex: boolean;
   };
 }
 
