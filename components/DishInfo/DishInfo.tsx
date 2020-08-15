@@ -25,10 +25,14 @@ export const DishInfo = ({ item }: IProps) => {
       <Box as="ul">
         {ingredients.map((ingredient, index) => (
           <Text key={index} as="li">
-            {ingredient}
+            {capitalizeFirstLetter(ingredient)}
           </Text>
         ))}
       </Box>
     </Box>
   );
 };
+
+function capitalizeFirstLetter(string: string): string {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
