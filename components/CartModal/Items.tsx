@@ -1,5 +1,12 @@
 import React from "react";
-import { Table, TableBody, TableCell, TableFooter, TableRow } from "grommet";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableRow,
+  Text,
+} from "grommet";
 
 import { getSelectedItems, getTotalPrice, ICart } from "common/data/cart";
 
@@ -26,7 +33,7 @@ export function Items({ cart }: IProps) {
       <TableFooter>
         <TableRow>
           <TableCell>
-            <strong>Итого: {totalPrice}&nbsp;₽</strong>
+            <Text weight={500}>Итого: {totalPrice}&nbsp;₽</Text>
           </TableCell>
           <TableCell />
         </TableRow>

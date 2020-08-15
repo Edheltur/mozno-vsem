@@ -1,6 +1,12 @@
 import { useMemo } from "react";
 import { useAppState } from "store";
-import { extLink, hit, notBounce, reachGoal, userVars } from "lyam";
+import {
+  extLink,
+  hit,
+  notBounce,
+  reachGoal as reachGoalUntyped,
+  userVars,
+} from "lyam";
 
 export function useYandexMetrika() {
   const {
@@ -19,3 +25,18 @@ export function useYandexMetrika() {
     [counterId]
   );
 }
+
+export function reachGoal(
+  counterId: string,
+  name: TGoalName,
+  userVars?: Lyam.UserVars
+) {
+  reachGoalUntyped(counterId, name, userVars);
+}
+
+export type TGoalName = typeof GOALS[keyof typeof GOALS];
+export const GOALS = {
+  orderComplete: "order-messenger-button-click",
+  openCart: "open-cart",
+  addItemToCart: "add-item-to-cart",
+} as const;

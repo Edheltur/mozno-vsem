@@ -5,16 +5,20 @@ import { Button } from "grommet";
 import { useAppState } from "store";
 import { Modal } from "components/ui/Modal";
 import { ExternalLink } from "components/ExternalLink";
+import { GOALS, useYandexMetrika } from "client/helpers/yandex-metrika";
 
 export const OrderSuccessModal = () => {
   const { order, config, dispatch } = useAppState("order", "config");
+  const { reachGoal } = useYandexMetrika();
+
   const messageText = encodeURIComponent(
     `Добрый день! Мой номер заказа - ${order.id}.`
   );
 
   const handle = React.useMemo(
     () => ({
-      close() {
+      messengerLinkClick() {
+        reachGoal(GOALS.orderComplete);
         dispatch("order/reset");
         dispatch("cart/clear");
       },
@@ -39,7 +43,7 @@ export const OrderSuccessModal = () => {
           target="_blank"
           children="WhatsApp"
           href={`https://wa.me/${config.whatsAppPhoneNumber}?text=${messageText}`}
-          onClick={handle.close}
+          onClick={handle.messengerLinkClick}
           color="whatsapp"
         />
         <Button
@@ -47,7 +51,7 @@ export const OrderSuccessModal = () => {
           target="_blank"
           children="Telegram"
           href={`https://t.me/${config.telegramUsername}`}
-          onClick={handle.close}
+          onClick={handle.messengerLinkClick}
           color="telegram"
         />
       </Modal.Controls>
