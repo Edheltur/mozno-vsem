@@ -66,12 +66,12 @@ export const DishCard = ({ item }: IProps) => {
         {titleMarkup}
         <Box direction="row" justify="center" align="center" gap="xsmall">
           <WeightText weight={weight} />
-          {"amount" in item && [
-            <Dot />,
+          {"amount" in item && <Dot />}
+          {"amount" in item && (
             <Text size="small" color="dark-3">
               {item.amount}&nbsp;шт
-            </Text>,
-          ]}
+            </Text>
+          )}
         </Box>
         <Box direction="row" justify="between" align="end">
           <Text size="large" margin={{ left: "xsmall" }}>
