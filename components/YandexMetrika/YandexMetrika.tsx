@@ -9,7 +9,9 @@ const NOT_BOUNCE_INTERVAL_MS = 15000;
 
 const useEffectOnce = (effect: React.EffectCallback) => useEffect(effect, []);
 
-export const YandexMetrika = React.memo(({ url }: IProps) => {
+export const YandexMetrika = React.memo(function YandexMetrika({
+  url,
+}: IProps) {
   const { hit, notBounce, extLink, counterId } = useYandexMetrika();
   useEffect(() => {
     hit({ url });
