@@ -1,0 +1,9 @@
+.TitleWithImage__image {
+  width: 150px;
+  height: 150px;
+}
+
+.TitleWithImage__link,
+.TitleWithImage__image {
+  cursor: pointer;
+}

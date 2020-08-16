@@ -7,7 +7,7 @@ import { TMenuItem } from "common/data/menu";
 
 import { WeightAndAmount } from "./WeightAndAmount";
 import { WeightAndPrice } from "./WeightAndPrice";
-import { TitleWithImage } from "./TitleWithImage";
+import { TitleWithImage } from "./TitleWithImage/TitleWithImage";
 
 interface IProps {
   item: TMenuItem;

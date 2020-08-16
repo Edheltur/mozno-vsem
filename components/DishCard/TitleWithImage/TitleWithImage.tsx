@@ -2,12 +2,11 @@ import React from "react";
 import { Anchor, Box, Image, Text } from "grommet";
 import Link from "next/link";
 import { TMenuItem } from "common/data/menu";
+import styles from "./TitleWithImage.module.css";
 
 interface IProps {
   item: TMenuItem;
 }
-
-const IMAGE_STYLE = { width: 150, height: 150 };
 
 export const TitleWithImage = React.memo(function TitleWithImage({
   item,
@@ -18,11 +17,19 @@ export const TitleWithImage = React.memo(function TitleWithImage({
   return (
     <Box flex="grow">
       <Link href="/dish/[id]" as={`/dish/${item.id}`}>
-        <Image style={IMAGE_STYLE} src={imageUrl} alt={title} />
+        <Image
+          className={styles.TitleWithImage__image}
+          src={imageUrl}
+          alt={title}
+        />
       </Link>
       <Text size="15px" textAlign="center">
         <Link href="/dish/[id]" as={`/dish/${item.id}`}>
-          <Anchor color="text" as="span">
+          <Anchor
+            className={styles.TitleWithImage__link}
+            color="text"
+            as="span"
+          >
             {title}
           </Anchor>
         </Link>
