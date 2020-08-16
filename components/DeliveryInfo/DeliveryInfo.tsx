@@ -1,15 +1,10 @@
 import React from "react";
-import { Box, Heading, Text } from "grommet";
-
-import delivery from "common/data/delivery";
+import { InfoBlock } from "components/ui/InfoBlock";
 
 export const DeliveryInfo = () => (
-  <Box width={{ max: "medium" }} margin={{ horizontal: "medium" }}>
-    <Heading level="2" textAlign="center" margin="small">
-      {delivery.title}
-    </Heading>
-    <Text textAlign="center" size="small">
-      {delivery.description}
-    </Text>
-  </Box>
+  <InfoBlock title="Условия доставки">
+    Доставляем каждый четверг в&nbsp;пределах Екатеринбурга. Стоимость
+    доставки&nbsp;-&nbsp;200&nbsp;₽. При&nbsp;заказе от&nbsp;2000&nbsp;₽
+    доставка бесплатная.
+  </InfoBlock>
 );
