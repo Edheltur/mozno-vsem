@@ -20,7 +20,7 @@ export const Page: React.FC = ({ children }) => {
         <Favicons />
       </Head>
       <PageHeader />
-      <Main pad="small" align="center">
+      <Main pad={{ horizontal: "small", bottom: "large" }} align="center">
         {children}
       </Main>
       <CartModal />
