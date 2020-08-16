@@ -8,6 +8,8 @@ export interface State {
     id?: number;
   };
   config: {
+    freeDeliveryFrom: number;
+    deliveryPrice: number;
     telegramUsername: string;
     whatsAppPhoneNumber: string;
     yandexMetrikaCounterId: string;

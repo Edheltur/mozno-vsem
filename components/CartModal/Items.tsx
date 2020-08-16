@@ -8,6 +8,7 @@ import {
   Text,
 } from "grommet";
 
+import { useAppState } from "store";
 import { getSelectedItems, getTotalPrice, ICart } from "common/data/cart";
 
 interface IProps {
@@ -17,6 +18,7 @@ interface IProps {
 export function Items({ cart }: IProps) {
   const selectedItems = getSelectedItems(cart);
   const totalPrice = getTotalPrice(cart);
+  const { config } = useAppState("config");
 
   return (
     <Table>
@@ -34,12 +36,14 @@ export function Items({ cart }: IProps) {
       </TableBody>
       <TableFooter>
         <TableRow>
-          <TableCell>
+          <TableCell colSpan={2} style={{ borderCollapse: "separate" }}>
             <Text size="small" weight={500}>
               Итого: {totalPrice}&nbsp;₽
+              {totalPrice < config.freeDeliveryFrom && (
+                <>&nbsp;+&nbsp;{config.deliveryPrice}&nbsp;₽ доставка</>
+              )}
             </Text>
           </TableCell>
-          <TableCell />
         </TableRow>
       </TableFooter>
     </Table>
