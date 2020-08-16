@@ -6,10 +6,27 @@ import * as menu from "common/data/menu";
 import { DishCard } from "components/DishCard";
 
 import styles from "./DishList.module.css";
+import { getItemCountInCart } from "common/data/cart";
+import { useAppState } from "store";
 
 interface IProps {
   mix?: string;
 }
+
+const List = React.memo(function List() {
+  const { cart } = useAppState("cart");
+  return (
+    <>
+      {menu.items.map((item) => (
+        <DishCard
+          countInCart={getItemCountInCart(cart, item.id)}
+          item={item}
+          key={item.id}
+        />
+      ))}
+    </>
+  );
+});
 
 export const DishList = ({ mix }: IProps) => {
   return (
@@ -18,9 +35,7 @@ export const DishList = ({ mix }: IProps) => {
         {menu.title}
       </Heading>
       <div className={styles.DishList__list}>
-        {menu.items.map((item) => (
-          <DishCard item={item} key={item.id} />
-        ))}
+        <List />
       </div>
     </section>
   );

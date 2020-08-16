@@ -9,7 +9,7 @@ interface IProps {
   item: TMenuItem;
 }
 
-export const DishInfo = ({ item }: IProps) => {
+export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
   const { title, image, id, ingredients } = item;
   const imageUrl = `/images/dishes/full/${image}`;
 
@@ -31,7 +31,7 @@ export const DishInfo = ({ item }: IProps) => {
       </Box>
     </Box>
   );
-};
+});
 
 function capitalizeFirstLetter(string: string): string {
   return string.charAt(0).toUpperCase() + string.slice(1);

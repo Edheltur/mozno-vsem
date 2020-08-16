@@ -1,16 +1,26 @@
 import React from "react";
 import { Button } from "grommet";
+import { FormAdd, FormSubtract } from "grommet-icons";
 
-interface IRoundButtonProps {
+interface IProps {
   onClick: React.MouseEventHandler;
-  icon: JSX.Element;
+  iconName: "plus" | "minus";
 }
+const ICONS = {
+  plus: <FormAdd color="brand" />,
+  minus: <FormSubtract color="brand" />,
+};
 
-export const RoundButton = ({ onClick, icon }: IRoundButtonProps) => (
-  <Button
-    plain={false}
-    style={{ padding: 2, borderRadius: "50%" }}
-    icon={icon}
-    onClick={onClick}
-  />
-);
+export const RoundButton = React.memo(function RoundButton({
+  onClick,
+  iconName,
+}: IProps) {
+  return (
+    <Button
+      plain={false}
+      style={{ padding: 2, borderRadius: "50%" }}
+      icon={ICONS[iconName]}
+      onClick={onClick}
+    />
+  );
+});

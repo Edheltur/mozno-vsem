@@ -7,6 +7,6 @@ interface IProps {
   mix?: string;
 }
 
-export const Logo = ({ mix }: IProps) => (
-  <div className={cn(styles.Logo, mix)} />
-);
+export const Logo = React.memo(function Logo({ mix }: IProps) {
+  return <div className={cn(styles.Logo, mix)} />;
+});

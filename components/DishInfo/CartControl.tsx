@@ -1,8 +1,7 @@
 import React from "react";
-import { Box, Button, Text } from "grommet";
-import { FormAdd, FormSubtract } from "grommet-icons";
+import { Box, Button } from "grommet";
 import { getItemCountInCart } from "common/data/cart";
-import { useAppState } from "store/index";
+import { useAppState } from "store";
 
 import { RoundButton } from "components/ui/RoundedButton";
 import { TMenuItemId } from "common/data/menu";
@@ -30,13 +29,12 @@ export const CartControl = ({ id }: IProps) => {
 
   if (countInCart > 0) {
     return (
-      <Box direction="row" justify="between" align="center" {...SIZES}>
-        <RoundButton
-          onClick={handle.remove}
-          icon={<FormSubtract color="brand" />}
-        />
-        <Text>{countInCart}</Text>
-        <RoundButton onClick={handle.add} icon={<FormAdd color="brand" />} />
+      <Box direction="row" justify="stretch" align="center" {...SIZES}>
+        <RoundButton onClick={handle.remove} iconName="minus" />
+        <Box flex="grow" align="center">
+          {countInCart}
+        </Box>
+        <RoundButton onClick={handle.add} iconName="plus" />
       </Box>
     );
   }
