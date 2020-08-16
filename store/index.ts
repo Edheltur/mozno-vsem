@@ -14,6 +14,7 @@ export const store = createStoreon<State, Events>([
   config,
   analytics,
   process.env.NODE_ENV !== "production" &&
+    process.browser &&
     require("storeon/devtools").storeonDevtools,
 ]);
 
