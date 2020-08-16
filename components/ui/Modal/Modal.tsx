@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Heading, Layer } from "grommet";
+import { Box, Button, Heading, Layer } from "grommet";
+import { FormClose } from "grommet-icons";
 
 interface IProps {
   children: React.ReactNode;
@@ -16,12 +17,19 @@ export const Modal = ({ onClose, children }: IProps) => (
   >
     <Box pad="medium" width="medium">
       {children}
+      {onClose && (
+        <Button
+          style={{ position: "absolute", right: "0", top: "0" }}
+          icon={<FormClose />}
+          onClick={onClose}
+        />
+      )}
     </Box>
   </Layer>
 );
 
 export const ModalHeader: React.FC = ({ children }) => (
-  <Heading margin={{ bottom: "medium", top: "none" }} level="3">
+  <Heading margin={{ bottom: "medium", top: "none", right: "48px" }} level="3">
     {children}
   </Heading>
 );

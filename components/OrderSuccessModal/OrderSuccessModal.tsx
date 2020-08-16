@@ -18,11 +18,13 @@ export const OrderSuccessModal = () => {
     () => ({
       messengerLinkClick() {
         reachGoal(GOALS.orderComplete);
+      },
+      close() {
         dispatch("order/reset");
         dispatch("cart/clear");
       },
     }),
-    [dispatch]
+    [dispatch, reachGoal]
   );
 
   if (order.status !== "confirmed") {
@@ -30,7 +32,7 @@ export const OrderSuccessModal = () => {
   }
 
   return (
-    <Modal>
+    <Modal onClose={handle.close}>
       <Modal.Header>Ваш заказ №&#8239;{order.id} создан!</Modal.Header>
       <Modal.Content>
         <Text size="small">
