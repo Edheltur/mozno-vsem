@@ -10,7 +10,7 @@ interface IProps {
 }
 
 export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
-  const { title, image, id, ingredients } = item;
+  const { title, image, id, ingredients, price } = item;
   const imageUrl = `/images/dishes/full/${image}`;
 
   return (
@@ -19,7 +19,8 @@ export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
       <Heading level="2" textAlign="center">
         {title}
       </Heading>
-      <Box direction="row" justify="center">
+      <Box direction="row" justify="center" gap="medium" align="center">
+        <Text size="xlarge">{price}&nbsp;₽</Text>
         <CartControl id={id} />
       </Box>
       <Box as="ul">

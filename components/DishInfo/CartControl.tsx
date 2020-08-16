@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button } from "grommet";
+import { Box, Button, Text } from "grommet";
 import { getItemCountInCart } from "common/data/cart";
 import { useAppState } from "store";
 
@@ -32,7 +32,7 @@ export const CartControl = ({ id }: IProps) => {
       <Box direction="row" justify="stretch" align="center" {...SIZES}>
         <RoundButton onClick={handle.remove} iconName="minus" />
         <Box flex="grow" align="center">
-          {countInCart}
+          <Text size="large">{countInCart}</Text>
         </Box>
         <RoundButton onClick={handle.add} iconName="plus" />
       </Box>
