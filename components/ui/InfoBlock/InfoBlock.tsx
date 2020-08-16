@@ -6,7 +6,10 @@ interface IProps {
 }
 
 export const InfoBlock: React.FC<IProps> = ({ title, children }) => (
-  <Box width={{ max: "medium" }} margin={{ horizontal: "medium" }}>
+  <Box
+    width={{ max: "medium" }}
+    margin={{ horizontal: "medium", top: "small" }}
+  >
     <Heading level="2" textAlign="center" margin="small">
       {title}
     </Heading>
