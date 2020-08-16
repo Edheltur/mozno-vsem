@@ -20,13 +20,13 @@ export const TitleWithImage = React.memo(function TitleWithImage({
       <Link href="/dish/[id]" as={`/dish/${item.id}`}>
         <Image style={IMAGE_STYLE} src={imageUrl} alt={title} />
       </Link>
-      <Link href="/dish/[id]" as={`/dish/${item.id}`}>
-        <Anchor color="text" as="span">
-          <Text size="15px" textAlign="center">
+      <Text size="15px" textAlign="center">
+        <Link href="/dish/[id]" as={`/dish/${item.id}`}>
+          <Anchor color="text" as="span">
             {title}
-          </Text>
-        </Anchor>
-      </Link>
+          </Anchor>
+        </Link>
+      </Text>
     </Box>
   );
 });
