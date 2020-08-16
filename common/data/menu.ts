@@ -194,14 +194,14 @@ const rawItemsById = {
     ],
   },
   "12": {
-    title: "Фарш говядина-курица",
+    title: "Фарш из говядины и курицы",
     price: 500,
     weight: 1000,
     image: "farsh-govyadina-kurtisa.jpg",
     ingredients: [],
   },
   "13": {
-    title: "Фарш говядина-курица",
+    title: "Фарш из говядины и курицы",
     price: 300,
     weight: 500,
     image: "farsh-govyadina-kurtisa.jpg",
