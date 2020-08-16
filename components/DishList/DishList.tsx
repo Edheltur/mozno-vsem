@@ -1,6 +1,6 @@
 import React from "react";
 import cn from "classnames";
-import { Box, Heading } from "grommet";
+import { Heading } from "grommet";
 
 import * as menu from "common/data/menu";
 import { DishCard } from "components/DishCard";
@@ -30,13 +30,13 @@ const List = React.memo(function List() {
 
 export const DishList = ({ mix }: IProps) => {
   return (
-    <Box className={cn(styles.DishList, mix)}>
+    <div className={cn(styles.DishList, mix)}>
       <Heading level="2" textAlign="center">
         {menu.title}
       </Heading>
       <div className={styles.DishList__list}>
         <List />
       </div>
-    </Box>
+    </div>
   );
 };
