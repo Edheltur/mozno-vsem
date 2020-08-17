@@ -4,9 +4,9 @@ import { Anchor } from "grommet";
 
 export const Contacts = () => (
   <InfoBlock title="Кто мы?">
-    Мы занимается приготовлением и&nbsp;доставкой полезных полуфабрикатов.
+    Мы занимаемся приготовлением и&nbsp;доставкой полезных полуфабрикатов.
     Не&nbsp;используем вредные добавки, только натуральные специи
-    и&nbsp;пряности. А&nbsp;ещё у&nbsp;нас есть{" "}
+    и&nbsp;пряности. А&nbsp;ещё у&nbsp;нас есть
     <Anchor href="https://www.instagram.com/mozno_vsem">Instagram</Anchor>.
   </InfoBlock>
 );
