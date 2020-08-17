@@ -37,7 +37,15 @@ const rawItemsById = {
     weight: 300,
     amount: 2,
     image: "kotleti-treska.jpg",
-    ingredients: [],
+    ingredients: [
+      "филе трески",
+      "лук",
+      "соль",
+      "яйцо куриное",
+      "розмарин",
+      "мускатный орех",
+      "тимьян",
+    ],
   },
   "3": {
     title: "Ленивые голубцы",
