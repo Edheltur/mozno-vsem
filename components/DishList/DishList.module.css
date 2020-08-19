@@ -1,25 +1,51 @@
 .DishList__list {
-  display: grid;
-  grid-gap: 15px;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 720px;
+  justify-content: center;
+  margin-right: -30px;
 }
 
-@media (min-width: 330px) {
+.DishList__listItem {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+@supports (display: grid) {
   .DishList__list {
-    grid-gap: 20px;
+    margin-right: 0;
+    max-width: 100%;
   }
-}
 
-@media (min-width: 700px) {
-  .DishList__list {
-    grid-gap: 25px;
-    grid-template-columns: repeat(3, 1fr);
+  .DishList__listItem {
+    margin-right: 0;
+    margin-bottom: 0;
   }
-}
 
-@media (min-width: 900px) {
   .DishList__list {
-    grid-gap: 30px;
-    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    grid-gap: 15px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 330px) {
+    .DishList__list {
+      grid-gap: 20px;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .DishList__list {
+      grid-gap: 25px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 900px) {
+    .DishList__list {
+      grid-gap: 30px;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }

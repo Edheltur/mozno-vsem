@@ -12,6 +12,7 @@ import { TitleWithImage } from "./TitleWithImage/TitleWithImage";
 interface IProps {
   item: TMenuItem;
   countInCart: number;
+  mix?: string;
 }
 
 const Layout = React.memo(function Layout({ item, countInCart }: IProps) {
@@ -56,9 +57,10 @@ const Layout = React.memo(function Layout({ item, countInCart }: IProps) {
 export const DishCard = React.memo(function DishCard({
   item,
   countInCart,
+  mix,
 }: IProps) {
   return (
-    <Box width="150px">
+    <Box width="150px" className={mix}>
       <TitleWithImage item={item} />
       <Layout item={item} countInCart={countInCart} />
     </Box>

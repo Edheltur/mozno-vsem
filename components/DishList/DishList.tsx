@@ -22,6 +22,7 @@ const List = React.memo(function List() {
           countInCart={getItemCountInCart(cart, item.id)}
           item={item}
           key={item.id}
+          mix={styles.DishList__listItem}
         />
       ))}
     </>
