@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Text } from "grommet";
 
 import { useAppState } from "store";
-import { RoundButton } from "components/ui/RoundedButton/RoundButton";
+import { RoundButton } from "components/ui/RoundButton/RoundButton";
 import { TMenuItem } from "common/data/menu";
 
 import { WeightAndAmount } from "./WeightAndAmount";

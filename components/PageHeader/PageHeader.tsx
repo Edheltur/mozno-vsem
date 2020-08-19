@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const LogoLink = React.memo(function LogoLink() {
   return (
-    <Link href="/">
+    <Link passHref href="/">
       <a>
         <Logo />
       </a>

@@ -24,12 +24,8 @@ export const TitleWithImage = React.memo(function TitleWithImage({
         />
       </Link>
       <Text size="15px" textAlign="center">
-        <Link href="/dish/[id]" as={`/dish/${item.id}`}>
-          <Anchor
-            className={styles.TitleWithImage__link}
-            color="text"
-            as="span"
-          >
+        <Link passHref href="/dish/[id]" as={`/dish/${item.id}`}>
+          <Anchor className={styles.TitleWithImage__link} color="text">
             {title}
           </Anchor>
         </Link>

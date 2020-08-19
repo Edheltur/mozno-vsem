@@ -3,7 +3,7 @@ import { Box, Button, Text } from "grommet";
 import { getItemCountInCart } from "common/data/cart";
 import { useAppState } from "store";
 
-import { RoundButton } from "components/ui/RoundedButton";
+import { RoundButton } from "components/ui/RoundButton";
 import { TMenuItemId } from "common/data/menu";
 
 interface IProps {

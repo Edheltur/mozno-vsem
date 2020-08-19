@@ -23,6 +23,10 @@ export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
         <Text size="xlarge">{price}&nbsp;₽</Text>
         <CartControl id={id} />
       </Box>
+
+      <Heading level="3" margin={{ bottom: "none" }}>
+        Состав:
+      </Heading>
       <Box as="ul">
         {ingredients.map((ingredient, index) => (
           <Text key={index} as="li">

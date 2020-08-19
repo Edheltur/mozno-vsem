@@ -18,7 +18,7 @@ export class TelegramReporter {
       .concat("–".repeat(20))
       .concat(...itemsLines)
       .concat("–".repeat(20))
-      .concat(`*Итого:* ${getTotalPrice(cart)}₽`)
+      .concat(`*Итого:* ${getTotalPrice(cart)}₽ (без учёта доставки)`)
       .join("\n");
   }
 
