@@ -23,4 +23,5 @@
 
 .PageHeader__cart {
   padding: 20px;
+  cursor: pointer;
 }
