@@ -71,9 +71,9 @@ export function Items({ cart }: IProps) {
     <Text size="small">
       <Table>
         <TableBody>
-          {selectedItems.map(({ id, title }) => (
+          {selectedItems.map(({ id }) => (
             <TableRow key={id}>
-              <TableCell>
+              <TableCell size="100%">
                 <Title id={id} />
               </TableCell>
               <TableCell
@@ -101,7 +101,7 @@ export function Items({ cart }: IProps) {
         </TableBody>
         <TableFooter>
           <TableRow>
-            <TableCell colSpan={3} style={{ borderCollapse: "separate" }}>
+            <TableCell colSpan={3}>
               Итого: {totalPrice + deliveryCost}&nbsp;₽
             </TableCell>
           </TableRow>
