@@ -145,7 +145,7 @@ const rawItemsById = {
     price: 440,
     weight: 520,
     amount: 4,
-    image: "kotleti-indeyka-imbir.jpg",
+    image: "kotleti-kuritsa-imbir.jpg",
     ingredients: [
       "куриное филе",
       "имбирь",
@@ -235,14 +235,14 @@ const rawItemsById = {
     title: "Фарш из курицы",
     price: 500,
     weight: 1000,
-    image: "empty.jpg",
+    image: "farsh-kuritsa.jpg",
     ingredients: ["филе курицы"],
   },
   "17": {
     title: "Фарш из курицы",
     price: 300,
     weight: 500,
-    image: "empty.jpg",
+    image: "farsh-kuritsa.jpg",
     ingredients: ["филе курицы"],
   },
   "18": {
