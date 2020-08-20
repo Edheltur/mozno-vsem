@@ -79,7 +79,7 @@ export function Items({ cart }: IProps) {
               <TableCell
                 align={"end" as any}
                 verticalAlign="top"
-                pad={{ horizontal: "none", vertical: "xsmall" }}
+                pad={{ horizontal: "none", vertical: "xxsmall" }}
               >
                 <Count id={id} />
               </TableCell>
@@ -101,8 +101,9 @@ export function Items({ cart }: IProps) {
         </TableBody>
         <TableFooter>
           <TableRow>
-            <TableCell colSpan={3}>
-              Итого: {totalPrice + deliveryCost}&nbsp;₽
+            <TableCell colSpan={2}>Итого</TableCell>
+            <TableCell align={"end" as any} verticalAlign="top">
+              {totalPrice + deliveryCost}&nbsp;₽
             </TableCell>
           </TableRow>
         </TableFooter>
