@@ -1,16 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 
 interface IProps {
   url: string;
 }
 
-export const Image = ({ url }: IProps) => (
-  <div
-    style={{
-      backgroundImage: `url(${url})`,
-      backgroundSize: "cover",
-      width: "100%",
-      paddingTop: "100%",
-    }}
-  />
-);
+export const Image = styled.div<IProps>`
+  background-image: url(${({ url }) => url});
+  background-size: cover;
+  width: 100%;
+  padding-top: 100%;
+`;
