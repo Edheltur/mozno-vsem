@@ -24,26 +24,28 @@ export const Contacts = () => {
       <Text size="medium">
         <Box align="center">
           <Heading level="3">Приём заказов</Heading>
-          <Anchor href={"tel:+" + config.whatsAppPhoneNumber}>
-            <Box direction="row" align="center">
-              <Phone color="brand" className={styles.Contacts__icon} />
-              {formattedPhone}
-            </Box>
-          </Anchor>
+          <Box align="center" gap="small">
+            <Anchor href={"tel:+" + config.whatsAppPhoneNumber}>
+              <Box direction="row" align="center">
+                <Phone color="brand" className={styles.Contacts__icon} />
+                {formattedPhone}
+              </Box>
+            </Anchor>
 
-          <Anchor href={`https://wa.me/${config.whatsAppPhoneNumber}`}>
-            <Box direction="row" align="center">
-              <WhatsApp color="brand" className={styles.Contacts__icon} />
-              {formattedPhone}
-            </Box>
-          </Anchor>
+            <Anchor href={`https://wa.me/${config.whatsAppPhoneNumber}`}>
+              <Box direction="row" align="center">
+                <WhatsApp color="brand" className={styles.Contacts__icon} />
+                {formattedPhone}
+              </Box>
+            </Anchor>
 
-          <Anchor href={`https://t.me/${config.telegramUsername}`}>
-            <Box direction="row" align="center">
-              <Telegram color="brand" className={styles.Contacts__icon} />
-              {config.telegramUsername}
-            </Box>
-          </Anchor>
+            <Anchor href={`https://t.me/${config.telegramUsername}`}>
+              <Box direction="row" align="center">
+                <Telegram color="brand" className={styles.Contacts__icon} />
+                {config.telegramUsername}
+              </Box>
+            </Anchor>
+          </Box>
 
           <Heading level="3">Наши блюда</Heading>
           <Anchor href="https://www.instagram.com/mozno_vsem">
