@@ -17,6 +17,7 @@ const StyledButton = styled(Button)`
   border-radius: 50%;
   touch-action: manipulation;
 `;
+
 export const RoundButton = React.memo(function RoundButton({
   onClick,
   iconName,
