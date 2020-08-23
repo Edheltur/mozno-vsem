@@ -14,7 +14,7 @@ export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
   const imageUrl = `/images/dishes/full/${image}`;
 
   return (
-    <Box align="stretch" width="600px" pad="small">
+    <Box align="stretch" width="600px" pad="medium">
       <Image url={imageUrl} />
       <Heading level="2" textAlign="center">
         {title}

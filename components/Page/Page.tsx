@@ -6,6 +6,7 @@ import { Favicons } from "components/Favicons";
 import { PageHeader } from "components/PageHeader";
 import { OrderSuccessModal } from "components/OrderSuccessModal";
 import { CartModal } from "components/CartModal";
+import { PageMenu } from "components/PageMenu";
 
 export const Page: React.FC = ({ children }) => {
   return (
@@ -20,7 +21,8 @@ export const Page: React.FC = ({ children }) => {
         <Favicons />
       </Head>
       <PageHeader />
-      <Main pad={{ horizontal: "small", bottom: "large" }} align="center">
+      <PageMenu />
+      <Main pad={{ bottom: "large" }} align="center">
         {children}
       </Main>
       <CartModal />

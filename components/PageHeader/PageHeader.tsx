@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import { useAppState } from "store";
 import { Logo } from "components/Logo";
@@ -7,7 +8,6 @@ import { Cart } from "grommet-icons";
 import { Box, Stack, Text } from "grommet";
 
 import styles from "./PageHeader.module.css";
-import Link from "next/link";
 
 const LogoLink = React.memo(function LogoLink() {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Heading, Text } from "grommet";
 
 interface IProps {
-  title: string;
+  title?: string;
 }
 
 export const InfoBlock: React.FC<IProps> = ({ title, children }) => (
@@ -10,9 +10,11 @@ export const InfoBlock: React.FC<IProps> = ({ title, children }) => (
     width={{ max: "medium" }}
     margin={{ horizontal: "medium", top: "small" }}
   >
-    <Heading level="2" textAlign="center" margin="small">
-      {title}
-    </Heading>
+    {title && (
+      <Heading level="2" textAlign="center" margin="small">
+        {title}
+      </Heading>
+    )}
     <Text textAlign="center" size="small">
       {children}
     </Text>
