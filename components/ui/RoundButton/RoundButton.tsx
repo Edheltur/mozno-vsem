@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "grommet";
 import { FormAdd, FormSubtract } from "grommet-icons";
+import styled from "styled-components";
 
 interface IProps {
   onClick: React.MouseEventHandler;
@@ -11,16 +12,16 @@ const ICONS = {
   minus: <FormSubtract color="brand" />,
 };
 
+const StyledButton = styled(Button)`
+  padding: 2px;
+  border-radius: 50%;
+  touch-action: manipulation;
+`;
 export const RoundButton = React.memo(function RoundButton({
   onClick,
   iconName,
 }: IProps) {
   return (
-    <Button
-      plain={false}
-      style={{ padding: 2, borderRadius: "50%" }}
-      icon={ICONS[iconName]}
-      onClick={onClick}
-    />
+    <StyledButton plain={false} icon={ICONS[iconName]} onClick={onClick} />
   );
 });
