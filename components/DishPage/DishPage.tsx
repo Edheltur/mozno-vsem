@@ -1,5 +1,6 @@
 import React from "react";
 import Error from "next/error";
+import Head from "next/head";
 
 import { DishInfo } from "components/DishInfo";
 import { itemsBydId, TMenuItemId } from "common/data/menu";
@@ -12,5 +13,15 @@ export const DishPage = ({ id }: IProps) => {
   if (!id) {
     return <Error statusCode={404} />;
   }
-  return <DishInfo item={itemsBydId[id]} />;
+
+  const item = itemsBydId[id];
+
+  return (
+    <>
+      <Head>
+        <title>{item.title} &mdash; заказать c доставкой</title>
+      </Head>
+      <DishInfo item={item} />
+    </>
+  );
 };

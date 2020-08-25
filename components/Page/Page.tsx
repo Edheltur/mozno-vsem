@@ -12,7 +12,7 @@ export const Page: React.FC = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Можно всем</title>
+        <title>Можно всем &mdash; доставка полезных полуфабрикатов</title>
         <meta
           name="description"
           content="Полуфабрикаты «МОЖНО ВСЕМ!» - Магазин здорового питания"
