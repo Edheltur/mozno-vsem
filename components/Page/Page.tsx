@@ -12,10 +12,10 @@ export const Page: React.FC = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Можно всем &mdash; доставка полезных полуфабрикатов</title>
+        <title>Можно всем – доставка полезных полуфабрикатов</title>
         <meta
           name="description"
-          content="Полуфабрикаты «МОЖНО ВСЕМ!» - Магазин здорового питания"
+          content="Полуфабрикаты «МОЖНО ВСЕМ!» – Магазин здорового питания"
         />
         <link rel="dns-prefetch" href="https://mc.yandex.ru" />
         <Favicons />

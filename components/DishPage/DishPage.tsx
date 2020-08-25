@@ -19,7 +19,7 @@ export const DishPage = ({ id }: IProps) => {
   return (
     <>
       <Head>
-        <title>{item.title} &mdash; заказать c доставкой</title>
+        <title>{item.title} – заказать c доставкой</title>
       </Head>
       <DishInfo item={item} />
     </>
