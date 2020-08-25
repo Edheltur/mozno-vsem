@@ -8,7 +8,7 @@ export function createTelegramClient() {
 
   return new TelegramClient(
     process.env.TELEGRAM_BOT_SECRET,
-    Number(process.env.TELEGRAM_API_TIMEOUT_MS ?? 2500)
+    Number(process.env.TELEGRAM_API_TIMEOUT_MS ?? 5000)
   );
 }
 
