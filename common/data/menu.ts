@@ -191,7 +191,7 @@ const rawItemsById = {
     price: 300,
     weight: 300,
     amount: 2,
-    image: "empty.jpg",
+    image: "kotleti-sudak-mintai.jpg",
     ingredients: [
       "филе судака",
       "филе минтая",
