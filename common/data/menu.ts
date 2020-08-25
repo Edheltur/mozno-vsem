@@ -292,7 +292,7 @@ const rawItemsById = {
 } as const;
 
 // prettier-ignore
-const OrderedIds: ReadonlyArray<TMenuItemId> = [
+const orderedIds: ReadonlyArray<TMenuItemId> = [
   "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
   "11", "22", "12", "13", "14", "15", "16", "17", "18",
   "19",  "20", "21"
@@ -301,18 +301,15 @@ const OrderedIds: ReadonlyArray<TMenuItemId> = [
 export const itemsBydId: Readonly<Record<
   TMenuItemId,
   TMenuItem
->> = OrderedIds.reduce((acc, id) => {
+>> = orderedIds.reduce((acc, id) => {
   acc[id] = {
-    ...itemsBydId[id],
+    ...rawItemsById[id],
     id,
   };
 
   return acc;
 }, {} as Record<TMenuItemId, TMenuItem>);
 
-export const items = Object.values(itemsBydId)
-  .map((item) => item.id)
-  .sort((a, b) => Number(a) - Number(b))
-  .map((id) => itemsBydId[id]);
+export const items = orderedIds.map((id) => itemsBydId[id]);
 
 export const title = "Меню";
