@@ -274,15 +274,36 @@ const rawItemsById = {
     image: "empty.jpg",
     ingredients: ["филе кеты"],
   },
+  "22": {
+    title: "Кальмары фаршировоанные",
+    price: 420,
+    weight: 260,
+    amount: 2,
+    image: "empty.jpg",
+    ingredients: [
+      "тушка кальмара",
+      "фарш кеты",
+      "фарш трески",
+      "рис бурый",
+      "лук",
+      "специи",
+    ],
+  },
 } as const;
+
+// prettier-ignore
+const OrderedIds: ReadonlyArray<TMenuItemId> = [
+  "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+  "11", "22", "12", "13", "14", "15", "16", "17", "18",
+  "19",  "20", "21"
+];
 
 export const itemsBydId: Readonly<Record<
   TMenuItemId,
   TMenuItem
->> = Object.entries(rawItemsById).reduce((acc, [rawId, item]) => {
-  const id = rawId as TMenuItemId;
+>> = OrderedIds.reduce((acc, id) => {
   acc[id] = {
-    ...item,
+    ...itemsBydId[id],
     id,
   };
 
