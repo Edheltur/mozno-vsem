@@ -6,9 +6,10 @@ export const DeliveryInfo = () => {
   const { config } = useAppState("config");
   return (
     <InfoBlock title="Условия доставки">
-      Доставляем каждый четверг в&nbsp;пределах Екатеринбурга. Стоимость
-      доставки&nbsp;-&nbsp;{config.deliveryPrice}&nbsp;₽. При&nbsp;заказе
-      от&nbsp;{config.freeDeliveryFrom}&nbsp;₽ доставка бесплатная.
+      Доставляем по четвергам и воскресеньям в&nbsp;пределах Екатеринбурга.
+      Стоимость доставки&nbsp;-&nbsp;{config.deliveryPrice}&nbsp;₽.
+      При&nbsp;заказе от&nbsp;{config.freeDeliveryFrom}&nbsp;₽ доставка
+      бесплатная.
     </InfoBlock>
   );
 };
