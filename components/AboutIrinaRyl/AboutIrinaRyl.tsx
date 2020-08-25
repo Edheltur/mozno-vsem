@@ -1,7 +1,8 @@
 import React from "react";
 import { InfoBlock } from "components/ui/InfoBlock";
-import { Anchor, Box } from "grommet";
+import { Box } from "grommet";
 import { Image } from "components/ui/Image";
+import { InstagramLink } from "components/InstagramLink";
 
 export const AboutIrinaRyl = () => (
   <>
@@ -13,10 +14,12 @@ export const AboutIrinaRyl = () => (
       <Image url="/images/about/irina-ryl.jpg" />
     </Box>
     <InfoBlock title="Кто я?">
-      Меня зовут Ирина Рыль, я практикующий врач-диетолог. Веду{" "}
-      <Anchor href="https://www.instagram.com/ryl.marafon">блог</Anchor>{" "}
-      о&nbsp;правильном питании, организую школу-марафон для&nbsp;желающих
-      наладить свой обмен веществ. А теперь запускаю линейку полуфабрикатов.
+      Меня зовут Ирина Рыль, я практикующий врач-диетолог (стаж в профессии 24
+      года). Веду <InstagramLink profile="ryl.marafon">блог</InstagramLink>{" "}
+      о&nbsp;рациональном питании, организую школу-марафон для&nbsp;желающих
+      наладить свой обмен веществ, избавиться от&nbsp;инсулинорезистентности
+      и&nbsp;решить проблемы с&nbsp;жкт. А&nbsp;теперь запустила линейку
+      полуфабрикатов.
     </InfoBlock>
   </>
 );

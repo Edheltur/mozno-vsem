@@ -7,6 +7,7 @@ import { Telegram, WhatsApp } from "components/ui/icons";
 import { useAppState } from "store/index";
 
 import styles from "./Contacts.module.css";
+import { InstagramLink } from "components/InstagramLink";
 
 function formatPhone(phone: string) {
   const countryCode = phone[0];
@@ -48,20 +49,20 @@ export const Contacts = () => {
           </Box>
 
           <Heading level="3">Наши блюда</Heading>
-          <Anchor href="https://www.instagram.com/mozno_vsem">
+          <InstagramLink profile="mozno_vsem">
             <Box direction="row" align="center">
               <Instagram color="brand" className={styles.Contacts__icon} />
               mozno_vsem
             </Box>
-          </Anchor>
+          </InstagramLink>
 
           <Heading level="3">Блог Ирины Рыль</Heading>
-          <Anchor href="https://www.instagram.com/ryl.marafon">
+          <InstagramLink profile="ryl.marafon">
             <Box direction="row" align="center">
               <Instagram color="brand" className={styles.Contacts__icon} />
               ryl.marafon
             </Box>
-          </Anchor>
+          </InstagramLink>
         </Box>
       </Text>
     </InfoBlock>
