@@ -12,7 +12,7 @@ import styles from "./PageHeader.module.css";
 const LogoLink = React.memo(function LogoLink() {
   return (
     <Link passHref href="/">
-      <a>
+      <a title="Главная">
         <Logo />
       </a>
     </Link>
