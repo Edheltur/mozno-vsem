@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import Head from "next/head";
+
 import { useYandexMetrika } from "client/helpers/yandex-metrika";
 
 interface IProps {
@@ -42,15 +44,24 @@ export const YandexMetrika = React.memo(function YandexMetrika({
     });
   });
 
+  if (!counterId) {
+    return null;
+  }
+
   return (
-    <noscript>
-      <div>
-        <img
-          src={`https://mc.yandex.ru/watch/${counterId}`}
-          style={{ position: "absolute", left: -9999 }}
-          alt=""
-        />
-      </div>
-    </noscript>
+    <>
+      <Head>
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+      </Head>
+      <noscript>
+        <div>
+          <img
+            src={`https://mc.yandex.ru/watch/${counterId}`}
+            style={{ position: "absolute", left: -9999 }}
+            alt=""
+          />
+        </div>
+      </noscript>
+    </>
   );
 });

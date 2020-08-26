@@ -8,22 +8,35 @@ import {
   userVars,
 } from "lyam";
 
+const noop = () => {};
+
+const fakeMetrika = {
+  counterId: null,
+  hit: noop,
+  reachGoal: noop,
+  extLink: noop,
+  userVars: noop,
+  notBounce: noop,
+};
+
 export function useYandexMetrika() {
   const {
     config: { yandexMetrikaCounterId: counterId },
   } = useAppState("config");
 
-  return useMemo(
-    () => ({
+  return useMemo(() => {
+    if (!counterId) {
+      return fakeMetrika;
+    }
+    return {
       counterId,
       hit: hit.bind(null, counterId),
       reachGoal: reachGoal.bind(null, counterId),
       extLink: extLink.bind(null, counterId),
       userVars: userVars.bind(null, counterId),
       notBounce: notBounce.bind(null, counterId),
-    }),
-    [counterId]
-  );
+    };
+  }, [counterId]);
 }
 
 export function reachGoal(

@@ -17,7 +17,6 @@ export const Page: React.FC = ({ children }) => {
           name="description"
           content="Полуфабрикаты «МОЖНО ВСЕМ!» – Магазин здорового питания"
         />
-        <link rel="preconnect" href="https://mc.yandex.ru" />
         <Favicons />
       </Head>
       <PageHeader />

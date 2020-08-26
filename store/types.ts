@@ -12,7 +12,7 @@ export interface State {
     deliveryPrice: number;
     telegramUsername: string;
     whatsAppPhoneNumber: string;
-    yandexMetrikaCounterId: string;
+    yandexMetrikaCounterId?: string;
   };
 }
 

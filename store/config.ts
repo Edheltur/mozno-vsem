@@ -8,7 +8,7 @@ export const config: StoreonModule<State, Events> = (store) => {
       deliveryPrice: 200,
       telegramUsername: process.env.NEXT_PUBLIC_TELEGRAM_USER_NAME ?? "",
       whatsAppPhoneNumber: process.env.NEXT_PUBLIC_WHATS_APP_PHONE_NUMBER ?? "",
-      yandexMetrikaCounterId: "66307693",
+      yandexMetrikaCounterId: process.env.NEXT_PUBLIC_YANDEX_METRIKA_COUNTER,
     },
   }));
 };
