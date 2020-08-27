@@ -8,7 +8,7 @@ import {
 
 export const analytics: StoreonModule<State, Events> = (store) => {
   store.on("order/openCart", (state) => {
-    reachGoal(state, GOALS.orderComplete);
+    reachGoal(state, GOALS.openCart);
   });
 
   store.on("cart/changeCount", (state, { delta }) => {
