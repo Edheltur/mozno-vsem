@@ -289,12 +289,28 @@ const rawItemsById = {
       "специи",
     ],
   },
+  "23": {
+    title: "Капустники",
+    price: 320,
+    weight: 360,
+    amount: 3,
+    image: "empty.jpg",
+    ingredients: [
+      "капуста",
+      "лук белый",
+      "яйцо куриное",
+      "чеснок",
+      "соль",
+      "тимьян",
+      "мука рисовая",
+    ],
+  },
 } as const;
 
 // prettier-ignore
 const orderedIds: ReadonlyArray<TMenuItemId> = [
   "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-  "11", "22", "13", "15", "17", "19", "21"
+  "11", "22", "23", "13", "15", "17", "19", "21"
 ];
 
 export const itemsBydId: Readonly<Record<
