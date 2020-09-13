@@ -16,7 +16,7 @@
     "grommet": "2.14.0",
     "http-status-codes": "1.4.0",
     "next": "9.5.2",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "storeon": "3.0.3",
