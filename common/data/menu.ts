@@ -410,9 +410,8 @@ const rawItemsById = {
 // prettier-ignore
 const orderedIds: ReadonlyArray<TMenuItemId> = [
   "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-  "11", "22", "23", "24", "25", "26", "27", "28", "29",
-  "13", "15", "17", "19", "21",
-
+  "11", "22", "23",   "13", "15", "17", "19", "21",
+  "24", "25", "26", "27", "28", "29",
 ];
 
 export const itemsBydId: Readonly<Record<
