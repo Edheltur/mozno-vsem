@@ -308,7 +308,7 @@ const rawItemsById = {
   "24": {
     title: "Хлеб полбяно-пшеничный",
     price: 200,
-    weight: 450,
+    weight: 540,
     amount: 1,
     image: "polyabno-pshenichnui.jpg",
     ingredients: [
@@ -323,7 +323,7 @@ const rawItemsById = {
   "25": {
     title: "Хлеб бездрожжевой ржаной",
     price: 200,
-    weight: 450,
+    weight: 540,
     amount: 1,
     image: "rzhanoy.jpg",
     ingredients: [
@@ -353,7 +353,7 @@ const rawItemsById = {
   "27": {
     title: "Хлеб бездрожжевой Бородинский",
     price: 200,
-    weight: 450,
+    weight: 540,
     amount: 1,
     image: "borodinskiy.jpg",
     ingredients: [
@@ -370,7 +370,7 @@ const rawItemsById = {
   "28": {
     title: "Хлеб бездрожжевой цельнозерновой десертный",
     price: 240,
-    weight: 450,
+    weight: 540,
     amount: 1,
     image: "desertniy.jpg",
     ingredients: [
