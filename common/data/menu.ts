@@ -309,7 +309,6 @@ const rawItemsById = {
     title: "Хлеб полбяно-пшеничный",
     price: 200,
     weight: 540,
-    amount: 1,
     image: "polyabno-pshenichnui.jpg",
     ingredients: [
       "вода",
@@ -324,7 +323,6 @@ const rawItemsById = {
     title: "Хлеб бездрожжевой ржаной",
     price: 200,
     weight: 540,
-    amount: 1,
     image: "rzhanoy.jpg",
     ingredients: [
       "вода",
@@ -337,7 +335,6 @@ const rawItemsById = {
     title: "Хлеб бездрожжевой цельнозерновой с прованскими травами",
     price: 160,
     weight: 450,
-    amount: 1,
     image: "celnozernovoy-provanskie.jpg",
     ingredients: [
       "вода",
@@ -354,7 +351,6 @@ const rawItemsById = {
     title: "Хлеб бездрожжевой Бородинский",
     price: 200,
     weight: 540,
-    amount: 1,
     image: "borodinskiy.jpg",
     ingredients: [
       "вода",
@@ -371,7 +367,6 @@ const rawItemsById = {
     title: "Хлеб бездрожжевой цельнозерновой десертный",
     price: 240,
     weight: 540,
-    amount: 1,
     image: "desertniy.jpg",
     ingredients: [
       "вода",
@@ -390,7 +385,6 @@ const rawItemsById = {
     title: "Хлеб бездрожжевой цельнозерновой с семечками",
     price: 160,
     weight: 450,
-    amount: 1,
     image: "celnozernovoy-semechki.jpg",
     ingredients: [
       "вода",
@@ -405,13 +399,73 @@ const rawItemsById = {
       "кунжут",
     ],
   },
+  "30": {
+    title: "Котлеты куриные с брокколи",
+    price: 280,
+    weight: 300,
+    amount: 2,
+    image: "kotleti-kuritsa-brokkoli.jpg",
+    ingredients: [
+      "куриная грудка",
+      "куриное бедро",
+      "брокколи",
+      "лук репка",
+      "специи",
+      "яйцо куриное",
+      "чеснок",
+      "соль",
+    ],
+  },
+  "31": {
+    title: "Биточки из минтая с креветками",
+    price: 350,
+    weight: 300,
+    amount: 3,
+    image: "kotleti-mintay-krevetka.jpg",
+    ingredients: [
+      "филе минтая",
+      "креветка",
+      "лук",
+      "яйцо куриное",
+      "укроп",
+      "куркума",
+      "чеснок",
+      "лимон",
+      "соль",
+      "перец",
+    ],
+  },
+  "32": {
+    title: "Перец фаршированный овощной",
+    price: 200,
+    weight: 400,
+    amount: 2,
+    image: "perci-s-ovoshami.jpg",
+    ingredients: [
+      "кабачок",
+      "баклажан",
+      "перец сладкий",
+      "помидор",
+      "лук репка",
+      "морковь",
+      "укроп",
+      "петрушка",
+      "чеснок",
+      "масло оливковое",
+      "куркума",
+      "прованские травы",
+      "мускатный орех",
+      "соль",
+    ],
+  },
 } as const;
 
 // prettier-ignore
 const orderedIds: ReadonlyArray<TMenuItemId> = [
   "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-  "11", "22", "23",  "13", "15", "17", "19", "21",
-  "24", "25", "26", "27", "28", "29",
+  "11", "22", "23", "30", "31", "32",
+  "13", "15", "17", "19", "21", // фарш
+  "24", "25", "27", "26", "28", "29", // хлеб
 ];
 
 export const itemsBydId: Readonly<Record<
