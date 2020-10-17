@@ -15,7 +15,7 @@ const rawItemsById = {
     title: "Гречаники",
     price: 280,
     weight: 400,
-    amount: 2,
+    amount: 4,
     image: "grechaniki.jpg",
     ingredients: [
       "фарш курица",
