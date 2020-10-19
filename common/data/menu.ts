@@ -458,13 +458,27 @@ const rawItemsById = {
       "соль",
     ],
   },
+  "33": {
+    title: "Фарш из говядины",
+    price: 400,
+    weight: 500,
+    image: "farsh-govyadina-kurtisa.jpg",
+    ingredients: ["говядина"],
+  },
+  "34": {
+    title: "Фарш для животных",
+    price: 100,
+    weight: 500,
+    image: "farsh-kuritsa.jpg",
+    ingredients: ["обрезь говядины", "обрезь курицы", "обрезь индейки"],
+  },
 } as const;
 
 // prettier-ignore
 const orderedIds: ReadonlyArray<TMenuItemId> = [
   "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
   "11", "22", "23", "30", "31", "32",
-  "13", "15", "17", "19", "21", // фарш
+  "13", "15", "17", "19", "21", "33", "34", // фарш
   "24", "25", "27", "26", "28", "29", // хлеб
 ];
 
