@@ -3,9 +3,9 @@ import { BadRequestError, HttpStatus } from "common/http";
 import { query as q } from "faunadb";
 import { Collection, createDbClient, createDocument } from "server/faunadb";
 import { createHandler } from "server/helpers/handlers";
-import { isInteger, isMenuItemId, isObject } from "common/validators";
 import { TApiResponseResult } from "common/api";
 import { createTelegramReporter } from "server/telegram";
+import { isOrder } from "common/data/order";
 
 export type TOrdersEndpoint = {
   POST: TApiResponseResult<{ orderId: number }>;
@@ -13,15 +13,18 @@ export type TOrdersEndpoint = {
 
 export default createHandler<TOrdersEndpoint>({
   POST: async (req, res) => {
-    const { countById } = req.body;
+    const order = req.body;
 
-    if (!isObject(countById, isMenuItemId, isInteger)) {
+    if (!isOrder(order)) {
       throw new BadRequestError();
     }
 
     const data = {
       date: q.Now(),
-      countById,
+      countById: order.cart.countById,
+      address: order.user.address,
+      name: order.user.name,
+      phone: order.user.phone,
     };
 
     const db = createDbClient();
@@ -29,7 +32,7 @@ export default createHandler<TOrdersEndpoint>({
 
     const orderId = await createDocument(db, Collection.orders, data);
 
-    await reporter.sendReport(orderId, { countById });
+    await reporter.sendReport(orderId, order);
     return responseWithData(res, HttpStatus.CREATED, { orderId });
   },
 });

@@ -1,18 +1,20 @@
 import { createContext } from "react";
 import { createStoreon } from "storeon";
+import { customContext } from "storeon/react";
+import { persistState } from "@storeon/localstorage";
 
 import { Events, State } from "./types";
 import { order } from "./order";
 import { cart } from "./cart";
-import { config } from "./config";
 import { analytics } from "./analytics";
-import { customContext } from "storeon/react";
+import { user } from "./user";
 
 export const store = createStoreon<State, Events>([
   cart,
   order,
-  config,
   analytics,
+  user,
+  persistState(["cart", "user"]),
   process.env.NODE_ENV !== "production" &&
     process.browser &&
     require("storeon/devtools").storeonDevtools,

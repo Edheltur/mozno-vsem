@@ -1,6 +1,6 @@
 import type { TOrdersEndpoint } from "pages/api/order";
 import { fetchApi } from "client/helpers/api";
-import { ICart } from "common/data/cart";
+import { IOrder } from "common/data/order";
 
-export const createOrder = (cart: ICart) =>
-  fetchApi<TOrdersEndpoint, "POST">("/api/order", "POST", cart);
+export const createOrder = (order: IOrder) =>
+  fetchApi<TOrdersEndpoint, "POST">("/api/order", "POST", order);

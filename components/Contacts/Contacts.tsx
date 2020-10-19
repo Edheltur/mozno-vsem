@@ -8,6 +8,7 @@ import { useAppState } from "store/index";
 
 import styles from "./Contacts.module.css";
 import { InstagramLink } from "components/InstagramLink";
+import { config } from "common/config";
 
 function formatPhone(phone: string) {
   const countryCode = phone[0];
@@ -18,7 +19,6 @@ function formatPhone(phone: string) {
 }
 
 export const Contacts = () => {
-  const { config } = useAppState("config");
   const formattedPhone = formatPhone(config.whatsAppPhoneNumber);
   return (
     <InfoBlock>

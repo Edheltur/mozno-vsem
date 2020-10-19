@@ -15,6 +15,7 @@ import { FormAdd, FormSubtract } from "grommet-icons";
 import { useAppState } from "store";
 import { getSelectedItems, getTotalPrice, ICart } from "common/data/cart";
 import { itemsById, TMenuItemId } from "common/data/menu";
+import { getDeliveryCost } from "common/data/price";
 
 interface IProps {
   cart: ICart;
@@ -62,10 +63,7 @@ const Title = ({ id }: { id: TMenuItemId }) => {
 export function Items({ cart }: IProps) {
   const selectedItems = getSelectedItems(cart);
   const totalPrice = getTotalPrice(cart);
-  const { config } = useAppState("config");
-  const { freeDeliveryFrom, deliveryPrice } = config;
-
-  const deliveryCost = totalPrice > freeDeliveryFrom ? 0 : deliveryPrice;
+  const deliveryCost = getDeliveryCost(totalPrice);
 
   return (
     <Text size="small">

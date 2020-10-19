@@ -9,8 +9,7 @@ import { Modal } from "components/ui/Modal";
 
 export const CartModal = () => {
   const { order, cart, dispatch } = useAppState("order", "cart");
-  const isSubmitting = order.status === "submitting";
-  const isOpen = order.status === "cart" || isSubmitting;
+  const isOpen = order.status === "cart";
   const isEmpty = getSelectedItems(cart).length === 0;
 
   const handle = React.useMemo(
@@ -21,7 +20,7 @@ export const CartModal = () => {
         dispatch("cart/clear");
         dispatch("order/reset");
       },
-      submit: () => dispatch("order/submit"),
+      checkout: () => dispatch("order/checkout"),
     }),
     [dispatch]
   );
@@ -58,14 +57,12 @@ export const CartModal = () => {
           secondary
           icon={<Trash />}
           onClick={handle.clearCart}
-          disabled={isSubmitting}
           type="reset"
         />
         <Button
           primary
-          label="Заказать"
-          onClick={handle.submit}
-          disabled={isSubmitting}
+          label="Оформить заказ"
+          onClick={handle.checkout}
           type="submit"
         />
       </Modal.Controls>

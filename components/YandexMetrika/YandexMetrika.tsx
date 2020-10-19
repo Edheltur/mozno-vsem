@@ -2,14 +2,13 @@ import React, { useEffect } from "react";
 import Head from "next/head";
 
 import { useYandexMetrika } from "client/helpers/yandex-metrika";
+import { useEffectOnce } from "client/helpers/hooks";
 
 interface IProps {
   url: string;
 }
 
 const NOT_BOUNCE_INTERVAL_MS = 15000;
-
-const useEffectOnce = (effect: React.EffectCallback) => useEffect(effect, []);
 
 export const YandexMetrika = React.memo(function YandexMetrika({
   url,

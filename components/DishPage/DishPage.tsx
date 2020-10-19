@@ -4,15 +4,13 @@ import Head from "next/head";
 
 import { DishInfo } from "components/DishInfo";
 import { itemsById, TMenuItemId } from "common/data/menu";
-import { useAppState } from "store/index";
+import { config } from "common/config";
 
 interface IProps {
   id?: TMenuItemId;
 }
 
 export const DishPage = ({ id }: IProps) => {
-  const { config } = useAppState("config");
-
   if (!id) {
     return <Error statusCode={404} />;
   }

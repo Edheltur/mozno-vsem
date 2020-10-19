@@ -7,6 +7,7 @@ import {
   reachGoal as reachGoalUntyped,
   userVars,
 } from "lyam";
+import { config } from "common/config";
 
 const noop = () => {};
 
@@ -20,10 +21,7 @@ const fakeMetrika = {
 };
 
 export function useYandexMetrika() {
-  const {
-    config: { yandexMetrikaCounterId: counterId },
-  } = useAppState("config");
-
+  const counterId = config.yandexMetrikaCounterId;
   return useMemo(() => {
     if (!counterId) {
       return fakeMetrika;

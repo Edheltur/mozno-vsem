@@ -4,10 +4,9 @@ import Head from "next/head";
 import { AboutCompany } from "components/AboutCompany";
 import { AboutIrinaRyl } from "components/AboutIrinaRyl";
 import { Features } from "components/Features";
-import { useAppState } from "store/index";
+import { config } from "common/config";
 
 export const AboutPage = () => {
-  const { config } = useAppState("config");
   return (
     <>
       <Head>

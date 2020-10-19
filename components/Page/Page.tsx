@@ -6,6 +6,7 @@ import { PageHeader } from "components/PageHeader";
 import { OrderSuccessModal } from "components/OrderSuccessModal";
 import { CartModal } from "components/CartModal";
 import { PageMenu } from "components/PageMenu";
+import { CheckoutModal } from "components/CheckoutModal";
 
 export const Page: React.FC = ({ children }) => {
   return (
@@ -45,6 +46,7 @@ export const Page: React.FC = ({ children }) => {
         {children}
       </Main>
       <CartModal />
+      <CheckoutModal />
       <OrderSuccessModal />
     </>
   );

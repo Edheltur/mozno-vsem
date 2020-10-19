@@ -1,9 +1,8 @@
 import React from "react";
 import { InfoBlock } from "components/ui/InfoBlock";
-import { useAppState } from "store";
+import { config } from "common/config";
 
 export const DeliveryInfo = () => {
-  const { config } = useAppState("config");
   return (
     <InfoBlock title="Условия доставки">
       Доставляем по четвергам и воскресеньям в&nbsp;пределах Екатеринбурга.

@@ -12,8 +12,9 @@ export const order: StoreonModule<State, Events> = (store) => {
   }));
 
   store.on("order/submit", (state) =>
-    createOrder(state.cart)
+    createOrder({ cart: state.cart, user: state.user })
       .then((order) => store.dispatch("order/confirm", order))
+      .then(() => store.dispatch("cart/clear"))
       .catch(() => store.dispatch("order/openCart"))
   );
 
@@ -30,5 +31,9 @@ export const order: StoreonModule<State, Events> = (store) => {
 
   store.on("order/openCart", () => ({
     order: { status: "cart" },
+  }));
+
+  store.on("order/checkout", () => ({
+    order: { status: "checkout" },
   }));
 };

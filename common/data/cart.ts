@@ -1,4 +1,5 @@
 import * as menu from "common/data/menu";
+import { isInteger, isMenuItemId, isObject } from "common/validators";
 
 export interface ICart {
   countById: Record<string, number>;
@@ -20,4 +21,8 @@ export function getSelectedItems(cart: ICart) {
 
 export function getItemCountInCart(cart: ICart, id: string) {
   return cart.countById[id] ?? 0;
+}
+
+export function isCart(cart: any): cart is ICart {
+  return isObject(cart.countById, isMenuItemId, isInteger);
 }

@@ -8,6 +8,7 @@ import { Cart } from "grommet-icons";
 import { Box, Stack, Text } from "grommet";
 
 import styles from "./PageHeader.module.css";
+import { useIsMounted } from "client/helpers/hooks";
 
 const LogoLink = React.memo(function LogoLink() {
   return (
@@ -21,7 +22,12 @@ const LogoLink = React.memo(function LogoLink() {
 
 const CartLabel = React.memo(function CartLabel({ value }: { value: number }) {
   return (
-    <Box background="accent-1" round className={styles.PageHeader__label}>
+    <Box
+      background="accent-1"
+      round
+      className={styles.PageHeader__label}
+      animation={{ type: "fadeIn", duration: 250 }}
+    >
       <Text size="11px">{value}</Text>
     </Box>
   );
@@ -29,9 +35,14 @@ const CartLabel = React.memo(function CartLabel({ value }: { value: number }) {
 
 const MemoizedStack = React.memo(Stack);
 
-const HeaderContent = React.memo(({ mix }: { mix?: string }) => {
+const HeaderContent = React.memo(function HeaderContent({
+  mix,
+}: {
+  mix?: string;
+}) {
   const { cart, dispatch } = useAppState("order", "cart");
   const itemsCount = getSelectedItems(cart).length;
+  const isMounted = useIsMounted();
 
   const handle = React.useMemo(
     () => ({
@@ -43,7 +54,7 @@ const HeaderContent = React.memo(({ mix }: { mix?: string }) => {
     <MemoizedStack anchor="right" className={mix}>
       <LogoLink />
       <Cart className={styles.PageHeader__cart} onClick={handle.open} />
-      {itemsCount > 0 && <CartLabel value={itemsCount} />}
+      {itemsCount > 0 && isMounted && <CartLabel value={itemsCount} />}
     </MemoizedStack>
   );
 });

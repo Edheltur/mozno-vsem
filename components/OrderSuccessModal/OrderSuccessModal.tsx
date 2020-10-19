@@ -5,9 +5,10 @@ import { Button, Text } from "grommet";
 import { useAppState } from "store";
 import { Modal } from "components/ui/Modal";
 import { GOALS, useYandexMetrika } from "client/helpers/yandex-metrika";
+import { config } from "common/config";
 
 export const OrderSuccessModal = () => {
-  const { order, config, dispatch } = useAppState("order", "config");
+  const { order, dispatch } = useAppState("order");
   const { reachGoal } = useYandexMetrika();
 
   const messageText = encodeURIComponent(
@@ -21,7 +22,6 @@ export const OrderSuccessModal = () => {
       },
       close() {
         dispatch("order/reset");
-        dispatch("cart/clear");
       },
     }),
     [dispatch, reachGoal]
