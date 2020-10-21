@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { Main } from "grommet";
 
-import { Favicons } from "components/Favicons";
 import { PageHeader } from "components/PageHeader";
 import { OrderSuccessModal } from "components/OrderSuccessModal";
 import { CartModal } from "components/CartModal";
@@ -17,7 +16,28 @@ export const Page: React.FC = ({ children }) => {
           name="description"
           content="Полуфабрикаты «МОЖНО ВСЕМ!» – Магазин здорового питания"
         />
-        <Favicons />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d9b07b" />
+        <meta name="msapplication-TileColor" content="#d9b07b" />
+        <meta name="theme-color" content="#d9b07b" />
       </Head>
       <PageHeader />
       <PageMenu />
