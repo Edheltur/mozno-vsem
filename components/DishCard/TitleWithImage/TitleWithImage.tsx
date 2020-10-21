@@ -17,7 +17,13 @@ export const TitleWithImage = React.memo(function TitleWithImage({
   return (
     <Box flex="grow">
       <Link href="/dish/[id]" as={`/dish/${item.id}`}>
-        <Image width={150} height={150} src={imageUrl} alt={title} />
+        <Image
+          width={150}
+          height={150}
+          src={imageUrl}
+          alt={title}
+          className={styles.TitleWithImage__image}
+        />
       </Link>
       <Text size="15px" textAlign="center">
         <Link passHref href="/dish/[id]" as={`/dish/${item.id}`}>
