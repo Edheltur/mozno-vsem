@@ -474,8 +474,8 @@ const rawItemsById = {
   },
   "35": {
     title: "Кальмары по-русски",
-    price: 600,
-    weight: 480,
+    price: 450,
+    weight: 450,
     amount: 2,
     image: "empty.jpg",
     ingredients: ["греча", "шампиньоны", "лук", "соль", "специи"],
@@ -483,7 +483,7 @@ const rawItemsById = {
   "36": {
     title: "Кальмар с красной рыбой",
     price: 600,
-    weight: 450,
+    weight: 480,
     amount: 2,
     image: "empty.jpg",
     ingredients: [
