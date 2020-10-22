@@ -482,7 +482,7 @@ const rawItemsById = {
   },
   "36": {
     title: "Кальмар с красной рыбой",
-    price: 450,
+    price: 600,
     weight: 450,
     amount: 2,
     image: "empty.jpg",
