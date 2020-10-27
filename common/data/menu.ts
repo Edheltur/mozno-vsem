@@ -498,12 +498,104 @@ const rawItemsById = {
       "специи",
     ],
   },
+  "37": {
+    title: "Капуста брокколи",
+    price: 150,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: ["капуста брокколи"],
+  },
+  "38": {
+    title: "Капуста цветная",
+    price: 150,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: ["капуста цветная"],
+  },
+  "39": {
+    title: "Мини- морковка",
+    price: 150,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: ["мини- морковака"],
+  },
+  "40": {
+    title: "Европеская смесь",
+    price: 140,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: ["брокколи", "цветная капуста", "фасоль", "морковь"],
+  },
+  "41": {
+    title: "Мексиканская смесь",
+    price: 130,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: [
+      "перец",
+      "цветная капуста",
+      "фасоль",
+      "зеленый горошек",
+      "лук",
+      "кукуруза",
+      "морковь",
+    ],
+  },
+  "42": {
+    title: "Овощной букет",
+    price: 130,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: [
+      "цветная капуста",
+      "фасоль",
+      "брокколи",
+      "морковь",
+      "зеленый горошек",
+    ],
+  },
+  "43": {
+    title: "Смесь с брокколи ",
+    price: 130,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: ["брокколи", "цветная капуста", "морковь"],
+  },
+  "44": {
+    title: "Смесь для жарки яиц",
+    price: 100,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: ["перец", "томаты", "фасоль", "лук"],
+  },
+  "45": {
+    title: "Шпинат резаный ",
+    price: 130,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: ["шпинат"],
+  },
+  "46": {
+    title: "Манго резаный",
+    price: 340,
+    weight: 300,
+    image: "empty.jpg",
+    ingredients: ["манго"],
+  },
+  "47": {
+    title: "Клубника",
+    price: 120,
+    weight: 300,
+    image: "empty.jpg",
+    ingredients: ["клубника"],
+  },
 } as const;
 
 // prettier-ignore
 const orderedIds: ReadonlyArray<TMenuItemId> = [
   "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
   "11", "23", "30", "31", "32", "35", "36",
+  "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", // гарниры
   "13", "15", "17", "19", "21", "33", "34", // фарш
   "24", "25", "27", "26", "28", "29", // хлеб
 ];
