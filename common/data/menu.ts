@@ -513,7 +513,7 @@ const rawItemsById = {
     ingredients: ["капуста цветная"],
   },
   "39": {
-    title: "Мини- морковка",
+    title: "Мини-морковка",
     price: 150,
     weight: 400,
     image: "empty.jpg",
