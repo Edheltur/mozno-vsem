@@ -477,7 +477,7 @@ const rawItemsById = {
     price: 450,
     weight: 450,
     amount: 2,
-    image: "empty.jpg",
+    image: "kalmari-po-russki.jpg",
     ingredients: ["греча", "шампиньоны", "лук", "соль", "специи"],
   },
   "36": {
@@ -485,7 +485,7 @@ const rawItemsById = {
     price: 600,
     weight: 450,
     amount: 2,
-    image: "empty.jpg",
+    image: "kalmari-s-krasnoi-riboi.jpg",
     ingredients: [
       "кета",
       "горбуша",
@@ -594,7 +594,7 @@ const rawItemsById = {
     price: 300,
     weight: 250,
     amount: 6,
-    image: "empty.jpg",
+    image: "dolma.jpg",
     ingredients: [
       "лист виноградный маринованный",
       "говядина",
@@ -616,7 +616,7 @@ const rawItemsById = {
     price: 350,
     weight: 450,
     amount: 4,
-    image: "empty.jpg",
+    image: "golubci-pekinskie.jpg",
     ingredients: [
       "лист пекинской капусты",
       "индейка",
@@ -632,6 +632,76 @@ const rawItemsById = {
       "укроп сухой",
     ],
   },
+  "50": {
+    title: "Банановый кекс",
+    price: 120,
+    weight: 100,
+    image: "empty.jpg",
+    ingredients: [
+      "мука кукурузная",
+      "банан",
+      "масло оливковое",
+      "орех грецкий",
+      "яйцо",
+      "сироп топинамбура",
+      "разрыхлитель",
+      "соль",
+    ],
+  },
+  "51": {
+    title: "Шоколадный кекс",
+    price: 120,
+    weight: 100,
+    image: "empty.jpg",
+    ingredients: [
+      "мука рисовая",
+      "яблоко",
+      "масло оливковое",
+      "вишня/клюква сушеные",
+      "яйцо",
+      "сироп топинамбура",
+      "разрыхлитель",
+      "соль",
+    ],
+  },
+  "52": {
+    title: "Тыквенный кекс",
+    price: 120,
+    weight: 100,
+    image: "empty.jpg",
+    ingredients: [
+      "мука кукурузная",
+      "тыква",
+      "масло оливковое",
+      "семечки тыквенные",
+      "яйцо",
+      "сироп топинамбура",
+      "разрыхлитель",
+      "соль",
+    ],
+  },
+  "53": {
+    title: "Фрикадельки для ухи",
+    price: 200,
+    weight: 250,
+    image: "empty.jpg",
+    ingredients: [
+      "красная рыба",
+      "лук",
+      "яйцо",
+      "соль",
+      "перец",
+      "куркума",
+      "мука цельно зерновая",
+    ],
+  },
+  "54": {
+    title: "Бульон рыбный замороженный",
+    price: 310,
+    weight: 500,
+    image: "empty.jpg",
+    ingredients: ["красная рыба", "белая рыба"],
+  },
 } as const;
 
 // prettier-ignore
@@ -639,6 +709,8 @@ const orderedIds: ReadonlyArray<TMenuItemId> = [
   "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
   "11", "23", "30", "31", "32", "35", "36", "48", "49",
   "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", // гарниры
+  "50", "51", "52", // кексы
+  "53", "54",
   "13", "15", "17", "19", "21", "33", "34", // фарш
   "24", "25", "27", "26", "28", "29", // хлеб
 ];
