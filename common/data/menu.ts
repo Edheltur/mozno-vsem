@@ -706,6 +706,7 @@ const rawItemsById = {
     title: "Чебуреки мясные",
     price: 210,
     weight: 200,
+    amount: 2,
     image: "empty.jpg",
     ingredients: [
       "мука пшеничная цельнозеровая",
