@@ -683,7 +683,7 @@ const rawItemsById = {
   "53": {
     title: "Фрикадельки для ухи",
     price: 200,
-    weight: 250,
+    weight: 200,
     image: "empty.jpg",
     ingredients: [
       "красная рыба",
