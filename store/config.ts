@@ -4,6 +4,7 @@ import { Events, State } from "./types";
 export const config: StoreonModule<State, Events> = (store) => {
   store.on("@init", () => ({
     config: {
+      publicUrl: "https://mozno-vsem.ru",
       freeDeliveryFrom: 2000,
       deliveryPrice: 200,
       telegramUsername: process.env.NEXT_PUBLIC_TELEGRAM_USER_NAME ?? "",

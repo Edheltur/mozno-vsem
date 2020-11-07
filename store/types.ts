@@ -8,6 +8,7 @@ export interface State {
     id?: number;
   };
   config: {
+    publicUrl: string;
     freeDeliveryFrom: number;
     deliveryPrice: number;
     telegramUsername: string;
