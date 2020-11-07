@@ -3,7 +3,7 @@ import Error from "next/error";
 import Head from "next/head";
 
 import { DishInfo } from "components/DishInfo";
-import { itemsBydId, TMenuItemId } from "common/data/menu";
+import { itemsById, TMenuItemId } from "common/data/menu";
 import { useAppState } from "store/index";
 
 interface IProps {
@@ -17,7 +17,7 @@ export const DishPage = ({ id }: IProps) => {
     return <Error statusCode={404} />;
   }
 
-  const item = itemsBydId[id];
+  const item = itemsById[id];
 
   return (
     <>

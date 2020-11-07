@@ -14,7 +14,7 @@ import { FormAdd, FormSubtract } from "grommet-icons";
 
 import { useAppState } from "store";
 import { getSelectedItems, getTotalPrice, ICart } from "common/data/cart";
-import { itemsBydId, TMenuItemId } from "common/data/menu";
+import { itemsById, TMenuItemId } from "common/data/menu";
 
 interface IProps {
   cart: ICart;
@@ -54,7 +54,7 @@ const Title = ({ id }: { id: TMenuItemId }) => {
 
   return (
     <Link passHref href="/dish/[id]" as={`/dish/${id}`}>
-      <Anchor onClick={handle.click}>{itemsBydId[id].title}</Anchor>
+      <Anchor onClick={handle.click}>{itemsById[id].title}</Anchor>
     </Link>
   );
 };
@@ -88,7 +88,7 @@ export function Items({ cart }: IProps) {
                 verticalAlign="top"
                 width={{ min: "50px" } as any}
               >
-                {cart.countById[id] * itemsBydId[id].price}&nbsp;₽
+                {cart.countById[id] * itemsById[id].price}&nbsp;₽
               </TableCell>
             </TableRow>
           ))}

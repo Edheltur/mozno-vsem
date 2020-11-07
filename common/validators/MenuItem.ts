@@ -1,5 +1,5 @@
-import { itemsBydId, TMenuItemId } from "../data/menu";
+import { itemsById, TMenuItemId } from "../data/menu";
 
 export function isMenuItemId(id: string): id is TMenuItemId {
-  return id in itemsBydId;
+  return id in itemsById;
 }

@@ -517,7 +517,7 @@ const rawItemsById = {
     price: 150,
     weight: 400,
     image: "empty.jpg",
-    ingredients: ["мини- морковака"],
+    ingredients: ["мини-морковака"],
   },
   "40": {
     title: "Европеская смесь",
@@ -743,10 +743,10 @@ const orderedIds: ReadonlyArray<TMenuItemId> = [
   "50", "51", "52", // кексы
   "53", "54",
   "13", "15", "17", "19", "21", "33", "34", // фарш
-  "24", "25", "27", "26", "28", "29", // хлеб
+  "24", "25", "26", "27", "28", "29" // хлеб
 ];
 
-export const itemsBydId: Readonly<Record<
+export const itemsById: Readonly<Record<
   TMenuItemId,
   TMenuItem
 >> = orderedIds.reduce((acc, id) => {
@@ -758,6 +758,4 @@ export const itemsBydId: Readonly<Record<
   return acc;
 }, {} as Record<TMenuItemId, TMenuItem>);
 
-export const items = orderedIds.map((id) => itemsBydId[id]);
-
-export const title = "Меню";
+export const items = orderedIds.map((id) => itemsById[id]);
