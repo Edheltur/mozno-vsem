@@ -36,6 +36,7 @@ const rawCategoriesBySlug = {
       itemsById["23"],
       itemsById["30"],
       itemsById["31"],
+      itemsById["53"],
     ],
   },
   "second-courses": {
@@ -77,7 +78,7 @@ const rawCategoriesBySlug = {
   },
   soups: {
     title: "Супы",
-    items: [itemsById["53"], itemsById["54"]],
+    items: [itemsById["54"], itemsById["57"]],
   },
   "fruits-and-berries": {
     title: "Фрукты и ягоды",
