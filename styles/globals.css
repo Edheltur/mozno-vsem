@@ -5,6 +5,11 @@ body {
   padding: 0;
 }
 
+html {
+  /* Фикс прыгающего скроллбара */
+  overflow-y: scroll;
+}
+
 body {
   min-width: 320px;
 }
