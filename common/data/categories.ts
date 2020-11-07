@@ -8,14 +8,14 @@ export type TCategory = {
 export type TCategorySlug = keyof typeof rawCategoriesBySlug;
 const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "all",
-  "second-courses",
   "cutlets",
-  "vegetable-garnishes",
-  "bread",
-  "broths-and-soups",
-  "fruits-and-berries",
-  "desserts-and-pastry",
+  "second-courses",
+  "soups",
   "mincemeat",
+  "garnishes",
+  "bread",
+  "fruits-and-berries",
+  "bakery",
 ];
 
 const rawCategoriesBySlug = {
@@ -50,8 +50,8 @@ const rawCategoriesBySlug = {
       itemsById["55"],
     ],
   },
-  "vegetable-garnishes": {
-    title: "Гарниры овощные",
+  garnishes: {
+    title: "Гарниры",
     items: [
       itemsById["37"],
       itemsById["38"],
@@ -75,7 +75,7 @@ const rawCategoriesBySlug = {
       itemsById["29"],
     ],
   },
-  "broths-and-soups": {
+  soups: {
     title: "Супы",
     items: [itemsById["53"], itemsById["54"]],
   },
@@ -83,8 +83,8 @@ const rawCategoriesBySlug = {
     title: "Фрукты и ягоды",
     items: [itemsById["46"], itemsById["47"]],
   },
-  "desserts-and-pastry": {
-    title: "Десерты и выпечка",
+  bakery: {
+    title: "Выпечка",
     items: [itemsById["50"], itemsById["51"], itemsById["52"]],
   },
   mincemeat: {
@@ -105,12 +105,12 @@ const rawCategoriesBySlug = {
       items: [
         ...this["cutlets"].items,
         ...this["second-courses"].items,
-        ...this["vegetable-garnishes"].items,
+        ...this["garnishes"].items,
         ...this["fruits-and-berries"].items,
-        ...this["desserts-and-pastry"].items,
-        ...this["broths-and-soups"].items,
-        ...this.mincemeat.items,
-        ...this.bread.items,
+        ...this["bakery"].items,
+        ...this["soups"].items,
+        ...this["mincemeat"].items,
+        ...this["bread"].items,
       ],
     };
   },
