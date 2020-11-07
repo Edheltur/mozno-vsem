@@ -1,3 +1,5 @@
-module.exports = {
+const withTM = require("next-transpile-modules"); // pass the modules you would like to see transpiled
+
+module.exports = withTM(["storeon"])({
   reactStrictMode: true,
-};
+});
