@@ -509,7 +509,7 @@ const rawItemsById = {
     title: "Капуста цветная",
     price: 150,
     weight: 400,
-    image: "empty.jpg",
+    image: "tsvetnaya-kapusta.jpg",
     ingredients: ["капуста цветная"],
   },
   "39": {
@@ -545,7 +545,7 @@ const rawItemsById = {
     title: "Овощной букет",
     price: 130,
     weight: 400,
-    image: "empty.jpg",
+    image: "ovoshnoi-buket.jpg",
     ingredients: [
       "цветная капуста",
       "фасоль",
@@ -572,7 +572,7 @@ const rawItemsById = {
     title: "Шпинат резаный",
     price: 130,
     weight: 400,
-    image: "empty.jpg",
+    image: "shpinat.jpg",
     ingredients: ["шпинат"],
   },
   "46": {
@@ -586,7 +586,7 @@ const rawItemsById = {
     title: "Клубника",
     price: 120,
     weight: 300,
-    image: "empty.jpg",
+    image: "klubnika.jpg",
     ingredients: ["клубника"],
   },
   "48": {
@@ -636,7 +636,7 @@ const rawItemsById = {
     title: "Банановый кекс",
     price: 120,
     weight: 100,
-    image: "empty.jpg",
+    image: "keks-banan.jpg",
     ingredients: [
       "мука кукурузная",
       "банан",
@@ -652,7 +652,7 @@ const rawItemsById = {
     title: "Шоколадный кекс",
     price: 120,
     weight: 100,
-    image: "empty.jpg",
+    image: "keks-shokolad.jpg",
     ingredients: [
       "мука рисовая",
       "яблоко",
@@ -668,7 +668,7 @@ const rawItemsById = {
     title: "Тыквенный кекс",
     price: 120,
     weight: 100,
-    image: "empty.jpg",
+    image: "keks-tikva.jpg",
     ingredients: [
       "мука кукурузная",
       "тыква",
@@ -723,7 +723,7 @@ const rawItemsById = {
     price: 310,
     weight: 300,
     amount: 4,
-    image: "empty.jpg",
+    image: "detskie-kotletki.jpg",
     ingredients: [
       "индейка",
       "лук",
