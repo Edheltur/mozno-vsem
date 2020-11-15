@@ -502,7 +502,7 @@ const rawItemsById = {
     title: "Капуста брокколи",
     price: 150,
     weight: 400,
-    image: "empty.jpg",
+    image: "brokkoli.jpg",
     ingredients: ["капуста брокколи"],
   },
   "38": {
@@ -707,7 +707,7 @@ const rawItemsById = {
     price: 210,
     weight: 200,
     amount: 2,
-    image: "empty.jpg",
+    image: "chebureki-myaso.jpg",
     ingredients: [
       "мука пшеничная цельнозеровая",
       "вода",
