@@ -49,6 +49,8 @@ const rawCategoriesBySlug = {
       itemsById["48"],
       itemsById["49"],
       itemsById["55"],
+      itemsById["58"],
+      itemsById["59"],
     ],
   },
   garnishes: {
