@@ -1,15 +1,16 @@
-import { isString } from "common/validators/String";
+import { String } from "common/validators";
+import { is, TModel } from "common/validators";
 
-export interface IUser {
-  name: string;
-  phone: string;
-  address: string;
-}
+export const User = {
+  name: String(50),
+  phone: String(25),
+  address: String(150),
+  entrance: String(4),
+  apartment: String(6),
+  intercomCode: String(6),
+  floor: String(2),
+} as const;
 
-export function isUser(user: any): user is IUser {
-  return (
-    isString(user?.name, 50) &&
-    isString(user?.phone, 25) &&
-    isString(user?.address, 150)
-  );
-}
+export const isUser = is(User);
+
+export type TUser = TModel<typeof User>;

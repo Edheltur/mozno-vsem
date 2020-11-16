@@ -1,6 +1,6 @@
 import { TMenuItemId } from "common/data/menu";
 import { ICart } from "common/data/cart";
-import { IUser } from "common/data/user";
+import { TUser } from "common/data/user";
 
 export interface State {
   cart: ICart;
@@ -8,7 +8,7 @@ export interface State {
     status: "new" | "cart" | "checkout" | "submitting" | "confirmed";
     id?: number;
   };
-  user: IUser;
+  user: TUser;
 }
 
 export interface Events {

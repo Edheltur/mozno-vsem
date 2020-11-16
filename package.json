@@ -20,6 +20,7 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "storeon": "3.0.4",
+    "ajv": "6.12.6",
     "@storeon/localstorage": "1.2.0",
     "styled-components": "5.1.1"
   },

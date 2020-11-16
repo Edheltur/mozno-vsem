@@ -1,62 +1,105 @@
 import React from "react";
-import { Box, Button, FormField, TextArea, TextInput } from "grommet";
+import {
+  Box,
+  Button,
+  FormField,
+  TextArea,
+  TextInput,
+  Form,
+  ThemeContext,
+  ResponsiveContext,
+} from "grommet";
 
 import { useAppState } from "store";
 import { Modal } from "components/ui/Modal";
+import { TUser, User } from "common/data/user";
+
+const NarrowUserFormTheme = { formField: { margin: "none" } } as const;
+const DefaultUserFormTheme = {} as const;
 
 export const UserInfoEditor = () => {
   const { user, dispatch } = useAppState("user");
 
   const handle = React.useMemo(
     () => ({
-      nameChange: (event: React.ChangeEvent<HTMLInputElement>) =>
-        dispatch("user/update", { name: event.target.value }),
-      addressChange: (event: React.ChangeEvent<HTMLTextAreaElement>) =>
-        dispatch("user/update", { address: event.target.value }),
-      phoneChange: (event: React.ChangeEvent<HTMLInputElement>) =>
-        dispatch("user/update", { phone: event.target.value }),
-      phoneFocus: () => {
-        if (!user.phone) {
-          dispatch("user/update", { phone: "+7" });
-        }
+      change: (value: unknown) => {
+        dispatch("user/update", value as TUser);
       },
     }),
-    [dispatch, user.address, user.phone, user.name]
+    [dispatch]
   );
+  const size = React.useContext(ResponsiveContext);
 
   return (
-    <Box>
-      <FormField label="Ваше имя">
-        <TextInput
+    <ThemeContext.Extend
+      value={size === "xxsmall" ? NarrowUserFormTheme : DefaultUserFormTheme}
+    >
+      <Form onChange={handle.change} value={user}>
+        <FormField
+          label="Ваше имя"
+          name="name"
+          component={TextInput}
           inputMode="text"
-          maxLength={50}
-          value={user.name}
           autoComplete="name"
-          onChange={handle.nameChange}
+          maxLength={User.name.maxLength}
         />
-      </FormField>
-      <FormField label="Телефон">
-        <TextInput
+        <FormField
+          label="Телефон"
+          name="phone"
+          component={TextInput}
           inputMode="tel"
-          value={user.phone}
           type="tel"
           autoComplete="tel"
-          maxLength={25}
-          onChange={handle.phoneChange}
-          onFocus={handle.phoneFocus}
-          placeholder="+7"
+          maxLength={User.phone.maxLength}
+          placeholder="+7 (9XX) XXX-XX-XX"
         />
-      </FormField>
-      <FormField label="Адрес доставки">
-        <TextArea
+        <FormField
+          label="Адрес доставки"
+          component={TextArea}
+          name="address"
           inputMode="text"
-          maxLength={150}
-          value={user.address}
-          onChange={handle.addressChange}
-          placeholder="Улица, дом, подъезд и квартира"
+          maxLength={User.address.maxLength}
+          placeholder="Улица и дом"
         />
-      </FormField>
-    </Box>
+        <Box direction="row" justify="around" gap="medium">
+          <FormField
+            component={TextInput}
+            label="Подъезд"
+            name="entrance"
+            inputMode="text"
+            type="text"
+            maxLength={User.entrance.maxLength}
+          />
+          <FormField
+            component={TextInput}
+            label="Домофон"
+            name="intercomCode"
+            inputMode="text"
+            type="text"
+            maxLength={User.intercomCode.maxLength}
+          />
+        </Box>
+
+        <Box direction="row" justify="around" gap="medium">
+          <FormField
+            component={TextInput}
+            label="Этаж"
+            name="floor"
+            inputMode="numeric"
+            type="number"
+            maxLength={User.floor.maxLength}
+          />
+          <FormField
+            component={TextInput}
+            label="Кв. / офис"
+            name="apartment"
+            inputMode="text"
+            type="text"
+            maxLength={User.apartment.maxLength}
+          />
+        </Box>
+      </Form>
+    </ThemeContext.Extend>
   );
 };
 

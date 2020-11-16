@@ -1,3 +1,5 @@
+import { mapObject } from "common/utils/object";
+
 export type TMenuItemId = keyof typeof rawItemsById;
 
 export type TMenuItem = {
@@ -739,26 +741,5 @@ export const itemsById: Readonly<Record<
   TMenuItemId,
   TMenuItem
 >> = mapObject(rawItemsById, (id, item) => ({ ...item, id }));
-
-type ValueOf<T> = T[keyof T];
-
-type MapTo<T, U> = {
-  [P in keyof T]: U;
-};
-
-function mapObject<T extends object, U>(
-  obj: T,
-  mappingFn: (key: Extract<keyof T, string>, value: ValueOf<T>) => U
-): MapTo<T, U> {
-  const newObj = {} as MapTo<T, U>;
-
-  for (const key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      const oldValue = obj[key];
-      newObj[key] = mappingFn(key, oldValue);
-    }
-  }
-  return newObj;
-}
 
 export const items: ReadonlyArray<TMenuItem> = Object.values(itemsById);

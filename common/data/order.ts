@@ -1,8 +1,8 @@
-import { isUser, IUser } from "common/data/user";
+import { isUser, TUser } from "common/data/user";
 import { ICart, isCart } from "common/data/cart";
 
 export interface IOrder {
-  user: IUser;
+  user: TUser;
   cart: ICart;
 }
 

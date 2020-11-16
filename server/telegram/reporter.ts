@@ -29,6 +29,10 @@ export class TelegramReporter {
       .concat(`*Имя:* ${user.name}`)
       .concat(`*Телефон:* ${user.phone}`)
       .concat(`*Адрес:* ${user.address}`)
+      .concat(`*Подъезд:* ${user.entrance}`)
+      .concat(`*Квартира/офис:* ${user.apartment}`)
+      .concat(`*Домофон:* ${user.intercomCode}`)
+      .concat(`*Этаж":* ${user.floor}`)
       .join("\n");
   }
 

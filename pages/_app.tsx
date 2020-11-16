@@ -24,6 +24,11 @@ const theme: ThemeType = {
       whatsapp: "#25D366",
       focus: "accent-2",
     },
+    breakpoints: {
+      xxsmall: {
+        value: 320,
+      },
+    },
   },
   anchor: {
     fontWeight: 500,

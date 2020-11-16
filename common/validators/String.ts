@@ -4,3 +4,10 @@ export function isString(string: any, maxLength?: number): string is string {
   }
   return false;
 }
+
+export const String = (maxLength?: number) => ({
+  maxLength,
+  validate(value: any): value is string {
+    return isString(value, this.maxLength);
+  },
+});
