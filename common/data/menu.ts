@@ -106,7 +106,6 @@ const rawItemsById = {
     ],
   },
   "6": {
-    id: "5",
     title: "Фрикадельки из индейки со шпинатом",
     price: 420,
     weight: 480,
@@ -203,26 +202,12 @@ const rawItemsById = {
       "тимьян",
     ],
   },
-  "12": {
-    title: "Фарш из говядины и курицы",
-    price: 500,
-    weight: 1000,
-    image: "farsh-govyadina-kurtisa.jpg",
-    ingredients: ["говядина 50%", "филе курицы 50%"],
-  },
   "13": {
     title: "Фарш из говядины и курицы",
     price: 300,
     weight: 500,
     image: "farsh-govyadina-kurtisa.jpg",
     ingredients: ["говядина 50%", "филе курицы 50%"],
-  },
-  "14": {
-    title: "Фарш из индейки",
-    price: 500,
-    weight: 1000,
-    image: "farsh-indeyka.jpg",
-    ingredients: ["филе индейки"],
   },
   "15": {
     title: "Фарш из индейки",
@@ -231,13 +216,6 @@ const rawItemsById = {
     image: "farsh-indeyka.jpg",
     ingredients: ["филе индейки"],
   },
-  "16": {
-    title: "Фарш из курицы",
-    price: 500,
-    weight: 1000,
-    image: "farsh-kuritsa.jpg",
-    ingredients: ["филе курицы"],
-  },
   "17": {
     title: "Фарш из курицы",
     price: 300,
@@ -245,27 +223,12 @@ const rawItemsById = {
     image: "farsh-kuritsa.jpg",
     ingredients: ["филе курицы"],
   },
-  "18": {
-    title: "Фарш из белой рыбы",
-    price: 500,
-    weight: 1000,
-    image: "farsh-treska.jpg",
-    ingredients: ["филе трески"],
-  },
   "19": {
-    id: "20",
     title: "Фарш из белой рыбы",
     price: 300,
     weight: 500,
     image: "farsh-treska.jpg",
     ingredients: ["филе трески"],
-  },
-  "20": {
-    title: "Фарш из красной рыбы",
-    price: 500,
-    weight: 1000,
-    image: "farsh-keta.jpg",
-    ingredients: ["филе кеты"],
   },
   "21": {
     title: "Фарш из красной рыбы",
@@ -273,21 +236,6 @@ const rawItemsById = {
     weight: 500,
     image: "farsh-keta.jpg",
     ingredients: ["филе кеты"],
-  },
-  "22": {
-    title: "Кальмары фаршированные",
-    price: 420,
-    weight: 260,
-    amount: 2,
-    image: "calmari.jpg",
-    ingredients: [
-      "тушка кальмара",
-      "фарш кеты",
-      "фарш трески",
-      "рис бурый",
-      "лук",
-      "специи",
-    ],
   },
   "23": {
     title: "Капустники",
@@ -787,27 +735,30 @@ const rawItemsById = {
   },
 } as const;
 
-// prettier-ignore
-const orderedIds: ReadonlyArray<TMenuItemId> = [
-  "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
-  "11", "23", "30", "31", "32", "35", "36", "48", "49", "55", "56",
-  "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", // гарниры
-  "50", "51", "52", // кексы
-  "53", "54", "57",
-  "13", "15", "17", "19", "21", "33", "34", // фарш
-  "24", "25", "26", "27", "28", "29" // хлеб
-];
-
 export const itemsById: Readonly<Record<
   TMenuItemId,
   TMenuItem
->> = orderedIds.reduce((acc, id) => {
-  acc[id] = {
-    ...rawItemsById[id],
-    id,
-  };
+>> = mapObject(rawItemsById, (id, item) => ({ ...item, id }));
 
-  return acc;
-}, {} as Record<TMenuItemId, TMenuItem>);
+type ValueOf<T> = T[keyof T];
 
-export const items = orderedIds.map((id) => itemsById[id]);
+type MapTo<T, U> = {
+  [P in keyof T]: U;
+};
+
+function mapObject<T extends object, U>(
+  obj: T,
+  mappingFn: (key: Extract<keyof T, string>, value: ValueOf<T>) => U
+): MapTo<T, U> {
+  const newObj = {} as MapTo<T, U>;
+
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      const oldValue = obj[key];
+      newObj[key] = mappingFn(key, oldValue);
+    }
+  }
+  return newObj;
+}
+
+export const items: ReadonlyArray<TMenuItem> = Object.values(itemsById);
