@@ -1,4 +1,4 @@
-import { getSelectedItems, getTotalPrice, ICart } from "common/data/cart";
+import { getSelectedItems, getTotalPrice } from "common/data/cart";
 import { TelegramClient } from "server/telegram";
 import { getDeliveryCost } from "common/data/price";
 import { IOrder } from "common/data/order";

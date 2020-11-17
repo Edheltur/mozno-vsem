@@ -4,7 +4,6 @@ import { Instagram, Phone } from "grommet-icons";
 
 import { InfoBlock } from "components/ui/InfoBlock";
 import { Telegram, WhatsApp } from "components/ui/icons";
-import { useAppState } from "store/index";
 
 import styles from "./Contacts.module.css";
 import { InstagramLink } from "components/InstagramLink";
