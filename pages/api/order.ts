@@ -6,6 +6,8 @@ import { createHandler } from "server/helpers/handlers";
 import { TApiResponseResult } from "common/api";
 import { createTelegramReporter } from "server/telegram";
 import { isOrder } from "common/data/order";
+import { mapObject } from "common/utils/object";
+import { User } from "common/data/user";
 
 export type TOrdersEndpoint = {
   POST: TApiResponseResult<{ orderId: number }>;
@@ -19,12 +21,11 @@ export default createHandler<TOrdersEndpoint>({
       throw new BadRequestError();
     }
 
+    const user = mapObject(User, (key) => order.user[key]);
     const data = {
       date: q.Now(),
       countById: order.cart.countById,
-      address: order.user.address,
-      name: order.user.name,
-      phone: order.user.phone,
+      ...user,
     };
 
     const db = createDbClient();
