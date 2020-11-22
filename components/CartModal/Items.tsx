@@ -19,9 +19,10 @@ import { getDeliveryCost } from "common/data/price";
 
 interface IProps {
   cart: ICart;
+  readonly?: boolean;
 }
 
-const Count = ({ id }: { id: TMenuItemId }) => {
+const CountControl = ({ id }: { id: TMenuItemId }) => {
   const { cart, dispatch } = useAppState("cart");
   const handle = React.useMemo(
     () => ({
@@ -60,7 +61,7 @@ const Title = ({ id }: { id: TMenuItemId }) => {
   );
 };
 
-export function Items({ cart }: IProps) {
+export function Items({ cart, readonly }: IProps) {
   const selectedItems = getSelectedItems(cart);
   const totalPrice = getTotalPrice(cart);
   const deliveryCost = getDeliveryCost(totalPrice);
@@ -72,15 +73,19 @@ export function Items({ cart }: IProps) {
           {selectedItems.map(({ id }) => (
             <TableRow key={id}>
               <TableCell size="100%">
-                <Title id={id} />
+                {readonly ? itemsById[id].title : <Title id={id} />}
               </TableCell>
               <TableCell
                 align={"end" as any}
                 verticalAlign="top"
-                pad={{ horizontal: "none", vertical: "xxsmall" }}
+                pad={{
+                  horizontal: "none",
+                  vertical: readonly ? "xsmall" : "xxsmall",
+                }}
               >
-                <Count id={id} />
+                {readonly ? cart.countById[id] : <CountControl id={id} />}
               </TableCell>
+
               <TableCell
                 align={"end" as any}
                 verticalAlign="top"

@@ -8,7 +8,16 @@ import { CartModal } from "components/CartModal";
 import { PageMenu } from "components/PageMenu";
 import { CheckoutModal } from "components/CheckoutModal";
 
-export const Page: React.FC = ({ children }) => {
+export interface ICommonPageProps {
+  disableHeader?: boolean;
+  disableMenu?: boolean;
+}
+
+export const Page: React.FC<ICommonPageProps> = ({
+  children,
+  disableHeader,
+  disableMenu,
+}) => {
   return (
     <>
       <Head>
@@ -40,8 +49,8 @@ export const Page: React.FC = ({ children }) => {
         <meta name="msapplication-TileColor" content="#d9b07b" />
         <meta name="theme-color" content="#d9b07b" />
       </Head>
-      <PageHeader />
-      <PageMenu />
+      {!disableHeader && <PageHeader />}
+      {!disableMenu && <PageMenu />}
       <Main pad={{ bottom: "large" }} align="center">
         {children}
       </Main>

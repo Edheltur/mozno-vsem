@@ -1,0 +1,8 @@
+CreateIndex({
+  name: "orders_by_date_desc",
+  source: Collection("orders"),
+  values: [
+    { field: ["data", "date"], reverse: true },
+    { field: ["ref"] }
+  ]
+})

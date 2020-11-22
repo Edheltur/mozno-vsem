@@ -4,7 +4,7 @@ import { Grommet, ThemeType } from "grommet";
 
 import { AppStateContext, store } from "store";
 import { YandexMetrika } from "components/YandexMetrika";
-import { Page } from "components/Page";
+import { ICommonPageProps, Page } from "components/Page";
 
 import "styles/globals.css";
 
@@ -41,15 +41,20 @@ const theme: ThemeType = {
   },
 };
 
-const App = ({ Component, pageProps, router }: AppProps) => (
-  <AppStateContext.Provider value={store}>
-    <YandexMetrika url={router.asPath} />
-    <Grommet theme={theme}>
-      <Page>
-        <Component {...pageProps} />
-      </Page>
-    </Grommet>
-  </AppStateContext.Provider>
-);
+const App = ({ Component, pageProps, router }: AppProps) => {
+  const { commonPageProps } = Component as {
+    commonPageProps?: ICommonPageProps;
+  };
+  return (
+    <AppStateContext.Provider value={store}>
+      <YandexMetrika url={router.asPath} />
+      <Grommet theme={theme}>
+        <Page {...commonPageProps}>
+          <Component {...pageProps} />
+        </Page>
+      </Grommet>
+    </AppStateContext.Provider>
+  );
+};
 
 export default App;

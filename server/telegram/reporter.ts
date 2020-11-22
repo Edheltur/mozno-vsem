@@ -1,7 +1,7 @@
 import { getSelectedItems, getTotalPrice } from "common/data/cart";
 import { TelegramClient } from "server/telegram";
 import { getDeliveryCost } from "common/data/price";
-import { IOrder } from "common/data/order";
+import { TOrder } from "common/data/order";
 
 const DIVIDER = " ";
 
@@ -13,7 +13,7 @@ export class TelegramReporter {
     this.client = client;
     this.channelId = channelId;
   }
-  private generateOrderReport(orderId: number, { cart, user }: IOrder) {
+  private generateOrderReport(orderId: number, { cart, user }: TOrder) {
     const itemsLines = getSelectedItems(cart).map(
       ({ id, title }) => `${cart.countById[id]} x ${title}`
     );
@@ -36,7 +36,7 @@ export class TelegramReporter {
       .join("\n");
   }
 
-  public async sendReport(orderId: number, order: IOrder) {
+  public async sendReport(orderId: number, order: TOrder) {
     const reportMarkdown = this.generateOrderReport(orderId, order);
     await this.client.sendMessage(this.channelId, reportMarkdown);
   }
