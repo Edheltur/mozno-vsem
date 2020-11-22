@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-import { Box, Button, Collapsible, DataTable } from "grommet";
+import { Anchor, Box, Button, Collapsible, DataTable } from "grommet";
 import { Items } from "components/CartModal/Items";
 import { ICart } from "common/data/cart";
 import { useIsMounted } from "client/helpers/hooks";
@@ -16,10 +16,11 @@ export type TOrderRow = {
   name: string;
   phone: string;
   address: string;
-  entrance: string;
-  apartment: string;
-  intercomCode: string;
-  floor: string;
+  entrance: string | null;
+  apartment: string | null;
+  intercomCode: string | null;
+  floor: string | null;
+  sum: number;
   cart: ICart;
 };
 
@@ -74,10 +75,14 @@ export const OrdersPage = ({ orders }: IProps) => {
                 }),
             },
             {
-              property: "countById",
+              property: "cart",
               header: "Корзина",
               sortable: false,
               render: ({ cart, id }) => <Cart cart={cart} key={id} />,
+            },
+            {
+              property: "sum",
+              header: "Сумма",
             },
             {
               property: "name",
@@ -86,22 +91,32 @@ export const OrdersPage = ({ orders }: IProps) => {
             {
               property: "phone",
               header: "Телефон",
+              render: ({ phone }) => (
+                <Anchor href={"tel:" + phone}>{phone}</Anchor>
+              ),
             },
             {
               property: "address",
               header: "Адрес",
-            },
-            {
-              property: "entrance",
-              header: "Подъезд",
-            },
-            {
-              property: "apartment",
-              header: "Квартира",
-            },
-            {
-              property: "intercomCode",
-              header: "Домофон",
+              render({ address, apartment, entrance, intercomCode, floor }) {
+                let result = address;
+                if (entrance) {
+                  result += `, подъезд ${entrance}`;
+                }
+                if (intercomCode) {
+                  result += `, домофон ${intercomCode}`;
+                }
+
+                if (apartment) {
+                  result += `, кв. ${apartment}`;
+                }
+
+                if (floor) {
+                  result += `, ${floor} этаж`;
+                }
+
+                return result;
+              },
             },
           ]}
           data={orders}

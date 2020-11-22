@@ -2,11 +2,17 @@ import { OrdersPage, IProps, TOrderRow } from "components/OrdersPage";
 import { GetServerSideProps } from "next";
 import { createDbClient, Index } from "server/faunadb";
 import { query as q } from "faunadb";
+import { getTotalPrice } from "common/data/cart";
+import { getDeliveryCost } from "common/data/price";
 
 export default OrdersPage;
 
-function getOptionalString(value: any): string {
+function getStringOrPlaceholder(value: any): string {
   return value ? String(value) : "-";
+}
+
+function getStringOrNull(value: any): string | null {
+  return typeof value === "string" ? value : null;
 }
 
 export const getServerSideProps: GetServerSideProps<IProps> = async () => {
@@ -34,20 +40,31 @@ export const getServerSideProps: GetServerSideProps<IProps> = async () => {
           floor,
         },
         ref: { id },
-      }: any): TOrderRow => ({
-        id: Number(id),
-        dateIsoString: date?.date.toISOString(),
-        name: getOptionalString(name),
-        phone: getOptionalString(phone),
-        cart: {
+      }: any): TOrderRow => {
+        const cart = {
           countById: countById ?? {},
-        },
-        address: getOptionalString(address),
-        entrance: getOptionalString(entrance),
-        apartment: getOptionalString(apartment),
-        intercomCode: getOptionalString(intercomCode),
-        floor: getOptionalString(floor),
-      })
+        };
+        const totalPrice = getTotalPrice(cart);
+        const deliveryCost = getDeliveryCost(totalPrice);
+        const sum = totalPrice + deliveryCost;
+
+        return {
+          id: Number(id),
+          dateIsoString: date?.date.toISOString(),
+
+          name: getStringOrPlaceholder(name),
+          phone: getStringOrPlaceholder(phone),
+          address: getStringOrPlaceholder(address),
+
+          entrance: getStringOrNull(entrance),
+          apartment: getStringOrNull(apartment),
+          intercomCode: getStringOrNull(intercomCode),
+          floor: getStringOrNull(floor),
+
+          cart,
+          sum,
+        };
+      }
     ),
   };
 
