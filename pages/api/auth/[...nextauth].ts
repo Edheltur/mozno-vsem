@@ -2,7 +2,9 @@ import { NextApiRequest, NextApiResponse } from "next";
 import NextAuth, { InitOptions } from "next-auth";
 import Providers from "next-auth/providers";
 
-const AdminEmails = new Set((process.env.ADMIN_EMAILS ?? "").split(","));
+const AdminEmails = new Set(
+  (process.env.ADMIN_EMAILS ?? "").toLowerCase().split(",")
+);
 
 const options: InitOptions = {
   providers: [
@@ -14,7 +16,9 @@ const options: InitOptions = {
   secret: process.env.AUTH_SECRET!,
   callbacks: {
     async signIn(user) {
-      return Boolean(user && user.email && AdminEmails.has(user.email));
+      const email = user?.email?.toLowerCase();
+
+      return typeof email === "string" && AdminEmails.has(email);
     },
   },
 };
