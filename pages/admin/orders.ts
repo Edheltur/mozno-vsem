@@ -4,6 +4,7 @@ import { createDbClient, Index } from "server/faunadb";
 import { query as q } from "faunadb";
 import { getTotalPrice } from "common/data/cart";
 import { getDeliveryCost } from "common/data/price";
+import { getSession } from "next-auth/client";
 
 export default OrdersPage;
 
@@ -15,7 +16,14 @@ function getStringOrNull(value: any): string | null {
   return typeof value === "string" ? value : null;
 }
 
-export const getServerSideProps: GetServerSideProps<IProps> = async () => {
+export const getServerSideProps: GetServerSideProps<IProps> = async (
+  context
+) => {
+  const session = await getSession(context);
+  if (!session) {
+    return { props: {} };
+  }
+
   const db = createDbClient();
 
   const { data } = await db.query<any>(

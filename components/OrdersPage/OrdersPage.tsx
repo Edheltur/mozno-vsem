@@ -7,7 +7,7 @@ import { ICart } from "common/data/cart";
 import { useIsMounted } from "client/helpers/hooks";
 
 export interface IProps {
-  orders: TOrderRow[];
+  orders?: TOrderRow[];
 }
 
 export type TOrderRow = {
@@ -47,6 +47,9 @@ const Cart = ({ cart }: { cart: ICart }) => {
   );
 };
 export const OrdersPage = ({ orders }: IProps) => {
+  if (!orders) {
+    return null;
+  }
   return (
     <>
       <Head>
