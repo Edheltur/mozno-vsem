@@ -37,6 +37,7 @@ const rawCategoriesBySlug = {
       itemsById["30"],
       itemsById["31"],
       itemsById["53"],
+      itemsById["79"],
     ],
   },
   "second-courses": {
@@ -68,6 +69,11 @@ const rawCategoriesBySlug = {
       itemsById["43"],
       itemsById["44"],
       itemsById["45"],
+      itemsById["63"],
+      itemsById["64"],
+      itemsById["65"],
+      itemsById["66"],
+      itemsById["67"],
     ],
   },
   bread: {
@@ -83,11 +89,24 @@ const rawCategoriesBySlug = {
   },
   soups: {
     title: "Супы",
-    items: [itemsById["54"], itemsById["57"]],
+    items: [itemsById["54"], itemsById["57"], itemsById["68"]],
   },
   "fruits-and-berries": {
     title: "Фрукты и ягоды",
-    items: [itemsById["46"], itemsById["47"]],
+    items: [
+      itemsById["46"],
+      itemsById["47"],
+      itemsById["69"],
+      itemsById["70"],
+      itemsById["71"],
+      itemsById["72"],
+      itemsById["73"],
+      itemsById["74"],
+      itemsById["75"],
+      itemsById["76"],
+      itemsById["77"],
+      itemsById["78"],
+    ],
   },
   bakery: {
     title: "Выпечка",
