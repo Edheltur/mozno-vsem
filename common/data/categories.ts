@@ -109,6 +109,8 @@ const rawCategoriesBySlug = {
       itemsById["76"],
       itemsById["77"],
       itemsById["78"],
+      itemsById["83"],
+      itemsById["84"],
     ],
   },
   bakery: {
