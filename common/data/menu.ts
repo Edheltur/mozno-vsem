@@ -999,6 +999,20 @@ const rawItemsById = {
       "масло оливковое",
     ],
   },
+  "83": {
+    title: "Жимолость",
+    price: 400,
+    weight: 300,
+    image: "empty.jpg",
+    ingredients: ["жимолость"],
+  },
+  "84": {
+    title: "Черника",
+    price: 350,
+    weight: 300,
+    image: "empty.jpg",
+    ingredients: ["черника"],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<
