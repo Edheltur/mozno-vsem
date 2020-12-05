@@ -627,7 +627,7 @@ const rawItemsById = {
     title: "Фрикадельки для ухи",
     price: 200,
     weight: 200,
-    image: "empty.jpg",
+    image: "ribnuie-frikadelki.jpg",
     ingredients: [
       "красная рыба",
       "лук",
@@ -681,7 +681,7 @@ const rawItemsById = {
     price: 310,
     weight: 700,
     amount: 4,
-    image: "empty.jpg",
+    image: "ribnui-bulyon-s-frikadelkami.jpg",
     ingredients: ["бульон из рыбы", "фрикадельки из красной рыбы", "соль"],
   },
   "58": {
@@ -824,7 +824,7 @@ const rawItemsById = {
     title: "Рататуй",
     price: 200,
     weight: 400,
-    image: "empty.jpg",
+    image: "raratui.jpg",
     ingredients: ["цукини", "томаты", "перец", "лук", "баклажаны"],
   },
   "67": {
@@ -923,7 +923,7 @@ const rawItemsById = {
     price: 650,
     weight: 400,
     amount: 4,
-    image: "empty.jpg",
+    image: "kotleti-forel-krevetka.jpg",
     ingredients: [
       "форель",
       "лук",
@@ -942,7 +942,7 @@ const rawItemsById = {
     price: 200,
     weight: 300,
     amount: 3,
-    image: "empty.jpg",
+    image: "kotleti-svekolnie.jpg",
     ingredients: [
       "свекла",
       "яйцо",
@@ -960,7 +960,7 @@ const rawItemsById = {
     price: 200,
     weight: 300,
     amount: 3,
-    image: "empty.jpg",
+    image: "kotleti-morkovnie.jpg",
     ingredients: [
       "морковь",
       "яйцо",
@@ -978,7 +978,7 @@ const rawItemsById = {
     price: 300,
     weight: 400,
     amount: 4,
-    image: "empty.jpg",
+    image: "/kotleti-indeyaka-goroh.jpg",
     ingredients: [
       "филе грудки индейки",
       "зеленый горошек",
