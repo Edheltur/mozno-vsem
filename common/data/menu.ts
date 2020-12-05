@@ -852,7 +852,7 @@ const rawItemsById = {
     title: "Кубики ананаса",
     price: 210,
     weight: 300,
-    image: "empty.jpg",
+    image: "ananas.jpg",
     ingredients: ["ананас"],
   },
   "70": {
@@ -880,7 +880,7 @@ const rawItemsById = {
     title: "Ежевика",
     price: 350,
     weight: 300,
-    image: "empty.jpg",
+    image: "ezevika.jpg",
     ingredients: ["ежевика"],
   },
   "74": {
@@ -908,14 +908,14 @@ const rawItemsById = {
     title: "Облепиха",
     price: 250,
     weight: 300,
-    image: "empty.jpg",
+    image: "oblepikha.jpg",
     ingredients: ["облепиха"],
   },
   "78": {
     title: "Смесь для компота",
     price: 250,
     weight: 500,
-    image: "empty.jpg",
+    image: "smes-kompot.jpg",
     ingredients: [
       "красная смородина",
       "чёрная смородина",
@@ -1003,14 +1003,14 @@ const rawItemsById = {
     title: "Жимолость",
     price: 400,
     weight: 300,
-    image: "empty.jpg",
+    image: "zhimolost.jpg",
     ingredients: ["жимолость"],
   },
   "84": {
     title: "Черника",
     price: 350,
     weight: 300,
-    image: "empty.jpg",
+    image: "chernika.jpg",
     ingredients: ["черника"],
   },
 } as const;
