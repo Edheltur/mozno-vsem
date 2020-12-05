@@ -4,13 +4,27 @@ import { TMenuItem } from "common/data/menu";
 
 import { Image } from "components/ui/Image";
 import { CartControl } from "./CartControl";
+import { StatusGoodSmall } from "grommet-icons";
 
 interface IProps {
   item: TMenuItem;
 }
 
+const InfoText = ({ item }: IProps) => {
+  const { price, weight, amount } = item;
+  return amount === undefined ? (
+    <>
+      {weight}&nbsp;г за&nbsp;{price}&nbsp;₽
+    </>
+  ) : (
+    <>
+      {amount}&nbsp;x&nbsp;{weight / amount}&nbsp;г за&nbsp;{price}&nbsp;₽
+    </>
+  );
+};
+
 export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
-  const { title, image, id, ingredients, price } = item;
+  const { title, image, id, ingredients, price, weight, amount } = item;
   const imageUrl = `/images/dishes/full/${image}`;
 
   return (
@@ -20,7 +34,9 @@ export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
         {title}
       </Heading>
       <Box direction="row" justify="center" gap="medium" align="center">
-        <Text size="xlarge">{price}&nbsp;₽</Text>
+        <Text size="xlarge">
+          <InfoText item={item} />
+        </Text>
         <CartControl id={id} />
       </Box>
 
