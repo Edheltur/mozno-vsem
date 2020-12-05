@@ -469,13 +469,6 @@ const rawItemsById = {
     image: "mini-markovka.jpg",
     ingredients: ["мини-морковака"],
   },
-  "40": {
-    title: "Европеская смесь",
-    price: 140,
-    weight: 400,
-    image: "evropeyskaya-smes.jpg",
-    ingredients: ["брокколи", "цветная капуста", "фасоль", "морковь"],
-  },
   "41": {
     title: "Мексиканская смесь",
     price: 130,
