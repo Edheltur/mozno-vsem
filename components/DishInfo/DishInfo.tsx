@@ -24,7 +24,7 @@ const InfoText = ({ item }: IProps) => {
 };
 
 export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
-  const { title, image, id, ingredients, price, weight, amount } = item;
+  const { title, image, id, ingredients } = item;
   const imageUrl = `/images/dishes/full/${image}`;
 
   return (
