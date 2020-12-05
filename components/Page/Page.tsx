@@ -21,7 +21,7 @@ export const Page: React.FC<ICommonPageProps> = ({
   return (
     <>
       <Head>
-        <title>Можно всем – доставка полезных полуфабрикатов</title>
+        <title>Можно всем – Доставка полезных полуфабрикатов</title>
         <meta
           name="description"
           content="Полуфабрикаты «МОЖНО ВСЕМ!» – Магазин здорового питания"
