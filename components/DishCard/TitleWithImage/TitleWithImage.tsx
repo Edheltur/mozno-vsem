@@ -18,6 +18,7 @@ export const TitleWithImage = React.memo(function TitleWithImage({
     <Box flex="grow">
       <Link href="/dish/[id]" as={`/dish/${item.id}`}>
         <Image
+          loading="lazy"
           width={150}
           height={150}
           src={imageUrl}
