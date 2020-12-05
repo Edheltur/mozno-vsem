@@ -710,7 +710,7 @@ const rawItemsById = {
     title: "Пельмени с судаком безглютеновые",
     price: 800,
     weight: 840,
-    image: "empty.jpg",
+    image: "pelmeni-sudak.jpg",
     ingredients: [
       "мука универсальная безглютеновая",
       "мука кукурузная",
@@ -733,7 +733,7 @@ const rawItemsById = {
     price: 150,
     weight: 150,
     amount: 4,
-    image: "empty.jpg",
+    image: "blini.jpg",
     ingredients: [
       "яйцо",
       "вода",
@@ -754,7 +754,7 @@ const rawItemsById = {
     price: 220,
     weight: 250,
     amount: 4,
-    image: "empty.jpg",
+    image: "blini-kurinoye-serdce.jpg",
     ingredients: [
       "яйцо",
       "вода",
@@ -780,7 +780,7 @@ const rawItemsById = {
     price: 250,
     weight: 250,
     amount: 4,
-    image: "empty.jpg",
+    image: "blini-yabloko-koritsa.jpg",
     ingredients: [
       "яйцо",
       "вода",
