@@ -978,7 +978,7 @@ const rawItemsById = {
     price: 300,
     weight: 400,
     amount: 4,
-    image: "/kotleti-indeyaka-goroh.jpg",
+    image: "kotleti-indeyaka-goroh.jpg",
     ingredients: [
       "филе грудки индейки",
       "зеленый горошек",
