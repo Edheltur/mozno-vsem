@@ -1,4 +1,4 @@
-import { itemsById, TMenuItem, TMenuItemId } from "common/data/menu";
+import { itemsById, TMenuItem } from "common/data/menu";
 
 export type TCategory = {
   slug: TCategorySlug;
@@ -31,7 +31,7 @@ const rawCategoriesBySlug = {
       itemsById["90"],
       itemsById["91"],
       itemsById["79"],
-      itemsById["21"],
+      itemsById["36"],
       itemsById["70"],
       itemsById["71"],
     ],
