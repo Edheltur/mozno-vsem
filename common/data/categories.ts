@@ -1,4 +1,4 @@
-import { itemsById, TMenuItem } from "common/data/menu";
+import { itemsById, TMenuItem, TMenuItemId } from "common/data/menu";
 
 export type TCategory = {
   slug: TCategorySlug;
@@ -8,6 +8,7 @@ export type TCategory = {
 export type TCategorySlug = keyof typeof rawCategoriesBySlug;
 const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "all",
+  "new-year",
   "cutlets",
   "second-courses",
   "soups",
@@ -19,6 +20,22 @@ const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
 ];
 
 const rawCategoriesBySlug = {
+  "new-year": {
+    title: "Новогодние блюда",
+    items: [
+      itemsById["85"],
+      itemsById["86"],
+      itemsById["87"],
+      itemsById["88"],
+      itemsById["89"],
+      itemsById["90"],
+      itemsById["91"],
+      itemsById["79"],
+      itemsById["21"],
+      itemsById["70"],
+      itemsById["71"],
+    ],
+  },
   cutlets: {
     title: "Котлеты",
     items: [
@@ -56,6 +73,12 @@ const rawCategoriesBySlug = {
       itemsById["60"],
       itemsById["61"],
       itemsById["62"],
+      itemsById["85"],
+      itemsById["86"],
+      itemsById["87"],
+      itemsById["88"],
+      itemsById["89"],
+      itemsById["90"],
     ],
   },
   garnishes: {
@@ -76,6 +99,7 @@ const rawCategoriesBySlug = {
       itemsById["67"],
       itemsById["80"],
       itemsById["81"],
+      itemsById["91"],
     ],
   },
   bread: {
@@ -110,6 +134,7 @@ const rawCategoriesBySlug = {
       itemsById["78"],
       itemsById["83"],
       itemsById["84"],
+      itemsById["92"],
     ],
   },
   bakery: {
@@ -131,7 +156,8 @@ const rawCategoriesBySlug = {
   get all() {
     return {
       title: "Все блюда",
-      items: [
+      items: getUniqueItems([
+        ...this["new-year"].items,
         ...this["cutlets"].items,
         ...this["second-courses"].items,
         ...this["garnishes"].items,
@@ -140,7 +166,7 @@ const rawCategoriesBySlug = {
         ...this["soups"].items,
         ...this["mincemeat"].items,
         ...this["bread"].items,
-      ],
+      ]),
     };
   },
 } as const;
@@ -159,3 +185,15 @@ export const categoriesBySlug: Readonly<Record<
 export const categories = orderedCategorySlugs.map(
   (slug) => categoriesBySlug[slug]
 );
+
+function getUniqueItems(items: TMenuItem[]): TMenuItem[] {
+  const itemsById: Record<string, TMenuItem> = {};
+
+  items.forEach((item) => {
+    itemsById[item.id] = item;
+  });
+
+  return Object.keys(itemsById).map(function (v) {
+    return itemsById[v];
+  });
+}
