@@ -1093,6 +1093,22 @@ const rawItemsById = {
     image: "empty.jpg",
     ingredients: ["шиповник"],
   },
+  "93": {
+    title: "Готовый холодец",
+    price: 850,
+    weight: 700,
+    image: "empty.jpg",
+    ingredients: [
+      "говядина",
+      "курица",
+      "соль",
+      "чеснок",
+      "лук",
+      "лавровый лист",
+      "укроп перец",
+      "желатин",
+    ],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<
