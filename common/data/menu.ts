@@ -497,13 +497,6 @@ const rawItemsById = {
       "зеленый горошек",
     ],
   },
-  "43": {
-    title: "Смесь с брокколи",
-    price: 130,
-    weight: 400,
-    image: "smes-s-brokkoli.jpg",
-    ingredients: ["брокколи", "цветная капуста", "морковь"],
-  },
   "44": {
     title: "Смесь для жарки яиц",
     price: 100,
@@ -1108,6 +1101,13 @@ const rawItemsById = {
       "укроп перец",
       "желатин",
     ],
+  },
+  "94": {
+    title: "Тыква резаная",
+    price: 120,
+    weight: 400,
+    image: "empty.jpg",
+    ingredients: ["тыква"],
   },
 } as const;
 

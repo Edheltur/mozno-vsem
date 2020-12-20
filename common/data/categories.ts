@@ -86,12 +86,12 @@ const rawCategoriesBySlug = {
   garnishes: {
     title: "Гарниры",
     items: [
+      itemsById["94"],
       itemsById["37"],
       itemsById["38"],
       itemsById["39"],
       itemsById["41"],
       itemsById["42"],
-      itemsById["43"],
       itemsById["44"],
       itemsById["45"],
       itemsById["63"],
