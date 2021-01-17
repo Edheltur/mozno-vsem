@@ -23,8 +23,6 @@ const rawCategoriesBySlug = {
   banquet: {
     title: "Банкетные блюда",
     items: [
-      itemsById["85"],
-      itemsById["86"],
       itemsById["87"],
       itemsById["88"],
       itemsById["93"],
@@ -81,6 +79,8 @@ const rawCategoriesBySlug = {
       itemsById["93"],
       itemsById["89"],
       itemsById["90"],
+      itemsById["85"],
+      itemsById["86"],
     ],
   },
   garnishes: {
