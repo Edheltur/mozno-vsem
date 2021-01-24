@@ -2,6 +2,7 @@ import { getSelectedItems, getTotalPrice } from "common/data/cart";
 import { TelegramClient } from "server/telegram";
 import { getDeliveryCost } from "common/data/price";
 import { TOrder } from "common/data/order";
+import { config } from "common/config";
 
 const DIVIDER = " ";
 
@@ -20,7 +21,9 @@ export class TelegramReporter {
     const totalPrice = getTotalPrice(cart);
     const deliveryCost = getDeliveryCost(totalPrice);
 
-    return [`*Заказ c сайта №${orderId}*`]
+    return [
+      `*Заказ c сайта* [№${orderId}](${config.publicUrl}/admin/invoice/${orderId})`,
+    ]
       .concat(...itemsLines)
       .concat(DIVIDER)
       .concat(`*Доставка:* ${deliveryCost}₽`)

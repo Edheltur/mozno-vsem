@@ -1,0 +1,10 @@
+@page {
+  size: auto;
+  margin: 0;
+}
+
+@media print {
+  .InvoicePage__controls {
+    display: none !important;
+  }
+}

@@ -1,24 +1,18 @@
-import { OrdersPage, IProps, TOrderRow } from "components/OrdersPage";
+import React from "react";
+import { OrdersPage } from "components/OrdersPage";
 import { GetServerSideProps } from "next";
 import { createDbClient, Index } from "server/faunadb";
 import { query as q } from "faunadb";
 import { getTotalPrice } from "common/data/cart";
 import { getDeliveryCost } from "common/data/price";
 import { getSession } from "next-auth/client";
+import { getClientInfo } from "common/data/clientInfo";
 
 export default OrdersPage;
 
-function getStringOrPlaceholder(value: any): string {
-  return value ? String(value) : "-";
-}
-
-function getStringOrNull(value: any): string | null {
-  return typeof value === "string" ? value : null;
-}
-
-export const getServerSideProps: GetServerSideProps<IProps> = async (
-  context
-) => {
+export const getServerSideProps: GetServerSideProps<React.ComponentProps<
+  typeof OrdersPage
+>> = async (context) => {
   const session = await getSession(context);
   if (!session) {
     return { props: {} };
@@ -33,22 +27,9 @@ export const getServerSideProps: GetServerSideProps<IProps> = async (
     )
   );
 
-  const props: IProps = {
+  const props = {
     orders: data.map(
-      ({
-        data: {
-          date,
-          name,
-          phone,
-          countById,
-          address,
-          entrance,
-          apartment,
-          intercomCode,
-          floor,
-        },
-        ref: { id },
-      }: any): TOrderRow => {
+      ({ data: { date, countById, ...rawClientInfo }, ref: { id } }: any) => {
         const cart = {
           countById: countById ?? {},
         };
@@ -59,16 +40,7 @@ export const getServerSideProps: GetServerSideProps<IProps> = async (
         return {
           id: Number(id),
           dateIsoString: date?.date.toISOString(),
-
-          name: getStringOrPlaceholder(name),
-          phone: getStringOrPlaceholder(phone),
-          address: getStringOrPlaceholder(address),
-
-          entrance: getStringOrNull(entrance),
-          apartment: getStringOrNull(apartment),
-          intercomCode: getStringOrNull(intercomCode),
-          floor: getStringOrNull(floor),
-
+          clientInfo: getClientInfo(rawClientInfo),
           cart,
           sum,
         };

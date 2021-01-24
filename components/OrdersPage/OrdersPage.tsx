@@ -1,27 +1,23 @@
 import React from "react";
 import Head from "next/head";
+import Error from "next/error";
 
 import { Anchor, Box, Button, Collapsible, DataTable } from "grommet";
 import { Items } from "components/CartModal/Items";
 import { ICart } from "common/data/cart";
 import { useIsMounted } from "client/helpers/hooks";
+import { IClientInfo, getCombinedAddress } from "common/data/clientInfo";
 
-export interface IProps {
+interface IProps {
   orders?: TOrderRow[];
 }
 
-export type TOrderRow = {
+type TOrderRow = {
   id: number;
   dateIsoString: string;
-  name: string;
-  phone: string;
-  address: string;
-  entrance: string | null;
-  apartment: string | null;
-  intercomCode: string | null;
-  floor: string | null;
   sum: number;
   cart: ICart;
+  clientInfo: IClientInfo;
 };
 
 const Cart = ({ cart }: { cart: ICart }) => {
@@ -48,7 +44,7 @@ const Cart = ({ cart }: { cart: ICart }) => {
 };
 export const OrdersPage = ({ orders }: IProps) => {
   if (!orders) {
-    return null;
+    return <Error statusCode={404} />;
   }
   return (
     <>
@@ -66,6 +62,11 @@ export const OrdersPage = ({ orders }: IProps) => {
               property: "id",
               header: "№",
               primary: true,
+              render: ({ id }) => (
+                <Anchor target="_blank" href={`/admin/invoice/${id}`}>
+                  {id}
+                </Anchor>
+              ),
             },
             {
               property: "date",
@@ -88,38 +89,20 @@ export const OrdersPage = ({ orders }: IProps) => {
               header: "Сумма",
             },
             {
-              property: "name",
+              property: "clientInfo.name",
               header: "Имя",
             },
             {
               property: "phone",
               header: "Телефон",
-              render: ({ phone }) => (
+              render: ({ clientInfo: { phone } }) => (
                 <Anchor href={"tel:" + phone}>{phone}</Anchor>
               ),
             },
             {
               property: "address",
               header: "Адрес",
-              render({ address, apartment, entrance, intercomCode, floor }) {
-                let result = address;
-                if (entrance) {
-                  result += `, подъезд ${entrance}`;
-                }
-                if (intercomCode) {
-                  result += `, домофон ${intercomCode}`;
-                }
-
-                if (apartment) {
-                  result += `, кв. ${apartment}`;
-                }
-
-                if (floor) {
-                  result += `, ${floor} этаж`;
-                }
-
-                return result;
-              },
+              render: ({ clientInfo }) => getCombinedAddress(clientInfo),
             },
           ]}
           data={orders}
