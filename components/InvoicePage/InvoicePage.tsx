@@ -123,7 +123,7 @@ export const InvoicePage = (props: IProps | {}) => {
         <title>Админка. Заказ №{id}</title>
         <meta name="robots" content="noindex" />
       </Head>
-      <Box alignContent="start" margin={{ vertical: "medium" }}>
+      <Box alignContent="start" pad="medium">
         <h1>Заказ №{id}</h1>
         <ClientInfo {...clientInfo} />
         <h3>Перечень товаров</h3>
@@ -135,6 +135,16 @@ export const InvoicePage = (props: IProps | {}) => {
         >
           <Button label="Распечатать" onClick={global.print} />
         </Box>
+        <div className={styles.InvoicePage__recipes}>
+          <h3>Способ приготовления</h3>
+          <p>
+            Не размораживая, в предварительно разогретой духовке, готовить при
+            температуре 180-200 градусов, в течении 30-40 минут, добавив немного
+            воды.
+          </p>
+          <p>В мультиварке - режим «пароварка» на 30 минут</p>
+          <p>В сковороде - тушить 30 минут</p>
+        </div>
       </Box>
     </>
   );
