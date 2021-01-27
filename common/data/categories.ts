@@ -55,6 +55,8 @@ const rawCategoriesBySlug = {
       itemsById["53"],
       itemsById["79"],
       itemsById["82"],
+      itemsById["95"],
+      itemsById["96"],
     ],
   },
   "second-courses": {
@@ -67,6 +69,7 @@ const rawCategoriesBySlug = {
       itemsById["48"],
       itemsById["49"],
       itemsById["55"],
+      itemsById["97"],
       itemsById["58"],
       itemsById["59"],
       itemsById["60"],
