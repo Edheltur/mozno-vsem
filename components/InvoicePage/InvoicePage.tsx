@@ -135,6 +135,11 @@ export const InvoicePage = (props: IProps | {}) => {
         >
           <Button label="Распечатать" onClick={global.print} />
         </Box>
+        <div className={styles.InvoicePage__comment}>
+          <hr />
+          <hr />
+          <hr />
+        </div>
         <div className={styles.InvoicePage__recipes}>
           <h3>Способ приготовления</h3>
           <p>

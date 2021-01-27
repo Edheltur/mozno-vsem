@@ -10,6 +10,16 @@
 }
 
 .InvoicePage__recipes p {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   max-width: 800px;
+}
+
+.InvoicePage__comment {
+  margin: 15px 0;
+}
+
+.InvoicePage__comment hr {
+  margin: 1.5em 0 0;
+  border-width: 1px 0 0;
+  border-style: dotted;
 }
