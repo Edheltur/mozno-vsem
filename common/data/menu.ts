@@ -72,7 +72,7 @@ const rawItemsById = {
   },
   "4": {
     title: "Фрикадельки из индейки с луком",
-    price: 410,
+    price: 450,
     weight: 480,
     amount: 6,
     image: "frikadelki-indeyka-luk.jpg",
@@ -174,7 +174,7 @@ const rawItemsById = {
   },
   "10": {
     title: "Котлетки из красной рыбы с кальмаром",
-    price: 380,
+    price: 400,
     weight: 300,
     amount: 3,
     image: "kotleti-forel-kalmar.jpg",
@@ -189,7 +189,7 @@ const rawItemsById = {
   },
   "11": {
     title: "Рыбные биточки из судака с минтаем",
-    price: 300,
+    price: 350,
     weight: 300,
     amount: 2,
     image: "kotleti-sudak-mintai.jpg",
@@ -368,7 +368,7 @@ const rawItemsById = {
   },
   "31": {
     title: "Биточки из минтая с креветками",
-    price: 350,
+    price: 380,
     weight: 300,
     amount: 3,
     image: "kotleti-mintay-krevetka.jpg",
