@@ -41,6 +41,8 @@ export class TelegramReporter {
 
   public async sendReport(orderId: number, order: TOrder) {
     const reportMarkdown = this.generateOrderReport(orderId, order);
-    await this.client.sendMessage(this.channelId, reportMarkdown);
+    await this.client.sendMessage(this.channelId, reportMarkdown, {
+      disableLinkPreview: true,
+    });
   }
 }

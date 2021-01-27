@@ -5,6 +5,8 @@ const headers = {
   "Content-Type": "application/json",
 };
 
+type SendMessageOptions = { disableLinkPreview?: boolean };
+
 export class TelegramClient {
   private readonly token: string;
   private readonly timeoutMs: number;
@@ -34,11 +36,16 @@ export class TelegramClient {
     throw new Error(response.statusText);
   }
 
-  sendMessage(chatId: string, markdownText: string) {
+  sendMessage(
+    chatId: string,
+    markdownText: string,
+    { disableLinkPreview }: SendMessageOptions = { disableLinkPreview: false }
+  ) {
     return this.request("sendMessage", {
       chat_id: chatId,
       text: markdownText,
       parse_mode: "markdown",
+      disable_web_page_preview: disableLinkPreview,
     });
   }
 }
