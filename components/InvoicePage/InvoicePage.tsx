@@ -74,7 +74,7 @@ function Invoice({ cart }: { cart: ICart }) {
         <TableRow>
           <TableCell>☑</TableCell>
           <TableCell>Наименование</TableCell>
-          <TableCell>Кол-во</TableCell>
+          <TableCell>Кол‑во</TableCell>
           <TableCell>Стоимость</TableCell>
         </TableRow>
       </TableHeader>
