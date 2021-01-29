@@ -120,7 +120,7 @@ const rawCategoriesBySlug = {
   },
   soups: {
     title: "Супы",
-    items: [itemsById["54"], itemsById["57"], itemsById["68"]],
+    items: [itemsById["54"], itemsById["57"], itemsById["68"], itemsById["98"]],
   },
   "fruits-and-berries": {
     title: "Фрукты и ягоды",

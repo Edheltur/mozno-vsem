@@ -1169,6 +1169,13 @@ const rawItemsById = {
       "мускат",
     ],
   },
+  "98": {
+    title: "Бульон куриный замороженный",
+    price: 100,
+    weight: 500,
+    image: "empty.jpg",
+    ingredients: ["вода", "курица", "соль"],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<
