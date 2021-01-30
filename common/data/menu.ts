@@ -897,20 +897,6 @@ const rawItemsById = {
     image: "oblepikha.jpg",
     ingredients: ["облепиха"],
   },
-  "78": {
-    title: "Смесь для компота",
-    price: 250,
-    weight: 500,
-    image: "smes-kompot.jpg",
-    ingredients: [
-      "красная смородина",
-      "чёрная смородина",
-      "крыжовник",
-      "слива",
-      "клубника",
-      "рябина черноплодная",
-    ],
-  },
   "79": {
     title: "Котлеты из форели с креветками",
     price: 650,
