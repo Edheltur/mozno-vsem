@@ -1162,6 +1162,35 @@ const rawItemsById = {
     image: "empty.jpg",
     ingredients: ["вода", "курица", "соль"],
   },
+  "99": {
+    title: "Чебуреки с сыром и зеленью",
+    price: 230,
+    weight: 200,
+    amount: 2,
+    image: "empty.jpg",
+    ingredients: [
+      "мука пшеничная цельнозерновая",
+      "сыр 40%",
+      "петрушка",
+      "укроп",
+      "соль",
+    ],
+  },
+  "100": {
+    title: "Чебуреки с сыром и зеленью",
+    price: 260,
+    weight: 200,
+    amount: 2,
+    image: "empty.jpg",
+    ingredients: [
+      "мука ржаная",
+      "масло оливковое",
+      "сыр 40%",
+      "петрушка",
+      "укроп",
+      "соль",
+    ],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<
