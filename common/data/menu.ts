@@ -1191,6 +1191,20 @@ const rawItemsById = {
       "соль",
     ],
   },
+  "101": {
+    title: "Аджика",
+    price: 280,
+    weight: 200,
+    image: "empty.jpg",
+    ingredients: [
+      "чеснок",
+      "перец красный",
+      "соль",
+      "базилик",
+      "хмели-сунели",
+      "кинза",
+    ],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<
