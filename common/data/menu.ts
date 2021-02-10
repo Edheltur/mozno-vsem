@@ -422,14 +422,6 @@ const rawItemsById = {
     image: "farsh-kuritsa.jpg",
     ingredients: ["обрезь говядины", "обрезь курицы", "обрезь индейки"],
   },
-  "35": {
-    title: "Кальмары по-русски",
-    price: 450,
-    weight: 450,
-    amount: 2,
-    image: "kalmari-po-russki.jpg",
-    ingredients: ["греча", "шампиньоны", "лук", "соль", "специи"],
-  },
   "36": {
     title: "Кальмар с красной рыбой",
     price: 600,

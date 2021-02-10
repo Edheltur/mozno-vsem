@@ -17,17 +17,15 @@ const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "fruits-and-berries",
   "bakery",
   "banquet",
+  "preorder",
 ];
 
 const rawCategoriesBySlug = {
   banquet: {
     title: "Банкетные блюда",
     items: [
-      itemsById["87"],
       itemsById["88"],
       itemsById["93"],
-      itemsById["89"],
-      itemsById["90"],
       itemsById["91"],
       itemsById["79"],
       itemsById["36"],
@@ -64,7 +62,6 @@ const rawCategoriesBySlug = {
     items: [
       itemsById["9"],
       itemsById["32"],
-      itemsById["35"],
       itemsById["36"],
       itemsById["48"],
       itemsById["49"],
@@ -72,18 +69,13 @@ const rawCategoriesBySlug = {
       itemsById["97"],
       itemsById["99"],
       itemsById["100"],
-      itemsById["58"],
-      itemsById["59"],
       itemsById["60"],
       itemsById["61"],
       itemsById["62"],
       itemsById["85"],
       itemsById["86"],
-      itemsById["87"],
       itemsById["88"],
       itemsById["93"],
-      itemsById["89"],
-      itemsById["90"],
       itemsById["85"],
       itemsById["86"],
     ],
@@ -158,6 +150,16 @@ const rawCategoriesBySlug = {
       itemsById["21"],
       itemsById["33"],
       itemsById["34"],
+    ],
+  },
+  preorder: {
+    title: "По предзаказу",
+    items: [
+      itemsById["90"],
+      itemsById["58"],
+      itemsById["59"],
+      itemsById["87"],
+      itemsById["89"],
     ],
   },
   get all() {
