@@ -78,6 +78,13 @@ const rawCategoriesBySlug = {
       itemsById["93"],
       itemsById["85"],
       itemsById["86"],
+      itemsById["102"],
+      itemsById["103"],
+      itemsById["104"],
+      itemsById["105"],
+      itemsById["106"],
+      itemsById["107"],
+      itemsById["108"],
     ],
   },
   garnishes: {
@@ -115,7 +122,13 @@ const rawCategoriesBySlug = {
   },
   soups: {
     title: "Супы",
-    items: [itemsById["54"], itemsById["57"], itemsById["68"], itemsById["98"]],
+    items: [
+      itemsById["54"],
+      itemsById["57"],
+      itemsById["68"],
+      itemsById["98"],
+      itemsById["109"],
+    ],
   },
   "fruits-and-berries": {
     title: "Фрукты и ягоды",
