@@ -155,4 +155,8 @@ export const InvoicePage = (props: IProps | {}) => {
   );
 };
 
-InvoicePage.commonPageProps = { disableHeader: true, disableMenu: true };
+InvoicePage.commonPageProps = {
+  disableHeader: true,
+  disableMenu: true,
+  noIndex: true,
+};

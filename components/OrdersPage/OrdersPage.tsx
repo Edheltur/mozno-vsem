@@ -112,4 +112,8 @@ export const OrdersPage = ({ orders }: IProps) => {
   );
 };
 
-OrdersPage.commonPageProps = { disableHeader: true, disableMenu: true };
+OrdersPage.commonPageProps = {
+  disableHeader: true,
+  disableMenu: true,
+  noIndex: true,
+};

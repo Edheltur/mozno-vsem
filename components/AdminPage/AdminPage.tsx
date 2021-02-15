@@ -15,6 +15,9 @@ const Content = ({ session }: { session?: Session | null }) => {
       <Link passHref href="/admin/orders">
         <Anchor>Список заказов</Anchor>
       </Link>
+      <Link passHref href="/admin/empty-images">
+        <Anchor>Список блюд без картинок</Anchor>
+      </Link>
       <Button primary label="Выйти" onClick={handleSignOutClick} />
     </Box>
   ) : (
@@ -36,4 +39,8 @@ export const AdminPage = () => {
   );
 };
 
-AdminPage.commonPageProps = { disableHeader: true, disableMenu: true };
+AdminPage.commonPageProps = {
+  disableHeader: true,
+  disableMenu: true,
+  noIndex: true,
+};
