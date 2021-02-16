@@ -1111,7 +1111,7 @@ const rawItemsById = {
     price: 410,
     weight: 400,
     amount: 4,
-    image: "empty.jpg",
+    image: "kotleti-skitlz.jpg",
     ingredients: [
       "филе грудки индейки",
       "перец сладкий",
@@ -1133,7 +1133,7 @@ const rawItemsById = {
     price: 240,
     weight: 200,
     amount: 2,
-    image: "empty.jpg",
+    image: "cheburek-rzhanoy.jpg",
     ingredients: [
       "мука ржаная",
       "вода",
@@ -1151,7 +1151,7 @@ const rawItemsById = {
     title: "Бульон куриный замороженный",
     price: 100,
     weight: 500,
-    image: "empty.jpg",
+    image: "bulyon-kuritsa.jpg",
     ingredients: ["вода", "курица", "соль"],
   },
   "99": {
@@ -1159,7 +1159,7 @@ const rawItemsById = {
     price: 230,
     weight: 200,
     amount: 2,
-    image: "empty.jpg",
+    image: "cheburek-sir-zelen.jpg",
     ingredients: [
       "мука пшеничная цельнозерновая",
       "сыр 40%",
@@ -1173,7 +1173,7 @@ const rawItemsById = {
     price: 260,
     weight: 200,
     amount: 2,
-    image: "empty.jpg",
+    image: "cheburek-rzhanoy-sir-zelen.jpg",
     ingredients: [
       "мука ржаная",
       "масло оливковое",
@@ -1201,7 +1201,7 @@ const rawItemsById = {
     title: "Бефстроганов из печени",
     price: 300,
     weight: 400,
-    image: "empty.jpg",
+    image: "befstroganov-pechen.jpg",
     ingredients: [
       "печень индейки",
       "масло оливковое",
@@ -1232,7 +1232,7 @@ const rawItemsById = {
     title: "Фрикасе из курицы",
     price: 350,
     weight: 400,
-    image: "empty.jpg",
+    image: "frikase-kuritsa.jpg",
     ingredients: [
       "куриная грудка",
       "лук",
@@ -1309,7 +1309,7 @@ const rawItemsById = {
     title: "Фрикадельки куриные",
     price: 250,
     weight: 300,
-    image: "empty.jpg",
+    image: "frikadelki-kuritsa.jpg",
     ingredients: [
       "курица",
       "лук",
