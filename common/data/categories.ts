@@ -24,8 +24,6 @@ const rawCategoriesBySlug = {
   banquet: {
     title: "Банкетные блюда",
     items: [
-      itemsById["88"],
-      itemsById["93"],
       itemsById["91"],
       itemsById["79"],
       itemsById["36"],
@@ -74,8 +72,6 @@ const rawCategoriesBySlug = {
       itemsById["62"],
       itemsById["85"],
       itemsById["86"],
-      itemsById["88"],
-      itemsById["93"],
       itemsById["85"],
       itemsById["86"],
       itemsById["102"],
@@ -168,6 +164,8 @@ const rawCategoriesBySlug = {
   preorder: {
     title: "По предзаказу",
     items: [
+      itemsById["88"],
+      itemsById["93"],
       itemsById["90"],
       itemsById["58"],
       itemsById["59"],
