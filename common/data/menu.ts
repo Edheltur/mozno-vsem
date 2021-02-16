@@ -1216,7 +1216,7 @@ const rawItemsById = {
   "103": {
     title: "Рулетики из индейки с сыром и зеленью",
     price: 650,
-    weight: 400,
+    weight: 520,
     image: "empty.jpg",
     ingredients: [
       "грудка индейки",
