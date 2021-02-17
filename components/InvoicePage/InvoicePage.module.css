@@ -1,12 +1,14 @@
-@page {
-  size: auto;
-  margin: 0;
-}
-
 @media print {
   .InvoicePage__controls {
     display: none !important;
   }
+}
+
+.InvoicePage__controls {
+  margin: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
 }
 
 .InvoicePage__recipes p {

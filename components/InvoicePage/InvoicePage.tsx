@@ -111,6 +111,7 @@ function Invoice({ cart }: { cart: ICart }) {
   );
 }
 
+const FIREFOX_FIX_STYLES = `main { overflow: visible !important; }`;
 export const InvoicePage = (props: IProps | {}) => {
   if (!("id" in props)) {
     return <Error statusCode={404} />;
@@ -122,19 +123,17 @@ export const InvoicePage = (props: IProps | {}) => {
       <Head>
         <title>Админка. Заказ №{id}</title>
         <meta name="robots" content="noindex" />
+        <style>{FIREFOX_FIX_STYLES}</style>
       </Head>
-      <Box alignContent="start" pad="medium">
+
+      <div>
         <h1>Заказ №{id}</h1>
         <ClientInfo {...clientInfo} />
         <h3>Перечень товаров</h3>
         <Invoice cart={cart} />
-        <Box
-          alignSelf="end"
-          margin={{ top: "medium" }}
-          className={styles.InvoicePage__controls}
-        >
+        <div className={styles.InvoicePage__controls}>
           <Button label="Распечатать" onClick={global.print} />
-        </Box>
+        </div>
         <div className={styles.InvoicePage__comment}>
           <hr />
           <hr />
@@ -150,7 +149,7 @@ export const InvoicePage = (props: IProps | {}) => {
           <p>В мультиварке - режим «пароварка» на 30 минут.</p>
           <p>В сковороде - тушить 30 минут.</p>
         </div>
-      </Box>
+      </div>
     </>
   );
 };
