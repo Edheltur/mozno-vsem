@@ -18,6 +18,7 @@ const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "fruits-and-berries",
   "bakery",
   "banquet",
+  "farm-meat",
   "preorder",
 ];
 
@@ -106,7 +107,6 @@ const rawCategoriesBySlug = {
       itemsById["94"],
       itemsById["37"],
       itemsById["38"],
-      itemsById["39"],
       itemsById["41"],
       itemsById["42"],
       itemsById["44"],
@@ -177,14 +177,16 @@ const rawCategoriesBySlug = {
       itemsById["34"],
     ],
   },
+  "farm-meat": {
+    title: "Фермерское мясо",
+    items: [itemsById["110"], itemsById["111"], itemsById["112"]],
+  },
   preorder: {
     title: "По предзаказу",
     items: [
       itemsById["88"],
       itemsById["93"],
       itemsById["90"],
-      itemsById["58"],
-      itemsById["59"],
       itemsById["87"],
       itemsById["89"],
     ],
