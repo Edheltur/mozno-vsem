@@ -1292,6 +1292,13 @@ const rawItemsById = {
     image: "empty.jpg",
     ingredients: ["говядина", "соль", "перец"],
   },
+  "113": {
+    title: "Цыплёнок тапака",
+    price: 380,
+    weight: 900,
+    image: "empty.jpg",
+    ingredients: ["курица", "соль", "специи"],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<
