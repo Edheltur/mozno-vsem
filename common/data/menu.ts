@@ -1196,7 +1196,7 @@ const rawItemsById = {
     title: "Гуляш из говядины",
     price: 600,
     weight: 400,
-    image: "empty.jpg",
+    image: "gulyahs-govyadina.jpg",
     ingredients: [
       "говядина",
       "томатная паста",
@@ -1281,7 +1281,7 @@ const rawItemsById = {
     title: "Фарш говядина",
     price: 750,
     weight: 500,
-    image: "empty.jpg",
+    image: "farsh-govyadina-farm.jpg",
     ingredients: ["говядина"],
   },
   "112": {
