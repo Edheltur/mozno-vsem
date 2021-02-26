@@ -973,7 +973,7 @@ const rawItemsById = {
     title: "Холодец",
     price: 650,
     weight: 500,
-    image: "empty.jpg",
+    image: "kholodetc.jpg",
     ingredients: [
       "говядина",
       "курица",
@@ -1010,7 +1010,7 @@ const rawItemsById = {
     title: "Шиповник",
     price: 600,
     weight: 500,
-    image: "empty.jpg",
+    image: "shipovnik.jpg",
     ingredients: ["шиповник"],
   },
   "93": {
@@ -1033,7 +1033,7 @@ const rawItemsById = {
     title: "Тыква резаная",
     price: 120,
     weight: 400,
-    image: "empty.jpg",
+    image: "tikva.jpg",
     ingredients: ["тыква"],
   },
   "95": {
@@ -1166,7 +1166,7 @@ const rawItemsById = {
     title: "Рулетики из индейки с сыром и зеленью",
     price: 650,
     weight: 520,
-    image: "empty.jpg",
+    image: "ruleti-indeyka.jpg",
     ingredients: [
       "грудка индейки",
       "сыр",
@@ -1227,7 +1227,7 @@ const rawItemsById = {
     title: "Печень индейки в сливочном соусе",
     price: 320,
     weight: 400,
-    image: "empty.jpg",
+    image: "pechen-indeyka.jpg",
     ingredients: [
       "печень индейки",
       "молоко кокосовое",
