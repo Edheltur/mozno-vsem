@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import { Heading, Tab, Tabs } from "grommet";
 
-import { categories, TCategorySlug } from "common/data/categories";
+import { categories } from "common/data/categories";
 import { DishCard } from "components/DishCard";
 
 import styles from "./DishList.module.css";
@@ -16,10 +16,10 @@ const List = React.memo(function List() {
 
   const router = useRouter();
   const { category, ...queryWithoutCategory } = router.query;
-  let activeIndex = categories.findIndex((x) => x.slug === category);
-  if (activeIndex < 0) {
-    activeIndex = 0;
-  }
+  const activeIndex = Math.max(
+    categories.findIndex((x) => x.slug === category),
+    0
+  );
 
   const handleActivate = useCallback((index: number) => {
     const categorySlug = categories[index].slug;
@@ -43,14 +43,16 @@ const List = React.memo(function List() {
       {categories.map(({ title, items, slug }) => (
         <Tab title={title} key={slug}>
           <div className={styles.DishList__list}>
-            {items.map((item) => (
-              <DishCard
-                countInCart={getItemCountInCart(cart, item.id)}
-                item={item}
-                key={item.id}
-                mix={styles.DishList__listItem}
-              />
-            ))}
+            {uniq(items)
+              .filter((v, i, a) => a.indexOf(v) === i)
+              .map((item) => (
+                <DishCard
+                  countInCart={getItemCountInCart(cart, item.id)}
+                  item={item}
+                  key={item.id}
+                  mix={styles.DishList__listItem}
+                />
+              ))}
           </div>
         </Tab>
       ))}
@@ -68,3 +70,7 @@ export const DishList = () => {
     </div>
   );
 };
+
+function uniq<T>(arr: ReadonlyArray<T>): ReadonlyArray<T> {
+  return arr.filter((v, i) => arr.indexOf(v) === i);
+}
