@@ -1278,7 +1278,7 @@ const rawItemsById = {
     ingredients: ["говядина"],
   },
   "111": {
-    title: "Фарш говядина",
+    title: "Фермерский фарш из говядины",
     price: 750,
     weight: 500,
     image: "farsh-govyadina-farm.jpg",
@@ -1287,7 +1287,7 @@ const rawItemsById = {
   "112": {
     title: "Рубленый бифштекс",
     price: 600,
-    weight: 150,
+    weight: 300,
     amount: 2,
     image: "empty.jpg",
     ingredients: ["говядина", "соль", "перец"],
