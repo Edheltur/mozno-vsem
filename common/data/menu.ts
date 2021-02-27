@@ -978,13 +978,6 @@ const rawItemsById = {
       "перец",
     ],
   },
-  "89": {
-    title: "Карп для запекания",
-    price: 700,
-    weight: 650,
-    image: "karp-zapekanie.jpg",
-    ingredients: ["карп", "соль", "перец"],
-  },
   "90": {
     title: "Язык говяжий отварной",
     price: 750,

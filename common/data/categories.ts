@@ -201,13 +201,7 @@ const rawCategoriesBySlug = {
   },
   preorder: {
     title: "По предзаказу",
-    items: [
-      itemsById["88"],
-      itemsById["93"],
-      itemsById["90"],
-      itemsById["87"],
-      itemsById["89"],
-    ],
+    items: [itemsById["88"], itemsById["93"], itemsById["90"], itemsById["87"]],
   },
   get all() {
     return {
