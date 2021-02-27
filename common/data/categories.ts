@@ -19,6 +19,7 @@ const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "bakery",
   "banquet",
   "farm-meat",
+  "for-man",
   "preorder",
 ];
 
@@ -39,6 +40,22 @@ const rawCategoriesBySlug = {
       itemsById["106"],
       itemsById["107"],
       itemsById["108"],
+    ],
+  },
+  "for-man": {
+    title: "Для мужчин",
+    items: [
+      itemsById["113"],
+      itemsById["105"],
+      itemsById["104"],
+      itemsById["108"],
+      itemsById["106"],
+      itemsById["103"],
+      itemsById["48"],
+      itemsById["112"],
+      itemsById["110"],
+      itemsById["99"],
+      itemsById["55"],
     ],
   },
   banquet: {
