@@ -206,7 +206,7 @@ const rawCategoriesBySlug = {
   get all() {
     return {
       title: "Все блюда",
-      items: getUniqueItems([
+      items: uniq([
         ...this["cutlets"].items,
         ...this["second-courses"].items,
         ...this["garnishes"].items,
@@ -236,14 +236,6 @@ export const categories = orderedCategorySlugs.map(
   (slug) => categoriesBySlug[slug]
 );
 
-function getUniqueItems(items: TMenuItem[]): TMenuItem[] {
-  const itemsById: Record<string, TMenuItem> = {};
-
-  items.forEach((item) => {
-    itemsById[item.id] = item;
-  });
-
-  return Object.keys(itemsById).map(function (v) {
-    return itemsById[v];
-  });
+function uniq<T>(arr: ReadonlyArray<T>): ReadonlyArray<T> {
+  return arr.filter((v, i) => arr.indexOf(v) === i);
 }
