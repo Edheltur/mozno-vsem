@@ -506,7 +506,7 @@ const rawItemsById = {
   "48": {
     title: "Долма",
     price: 300,
-    weight: 250,
+    weight: 240,
     amount: 6,
     image: "dolma.jpg",
     ingredients: [
