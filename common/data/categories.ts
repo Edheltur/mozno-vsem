@@ -147,7 +147,6 @@ const rawCategoriesBySlug = {
   "fruits-and-berries": {
     title: "Фрукты и ягоды",
     items: [
-      itemsById["46"],
       itemsById["47"],
       itemsById["69"],
       itemsById["70"],

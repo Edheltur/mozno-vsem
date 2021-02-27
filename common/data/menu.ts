@@ -496,13 +496,6 @@ const rawItemsById = {
     image: "shpinat.jpg",
     ingredients: ["шпинат"],
   },
-  "46": {
-    title: "Манго резаный",
-    price: 340,
-    weight: 300,
-    image: "mango.jpg",
-    ingredients: ["манго"],
-  },
   "47": {
     title: "Клубника",
     price: 120,
