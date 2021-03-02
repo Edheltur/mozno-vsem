@@ -60,13 +60,7 @@ const rawCategoriesBySlug = {
   },
   banquet: {
     title: "Банкетные блюда",
-    items: [
-      itemsById["91"],
-      itemsById["79"],
-      itemsById["36"],
-      itemsById["70"],
-      itemsById["71"],
-    ],
+    items: [itemsById["91"], itemsById["79"], itemsById["70"], itemsById["71"]],
   },
   cutlets: {
     title: "Котлеты",
@@ -89,7 +83,6 @@ const rawCategoriesBySlug = {
       itemsById["79"],
       itemsById["82"],
       itemsById["95"],
-      itemsById["96"],
     ],
   },
   "second-courses": {
@@ -98,7 +91,6 @@ const rawCategoriesBySlug = {
       itemsById["113"],
       itemsById["9"],
       itemsById["32"],
-      itemsById["36"],
       itemsById["48"],
       itemsById["49"],
       itemsById["55"],
