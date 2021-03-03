@@ -46,6 +46,7 @@ export function reachGoal(
 
 export type TGoalName = typeof GOALS[keyof typeof GOALS];
 export const GOALS = {
+  error: "error",
   orderComplete: "order-messenger-button-click",
   openCart: "open-cart",
   addItemToCart: "add-item-to-cart",

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
 
-import { useYandexMetrika } from "client/helpers/yandex-metrika";
+import { GOALS, useYandexMetrika } from "client/helpers/yandex-metrika";
 import { useEffectOnce } from "client/helpers/hooks";
 
 interface IProps {
@@ -13,9 +13,21 @@ const NOT_BOUNCE_INTERVAL_MS = 15000;
 export const YandexMetrika = React.memo(function YandexMetrika({
   url,
 }: IProps) {
-  const { hit, notBounce, extLink, counterId } = useYandexMetrika();
+  const { hit, notBounce, extLink, counterId, reachGoal } = useYandexMetrika();
   useEffect(() => {
     hit({ url });
+  });
+
+  useEffectOnce(() => {
+    window.addEventListener("error", (event) => {
+      reachGoal(GOALS.error, {
+        error: {
+          message: String(event?.message),
+          date: String(new Date()),
+          stack: String(event?.error?.stack),
+        },
+      });
+    });
   });
 
   useEffectOnce(() => {
