@@ -313,24 +313,6 @@ const rawItemsById = {
       "кориандр",
     ],
   },
-  "28": {
-    title: "Хлеб бездрожжевой цельнозерновой десертный",
-    price: 240,
-    weight: 540,
-    image: "desertniy.jpg",
-    ingredients: [
-      "вода",
-      "мука пшеничная цельнозерновая",
-      "закваска ржаная (мука ржаная, вода)",
-      "мука ржаная",
-      "сахар",
-      "масло оливковое",
-      "соль",
-      "смесь орехов",
-      "курага",
-      "изюм",
-    ],
-  },
   "29": {
     title: "Хлеб бездрожжевой цельнозерновой с семечками",
     price: 160,
@@ -750,13 +732,6 @@ const rawItemsById = {
     image: "smes-borsh.jpg",
     ingredients: ["картофель", "морковь", "свекла", "капуста", "лук", "томаты"],
   },
-  "69": {
-    title: "Кубики ананаса",
-    price: 210,
-    weight: 300,
-    image: "ananas.jpg",
-    ingredients: ["ананас"],
-  },
   "70": {
     title: "Брусника",
     price: 350,
@@ -798,13 +773,6 @@ const rawItemsById = {
     weight: 300,
     image: "smorodina-chernaya.jpg",
     ingredients: ["смородина чёрная"],
-  },
-  "76": {
-    title: "Малина",
-    price: 350,
-    weight: 300,
-    image: "malina.jpg",
-    ingredients: ["малина"],
   },
   "77": {
     title: "Облепиха",
@@ -996,13 +964,6 @@ const rawItemsById = {
       "укроп перец",
       "желатин",
     ],
-  },
-  "94": {
-    title: "Тыква резаная",
-    price: 120,
-    weight: 400,
-    image: "tikva.jpg",
-    ingredients: ["тыква"],
   },
   "95": {
     title: "Биточки из говядины с грибами",
