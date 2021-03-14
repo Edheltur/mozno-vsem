@@ -89,6 +89,11 @@ const rawCategoriesBySlug = {
     title: "Вторые блюда",
     items: [
       itemsById["113"],
+      itemsById["114"],
+      itemsById["115"],
+      itemsById["116"],
+      itemsById["117"],
+      itemsById["118"],
       itemsById["9"],
       itemsById["32"],
       itemsById["48"],
