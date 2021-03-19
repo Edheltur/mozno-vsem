@@ -15,7 +15,7 @@ export const AboutIrinaRyl = () => (
     </Box>
     <InfoBlock title="Кто я?">
       Меня зовут Ирина Рыль, я практикующий врач-диетолог (стаж в профессии 24
-      года). Веду <InstagramLink profile="ryl.marafon">блог</InstagramLink>{" "}
+      года). Веду <InstagramLink profile="rylschool">блог</InstagramLink>{" "}
       о&nbsp;рациональном питании, организую школу-марафон для&nbsp;желающих
       наладить свой обмен веществ, избавиться от&nbsp;инсулинорезистентности
       и&nbsp;решить проблемы с&nbsp;жкт. А&nbsp;теперь запустила линейку

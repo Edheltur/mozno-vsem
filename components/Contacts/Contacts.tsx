@@ -56,10 +56,10 @@ export const Contacts = () => {
           </InstagramLink>
 
           <Heading level="3">Блог Ирины Рыль</Heading>
-          <InstagramLink profile="ryl.marafon">
+          <InstagramLink profile="rylschool">
             <Box direction="row" align="center">
               <Instagram color="brand" className={styles.Contacts__icon} />
-              ryl.marafon
+              rylschool
             </Box>
           </InstagramLink>
         </Box>
