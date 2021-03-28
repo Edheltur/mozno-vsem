@@ -10,9 +10,9 @@ import { getClientInfo } from "common/data/clientInfo";
 
 export default OrdersPage;
 
-export const getServerSideProps: GetServerSideProps<React.ComponentProps<
-  typeof OrdersPage
->> = async (context) => {
+export const getServerSideProps: GetServerSideProps<
+  React.ComponentProps<typeof OrdersPage>
+> = async (context) => {
   const session = await getSession(context);
   if (!session) {
     return { props: {} };

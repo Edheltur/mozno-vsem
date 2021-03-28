@@ -1,5 +1,5 @@
 import React from "react";
-import { items } from "./../../common/data/menu";
+import { items } from "common/data/menu";
 import { Box, List } from "grommet";
 
 export const EmptyImagesPage = () => {

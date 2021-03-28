@@ -1378,9 +1378,8 @@ const rawItemsById = {
   },
 } as const;
 
-export const itemsById: Readonly<Record<
-  TMenuItemId,
-  TMenuItem
->> = mapObject(rawItemsById, (id, item) => ({ ...item, id }));
+export const itemsById: Readonly<
+  Record<TMenuItemId, TMenuItem>
+> = mapObject(rawItemsById, (id, item) => ({ ...item, id }));
 
 export const items: ReadonlyArray<TMenuItem> = Object.values(itemsById);

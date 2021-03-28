@@ -9,9 +9,9 @@ import { getClientInfo } from "common/data/clientInfo";
 
 export default InvoicePage;
 
-export const getServerSideProps: GetServerSideProps<React.ComponentProps<
-  typeof InvoicePage
->> = async (context) => {
+export const getServerSideProps: GetServerSideProps<
+  React.ComponentProps<typeof InvoicePage>
+> = async (context) => {
   const session = await getSession(context);
   if (!session) {
     return {

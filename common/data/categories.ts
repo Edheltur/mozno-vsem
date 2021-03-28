@@ -230,10 +230,9 @@ const rawCategoriesBySlug = {
   },
 } as const;
 
-export const categoriesBySlug: Readonly<Record<
-  TCategorySlug,
-  TCategory
->> = orderedCategorySlugs.reduce((acc, slug) => {
+export const categoriesBySlug: Readonly<
+  Record<TCategorySlug, TCategory>
+> = orderedCategorySlugs.reduce((acc, slug) => {
   acc[slug] = {
     ...rawCategoriesBySlug[slug],
     slug,
