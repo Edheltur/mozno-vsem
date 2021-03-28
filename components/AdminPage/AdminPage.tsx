@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import { signIn, signOut, useSession, Session } from "next-auth/client";
+import { signIn, signOut, useSession } from "next-auth/client";
+import { Session } from "next-auth";
 import { Anchor, Box, Button, Text } from "grommet";
 import Link from "next/link";
 import { Spinner } from "components/ui/Spinner";
