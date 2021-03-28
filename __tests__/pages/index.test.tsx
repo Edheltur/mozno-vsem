@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import HomePage from "../index";
+import HomePage from "pages/index";
 
 const useRouter = jest.spyOn(require("next/router"), "useRouter");
 

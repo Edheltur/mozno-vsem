@@ -6,10 +6,7 @@ export function createTelegramClient() {
     throw new InternalServerError();
   }
 
-  return new TelegramClient(
-    process.env.TELEGRAM_BOT_SECRET,
-    Number(process.env.TELEGRAM_API_TIMEOUT_MS ?? 5000)
-  );
+  return new TelegramClient(process.env.TELEGRAM_BOT_SECRET);
 }
 
 export function createTelegramReporter() {
