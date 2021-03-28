@@ -1,12 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import NextAuth, { InitOptions } from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import Providers from "next-auth/providers";
 
 const AdminEmails = new Set(
   (process.env.ADMIN_EMAILS ?? "").toLowerCase().split(",")
 );
 
-const options: InitOptions = {
+const options: NextAuthOptions = {
   providers: [
     Providers.Yandex({
       clientId: process.env.YANDEX_ID!,
