@@ -4,7 +4,6 @@ import { TMenuItem } from "common/data/menu";
 
 import { Image } from "components/ui/Image";
 import { CartControl } from "./CartControl";
-import { StatusGoodSmall } from "grommet-icons";
 
 interface IProps {
   item: TMenuItem;
@@ -18,7 +17,7 @@ const InfoText = ({ item }: IProps) => {
     </>
   ) : (
     <>
-      {amount}&nbsp;x&nbsp;{weight / amount}&nbsp;г за&nbsp;{price}&nbsp;₽
+      {weight}г&nbsp;({amount}шт) за&nbsp;{price}&nbsp;₽
     </>
   );
 };
