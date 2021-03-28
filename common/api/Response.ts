@@ -1,4 +1,4 @@
-import { THttpStatusCode } from "common/http";
+import { StatusCodes } from "http-status-codes";
 
 export type TApiResponse<T> = TApiResponseResult<T> | TApiResponseError;
 
@@ -9,5 +9,5 @@ export type TApiResponseResult<T = any> = {
 
 export type TApiResponseError = {
   errorMessage: string;
-  statusCode: THttpStatusCode;
+  statusCode: StatusCodes;
 };

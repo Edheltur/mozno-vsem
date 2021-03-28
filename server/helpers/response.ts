@@ -1,6 +1,6 @@
 import { NextApiResponse } from "next";
-import { THttpStatusCode } from "common/http/HttpStatus";
-import { getStatusText } from "http-status-codes";
+import { getReasonPhrase, StatusCodes } from "http-status-codes";
+
 import {
   TApiResponse,
   TApiResponseError,
@@ -9,17 +9,17 @@ import {
 
 export function responseWithError(
   res: NextApiResponse<TApiResponseError>,
-  statusCode: THttpStatusCode
+  statusCode: StatusCodes
 ) {
   responseWith(res, {
-    errorMessage: getStatusText(statusCode),
+    errorMessage: getReasonPhrase(statusCode),
     statusCode,
   });
 }
 
 export function responseWithData<T>(
   res: NextApiResponse<TApiResponseResult<T>>,
-  statusCode: THttpStatusCode,
+  statusCode: StatusCodes,
   data: T
 ) {
   responseWith(res, {

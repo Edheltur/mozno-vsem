@@ -1,4 +1,6 @@
-import { HttpError, HttpStatus } from "common/http";
+import { StatusCodes } from "http-status-codes";
+
+import { HttpError } from "common/http";
 import { NextApiHandler, NextApiRequest, NextApiResponse } from "next";
 import { responseWithError } from "server/helpers/response";
 import { TApiEndpoint } from "common/api";
@@ -15,7 +17,7 @@ function delegateResponseToHandler<T>(
     if (e instanceof HttpError) {
       responseWithError(res, e.statusCode);
     }
-    responseWithError(res, HttpStatus.INTERNAL_SERVER_ERROR);
+    responseWithError(res, StatusCodes.INTERNAL_SERVER_ERROR);
     throw e;
   }
 }
@@ -32,6 +34,6 @@ export function createHandler<TEndpoint extends TApiEndpoint>(
 
     return isHttpValidMethod(method)
       ? delegateResponseToHandler(handlers[method], req, res)
-      : responseWithError(res, HttpStatus.METHOD_NOT_ALLOWED);
+      : responseWithError(res, StatusCodes.METHOD_NOT_ALLOWED);
   };
 }
