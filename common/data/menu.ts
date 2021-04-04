@@ -920,7 +920,7 @@ const rawItemsById = {
     title: "Винегрет",
     price: 135,
     weight: 400,
-    image: "empty.jpg",
+    image: "vinegret.jpg",
     ingredients: ["картофель", "морковь", "свекла", "зеленый горошек"],
   },
   "92": {
@@ -1024,7 +1024,7 @@ const rawItemsById = {
     title: "Аджика",
     price: 280,
     weight: 200,
-    image: "empty.jpg",
+    image: "adzika.jpg",
     ingredients: [
       "чеснок",
       "перец красный",
@@ -1176,7 +1176,7 @@ const rawItemsById = {
     price: 350,
     weight: 400,
     amount: 4,
-    image: "empty.jpg",
+    image: "bitochki-s-sirom.jpg",
     ingredients: [
       "индейка",
       "сыр",
@@ -1212,7 +1212,7 @@ const rawItemsById = {
     price: 380,
     weight: 500,
     amount: 4,
-    image: "empty.jpg",
+    image: "kurinuie-byodra-brusnika.jpg",
     ingredients: [
       "куриное бедро",
       "брусника",
@@ -1227,7 +1227,7 @@ const rawItemsById = {
     price: 420,
     weight: 500,
     amount: 4,
-    image: "empty.jpg",
+    image: "kurinuie-byodra-gortchitza.jpg",
     ingredients: [
       "голень куриная",
       "кокосовое молоко",
@@ -1243,7 +1243,7 @@ const rawItemsById = {
     price: 380,
     weight: 400,
     amount: 4,
-    image: "empty.jpg",
+    image: "krilishki-pikantniye.jpg",
     ingredients: ["аджика", "горчица", "масло оливк", "паприка", "чеснок"],
   },
   "124": {
