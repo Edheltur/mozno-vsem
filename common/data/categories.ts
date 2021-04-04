@@ -27,6 +27,8 @@ const rawCategoriesBySlug = {
   new: {
     title: "Новинки",
     items: [
+      itemsById["126"],
+      itemsById["125"],
       itemsById["124"],
       itemsById["123"],
       itemsById["122"],
@@ -97,6 +99,8 @@ const rawCategoriesBySlug = {
   "second-courses": {
     title: "Вторые блюда",
     items: [
+      itemsById["126"],
+      itemsById["125"],
       itemsById["123"],
       itemsById["122"],
       itemsById["121"],
