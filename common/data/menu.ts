@@ -1,6 +1,12 @@
 import { mapObject } from "common/utils/object";
 
 export type TMenuItemId = keyof typeof rawItemsById;
+export type TNutrition = {
+  whey: number;
+  fats: number;
+  carbs: number;
+  energyValue: number;
+};
 
 export type TMenuItem = {
   id: TMenuItemId;
@@ -10,12 +16,7 @@ export type TMenuItem = {
   amount?: number;
   image: string;
   ingredients: ReadonlyArray<string>;
-  nutrition?: {
-    whey: number;
-    fats: number;
-    carbs: number;
-    energyValue: number;
-  };
+  nutrition?: TNutrition;
 };
 
 const rawItemsById = {
