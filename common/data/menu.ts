@@ -10,6 +10,12 @@ export type TMenuItem = {
   amount?: number;
   image: string;
   ingredients: ReadonlyArray<string>;
+  nutrition?: {
+    whey: number;
+    fats: number;
+    carbs: number;
+    energyValue: number;
+  };
 };
 
 const rawItemsById = {
@@ -32,6 +38,7 @@ const rawItemsById = {
       "мука пшеничная цельнозерновая",
       "мука греченевая",
     ],
+    nutrition: { whey: 10.3, fats: 7.2, carbs: 16, energyValue: 140.3 },
   },
   "2": {
     title: "Биточки из трески",
@@ -69,6 +76,7 @@ const rawItemsById = {
       "мука пшеничная цельнозерновая",
       "мука рисовая",
     ],
+    nutrition: { whey: 8, fats: 4.3, carbs: 6, energyValue: 94.2 },
   },
   "4": {
     title: "Фрикадельки из индейки с луком",
@@ -87,6 +95,7 @@ const rawItemsById = {
       "мука пшеничная цельнозерновая",
       "мука рисовая",
     ],
+    nutrition: { whey: 13.7, fats: 6.4, carbs: 5, energyValue: 130.3 },
   },
   "5": {
     title: "Котлеты из телятины с кабачком",
@@ -106,6 +115,7 @@ const rawItemsById = {
       "мука пшеничная цельнозерновая",
       "мука рисовая",
     ],
+    nutrition: { whey: 10.7, fats: 6.4, carbs: 7, energyValue: 319.6 },
   },
   "6": {
     title: "Фрикадельки из индейки со шпинатом",
@@ -124,6 +134,7 @@ const rawItemsById = {
       "мука пшеничная цельнозерновая",
       "мука рисовая",
     ],
+    nutrition: { whey: 11.4, fats: 5.1, carbs: 5, energyValue: 113 },
   },
   "7": {
     title: "Котлеты из телятины и булгура",
@@ -140,6 +151,7 @@ const rawItemsById = {
       "мука пшеничная цельнозерновая",
       "мука рисовая",
     ],
+    nutrition: { whey: 10.7, fats: 6.4, carbs: 7, energyValue: 132.4 },
   },
   "8": {
     title: "Котлеты из курицы с имбирём",
@@ -154,6 +166,7 @@ const rawItemsById = {
       "соевый соус",
       "зелень петрушки",
     ],
+    nutrition: { whey: 15.8, fats: 7.7, carbs: 4, energyValue: 146.6 },
   },
   "9": {
     title: "Перец фаршированный",
@@ -171,6 +184,7 @@ const rawItemsById = {
       "соль",
       "паприка",
     ],
+    nutrition: { whey: 9, fats: 5.9, carbs: 5, energyValue: 107.9 },
   },
   "10": {
     title: "Котлетки из красной рыбы с кальмаром",
@@ -203,6 +217,7 @@ const rawItemsById = {
       "мускатный орех",
       "тимьян",
     ],
+    nutrition: { whey: 14.3, fats: 3.2, carbs: 6, energyValue: 107.9 },
   },
   "13": {
     title: "Фарш из говядины и курицы",
@@ -254,6 +269,7 @@ const rawItemsById = {
       "тимьян",
       "мука рисовая",
     ],
+    nutrition: { whey: 9.8, fats: 4.4, carbs: 6, energyValue: 100.3 },
   },
   "24": {
     title: "Хлеб полбяно-пшеничный",
@@ -347,6 +363,7 @@ const rawItemsById = {
       "чеснок",
       "соль",
     ],
+    nutrition: { whey: 10.9, fats: 5, carbs: 6, energyValue: 110.5 },
   },
   "31": {
     title: "Биточки из минтая с креветками",
@@ -366,6 +383,7 @@ const rawItemsById = {
       "соль",
       "перец",
     ],
+    nutrition: { whey: 16.6, fats: 1.1, carbs: 3, energyValue: 88.2 },
   },
   "32": {
     title: "Перец фаршированный овощной",
@@ -389,6 +407,7 @@ const rawItemsById = {
       "мускатный орех",
       "соль",
     ],
+    nutrition: { whey: 1, fats: 1.5, carbs: 6, energyValue: 40.2 },
   },
   "33": {
     title: "Фарш из говядины",
@@ -488,6 +507,7 @@ const rawItemsById = {
       "петрушка сухая",
       "масло оливковое",
     ],
+    nutrition: { whey: 13.9, fats: 9.5, carbs: 2, energyValue: 152.2 },
   },
   "49": {
     title: "Голубцы Пекинские",
@@ -509,6 +529,7 @@ const rawItemsById = {
       "паприка",
       "укроп сухой",
     ],
+    nutrition: { whey: 8.4, fats: 3.6, carbs: 2, energyValue: 75.9 },
   },
   "50": {
     title: "Банановый кекс",
@@ -579,6 +600,7 @@ const rawItemsById = {
     weight: 500,
     image: "empty.jpg",
     ingredients: ["вода", "красная рыба", "белая рыба", "соль"],
+    nutrition: { whey: 2.9, fats: 0.7, carbs: 0, energyValue: 19.1 },
   },
   "55": {
     title: "Чебуреки мясные",
@@ -610,6 +632,7 @@ const rawItemsById = {
       "куркума",
       "мука безглютеновая",
     ],
+    nutrition: { whey: 7.2, fats: 21.2, carbs: 25, energyValue: 319.6 },
   },
   "57": {
     title: "Набор для ухи",
@@ -815,6 +838,7 @@ const rawItemsById = {
       "перец",
       "мускат",
     ],
+    nutrition: { whey: 8.9, fats: 5.1, carbs: 34, energyValue: 217.6 },
   },
 
   "81": {
@@ -834,6 +858,7 @@ const rawItemsById = {
       "перец",
       "мускат",
     ],
+    nutrition: { whey: 3, fats: 1.6, carbs: 13, energyValue: 78.1 },
   },
   "83": {
     title: "Жимолость",
