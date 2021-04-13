@@ -13,13 +13,13 @@ interface IProps {
 const InfoText = ({ item }: IProps) => {
   const { price, weight, amount } = item;
   return amount === undefined ? (
-    <>
+    <Text size="xlarge">
       {weight}&nbsp;г за&nbsp;{price}&nbsp;₽
-    </>
+    </Text>
   ) : (
-    <>
+    <Text size="xlarge">
       {weight}г&nbsp;({amount}шт) за&nbsp;{price}&nbsp;₽
-    </>
+    </Text>
   );
 };
 
@@ -32,29 +32,40 @@ export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
   const isMounted = useIsMounted();
   return (
     <Box align="stretch" width="600px" pad="medium">
-      <picture>
-        <source
-          media="(max-width: 450px)"
-          srcSet={`
+      <div
+        style={{
+          width: "100%",
+          paddingBottom: "100%",
+          position: "relative",
+          height: 0,
+        }}
+      >
+        <picture>
+          <source
+            media="(max-width: 450px)"
+            srcSet={`
             ${previewImageUrl} 300w, 
             ${mediumImageUrl} 600w, 
             ${fullImageUrl} 1200w`}
-          sizes={`
+            sizes={`
             (min-width: 150px) 300px,
             (min-width: 450px) 600px,
             600px`}
-        />
-        <source srcSet={`${fullImageUrl} 2x, ${mediumImageUrl} 1x`} />
-        <img src={mediumImageUrl} alt={title} width="100%" />
-      </picture>
+          />
+          <source srcSet={`${fullImageUrl} 2x, ${mediumImageUrl} 1x`} />
+          <img
+            src={mediumImageUrl}
+            alt={title}
+            style={{ position: "absolute", width: "100%", height: "auto" }}
+          />
+        </picture>
+      </div>
 
       <Heading level="2" textAlign="center">
         {title}
       </Heading>
       <Box direction="row" justify="center" gap="medium" align="center">
-        <Text size="xlarge">
-          <InfoText item={item} />
-        </Text>
+        <InfoText item={item} />
         {isMounted && <CartControl id={id} />}
       </Box>
 
