@@ -1,8 +1,7 @@
 import React from "react";
-import { Box, Heading, Text } from "grommet";
+import { Box, Heading, Text, Image } from "grommet";
 import { TMenuItem } from "common/data/menu";
 
-import { Image } from "components/ui/Image";
 import { CartControl } from "./CartControl";
 import { NutritionInfo } from "components/NutritionInfo";
 import { useIsMounted } from "client/helpers/hooks";
@@ -26,11 +25,29 @@ const InfoText = ({ item }: IProps) => {
 
 export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
   const { title, image, id, ingredients, nutrition } = item;
-  const imageUrl = `/images/dishes/full/${image}`;
+  const previewImageUrl = `/images/dishes/medium/${image}`;
+  const mediumImageUrl = `/images/dishes/medium/${image}`;
+  const fullImageUrl = `/images/dishes/full/${image}`;
+
   const isMounted = useIsMounted();
   return (
     <Box align="stretch" width="600px" pad="medium">
-      <Image url={imageUrl} />
+      <picture>
+        <source
+          media="(max-width: 450px)"
+          srcSet={`
+            ${previewImageUrl} 300w, 
+            ${mediumImageUrl} 600w, 
+            ${fullImageUrl} 1200w`}
+          sizes={`
+            (min-width: 150px) 300px,
+            (min-width: 450px) 600px,
+            600px`}
+        />
+        <source srcSet={`${fullImageUrl} 2x, ${mediumImageUrl} 1x`} />
+        <img src={mediumImageUrl} alt={title} width="100%" />
+      </picture>
+
       <Heading level="2" textAlign="center">
         {title}
       </Heading>
