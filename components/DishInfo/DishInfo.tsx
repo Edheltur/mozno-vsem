@@ -1,5 +1,14 @@
 import React from "react";
-import { Box, Heading, Text } from "grommet";
+import {
+  Box,
+  Heading,
+  Text,
+  Table,
+  TableRow,
+  TableCell,
+  TableHeader,
+  TableBody,
+} from "grommet";
 import { TMenuItem } from "common/data/menu";
 
 import { Image } from "components/ui/Image";
@@ -23,7 +32,7 @@ const InfoText = ({ item }: IProps) => {
 };
 
 export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
-  const { title, image, id, ingredients } = item;
+  const { title, image, id, ingredients, nutrition } = item;
   const imageUrl = `/images/dishes/full/${image}`;
 
   return (
@@ -49,6 +58,41 @@ export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
           </Text>
         ))}
       </Box>
+      {nutrition && (
+        <>
+          <Heading level="3" margin={{ bottom: "none" }}>
+            Пищевая энергетическая ценность:
+          </Heading>
+          <Text size="medium" color="grey">
+            (из рассчёта на 100гр)
+          </Text>
+          <Box>
+            <Table width="100%">
+              <TableBody>
+                <TableRow>
+                  <TableCell>Белки</TableCell>
+                  <TableCell>{nutrition.whey} г</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>Жиры</TableCell>
+                  <TableCell>{nutrition.fats} г</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>Углеводы</TableCell>
+                  <TableCell>{nutrition.carbs} г</TableCell>
+                </TableRow>
+
+                <TableRow>
+                  <TableCell>Энергетическая ценность</TableCell>
+                  <TableCell>{nutrition.energyValue} ккал</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </Box>
+        </>
+      )}
     </Box>
   );
 });
