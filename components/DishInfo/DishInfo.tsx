@@ -80,7 +80,7 @@ export const DishInfo = React.memo(function DishInfo({ item }: IProps) {
                 </TableRow>
 
                 <TableRow>
-                  <TableCell>Углеводы</TableCell>
+                  <TableCell>Углеводы</TableCell>з
                   <TableCell>{nutrition.carbs} г</TableCell>
                 </TableRow>
 
