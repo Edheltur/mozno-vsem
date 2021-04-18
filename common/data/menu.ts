@@ -189,9 +189,9 @@ const rawItemsById = {
   },
   "10": {
     title: "Котлетки из красной рыбы с кальмаром",
-    price: 400,
-    weight: 300,
-    amount: 3,
+    price: 260,
+    weight: 200,
+    amount: 2,
     image: "kotleti-forel-kalmar.jpg",
     ingredients: [
       "форель",
