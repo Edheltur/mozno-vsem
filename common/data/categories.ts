@@ -38,7 +38,6 @@ const rawCategoriesBySlug = {
       itemsById["113"],
       itemsById["112"],
       itemsById["111"],
-      itemsById["110"],
       itemsById["103"],
       itemsById["97"],
       itemsById["99"],
@@ -63,7 +62,6 @@ const rawCategoriesBySlug = {
       itemsById["103"],
       itemsById["48"],
       itemsById["112"],
-      itemsById["110"],
       itemsById["99"],
       itemsById["55"],
     ],
@@ -137,7 +135,6 @@ const rawCategoriesBySlug = {
       itemsById["44"],
       itemsById["45"],
       itemsById["63"],
-      itemsById["64"],
       itemsById["65"],
       itemsById["66"],
       itemsById["67"],
@@ -200,7 +197,7 @@ const rawCategoriesBySlug = {
   },
   "farm-meat": {
     title: "Фермерское мясо",
-    items: [itemsById["110"], itemsById["111"], itemsById["112"]],
+    items: [itemsById["111"], itemsById["112"]],
   },
   preorder: {
     title: "По предзаказу",

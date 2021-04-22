@@ -721,13 +721,6 @@ const rawItemsById = {
     image: "shampinyoni.jpg",
     ingredients: ["шампиньоны"],
   },
-  "64": {
-    title: "Зелёный горошек",
-    price: 130,
-    weight: 400,
-    image: "goroh.jpg",
-    ingredients: ["Зелёный горошек"],
-  },
   "65": {
     title: "Лечо",
     price: 150,
@@ -1153,13 +1146,6 @@ const rawItemsById = {
       "перец",
       "куркума",
     ],
-  },
-  "110": {
-    title: "Мясо для жаркого",
-    price: 750,
-    weight: 400,
-    image: "empty.jpg",
-    ingredients: ["говядина"],
   },
   "111": {
     title: "Фермерский фарш из говядины",
