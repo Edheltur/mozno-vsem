@@ -22,7 +22,7 @@ export type TMenuItem = {
 const rawItemsById = {
   "1": {
     title: "Гречаники",
-    price: 280,
+    price: 350,
     weight: 400,
     amount: 4,
     image: "grechaniki.jpg",
@@ -81,7 +81,7 @@ const rawItemsById = {
   },
   "4": {
     title: "Фрикадельки из индейки с луком",
-    price: 450,
+    price: 490,
     weight: 480,
     amount: 6,
     image: "frikadelki-indeyka-luk.jpg",
@@ -120,7 +120,7 @@ const rawItemsById = {
   },
   "6": {
     title: "Фрикадельки из индейки со шпинатом",
-    price: 420,
+    price: 480,
     weight: 480,
     amount: 6,
     image: "frikadelky-shpinat.jpg",
@@ -156,7 +156,7 @@ const rawItemsById = {
   },
   "8": {
     title: "Котлеты из курицы с имбирём",
-    price: 440,
+    price: 520,
     weight: 520,
     amount: 4,
     image: "kotleti-kuritsa-imbir.jpg",
@@ -171,7 +171,7 @@ const rawItemsById = {
   },
   "9": {
     title: "Перец фаршированный",
-    price: 350,
+    price: 370,
     weight: 400,
     amount: 2,
     image: "farshirovannuie-pertsi.jpg",
@@ -189,7 +189,7 @@ const rawItemsById = {
   },
   "10": {
     title: "Котлетки из красной рыбы с кальмаром",
-    price: 260,
+    price: 290,
     weight: 200,
     amount: 2,
     image: "kotleti-forel-kalmar.jpg",
@@ -275,7 +275,7 @@ const rawItemsById = {
   "24": {
     title: "Хлеб полбяно-пшеничный",
     price: 200,
-    weight: 540,
+    weight: 450,
     image: "polyabno-pshenichnui.jpg",
     ingredients: [
       "вода",
@@ -289,7 +289,7 @@ const rawItemsById = {
   "25": {
     title: "Хлеб бездрожжевой ржаной",
     price: 200,
-    weight: 540,
+    weight: 450,
     image: "rzhanoy.jpg",
     ingredients: [
       "вода",
@@ -300,8 +300,8 @@ const rawItemsById = {
   },
   "26": {
     title: "Хлеб бездрожжевой цельнозерновой с прованскими травами",
-    price: 160,
-    weight: 450,
+    price: 200,
+    weight: 425,
     image: "celnozernovoy-provanskie.jpg",
     ingredients: [
       "вода",
@@ -317,7 +317,7 @@ const rawItemsById = {
   "27": {
     title: "Хлеб бездрожжевой Бородинский",
     price: 200,
-    weight: 540,
+    weight: 450,
     image: "borodinskiy.jpg",
     ingredients: [
       "вода",
@@ -332,8 +332,8 @@ const rawItemsById = {
   },
   "29": {
     title: "Хлеб бездрожжевой цельнозерновой с семечками",
-    price: 160,
-    weight: 450,
+    price: 200,
+    weight: 425,
     image: "celnozernovoy-semechki.jpg",
     ingredients: [
       "вода",
@@ -368,9 +368,9 @@ const rawItemsById = {
   },
   "31": {
     title: "Биточки из минтая с креветками",
-    price: 380,
-    weight: 300,
-    amount: 3,
+    price: 290,
+    weight: 200,
+    amount: 2,
     image: "kotleti-mintay-krevetka.jpg",
     ingredients: [
       "филе минтая",
@@ -388,7 +388,7 @@ const rawItemsById = {
   },
   "32": {
     title: "Перец фаршированный овощной",
-    price: 200,
+    price: 250,
     weight: 400,
     amount: 2,
     image: "perci-s-ovoshami.jpg",
@@ -440,7 +440,7 @@ const rawItemsById = {
   },
   "41": {
     title: "Мексиканская смесь",
-    price: 130,
+    price: 150,
     weight: 400,
     image: "maksikanskaya-smes.jpg",
     ingredients: [
@@ -455,7 +455,7 @@ const rawItemsById = {
   },
   "42": {
     title: "Овощной букет",
-    price: 130,
+    price: 150,
     weight: 400,
     image: "ovoshnoi-buket.jpg",
     ingredients: [
@@ -468,28 +468,28 @@ const rawItemsById = {
   },
   "44": {
     title: "Смесь для жарки яиц",
-    price: 100,
+    price: 130,
     weight: 400,
     image: "smes-dlya-zarki-yaits.jpg",
     ingredients: ["перец", "томаты", "фасоль", "лук"],
   },
   "45": {
     title: "Шпинат резаный",
-    price: 130,
+    price: 150,
     weight: 400,
     image: "shpinat.jpg",
     ingredients: ["шпинат"],
   },
   "47": {
     title: "Клубника",
-    price: 120,
+    price: 150,
     weight: 300,
     image: "klubnika.jpg",
     ingredients: ["клубника"],
   },
   "48": {
     title: "Долма",
-    price: 300,
+    price: 340,
     weight: 240,
     amount: 6,
     image: "dolma.jpg",
@@ -512,7 +512,7 @@ const rawItemsById = {
   },
   "49": {
     title: "Голубцы Пекинские",
-    price: 350,
+    price: 370,
     weight: 450,
     amount: 4,
     image: "golubci-pekinskie.jpg",
@@ -582,7 +582,7 @@ const rawItemsById = {
   },
   "53": {
     title: "Фрикадельки для ухи",
-    price: 200,
+    price: 240,
     weight: 200,
     image: "ribnuie-frikadelki.jpg",
     ingredients: [
@@ -594,6 +594,7 @@ const rawItemsById = {
       "куркума",
       "мука цельно зерновая",
     ],
+    amount: 20,
   },
   "54": {
     title: "Бульон рыбный замороженный",
@@ -605,7 +606,7 @@ const rawItemsById = {
   },
   "55": {
     title: "Чебуреки мясные",
-    price: 210,
+    price: 270,
     weight: 200,
     amount: 2,
     image: "chebureki-myaso.jpg",
@@ -621,7 +622,7 @@ const rawItemsById = {
   },
   "56": {
     title: "Детские котлетки",
-    price: 310,
+    price: 380,
     weight: 300,
     amount: 4,
     image: "detskie-kotletki.jpg",
@@ -666,7 +667,7 @@ const rawItemsById = {
   },
   "61": {
     title: "Блины б/г с фаршем из куриных сердечек",
-    price: 220,
+    price: 250,
     weight: 250,
     amount: 4,
     image: "blini-kurinoye-serdce.jpg",
@@ -692,7 +693,7 @@ const rawItemsById = {
   },
   "62": {
     title: "Блины б/г с яблоком и корицей",
-    price: 250,
+    price: 260,
     weight: 250,
     amount: 4,
     image: "blini-yabloko-koritsa.jpg",
@@ -737,7 +738,7 @@ const rawItemsById = {
   },
   "67": {
     title: "Кабачок",
-    price: 120,
+    price: 130,
     weight: 400,
     image: "kabachok.jpg",
     ingredients: ["кабачок"],
@@ -818,9 +819,9 @@ const rawItemsById = {
   },
   "80": {
     title: "Котлеты свекольные",
-    price: 200,
-    weight: 300,
-    amount: 3,
+    price: 140,
+    weight: 200,
+    amount: 2,
     image: "kotleti-svekolnie.jpg",
     ingredients: [
       "свекла",
@@ -834,12 +835,11 @@ const rawItemsById = {
     ],
     nutrition: { whey: 8.9, fats: 5.1, carbs: 34, energyValue: 217.6 },
   },
-
   "81": {
     title: "Котлеты морковные",
-    price: 200,
-    weight: 300,
-    amount: 3,
+    price: 140,
+    weight: 200,
+    amount: 2,
     image: "kotleti-morkovnie.jpg",
     ingredients: [
       "морковь",
@@ -907,7 +907,7 @@ const rawItemsById = {
   },
   "87": {
     title: "Кальмары отварные",
-    price: 700,
+    price: 800,
     weight: 400,
     image: "kalmar.jpg",
     ingredients: ["кальмар"],
@@ -937,7 +937,7 @@ const rawItemsById = {
   },
   "91": {
     title: "Винегрет",
-    price: 135,
+    price: 150,
     weight: 400,
     image: "vinegret.jpg",
     ingredients: ["картофель", "морковь", "свекла", "зеленый горошек"],
@@ -967,8 +967,8 @@ const rawItemsById = {
   },
   "95": {
     title: "Биточки из говядины с грибами",
-    price: 340,
-    weight: 300,
+    price: 260,
+    weight: 200,
     amount: 2,
     image: "empty.jpg",
     ingredients: [
@@ -986,7 +986,7 @@ const rawItemsById = {
   },
   "97": {
     title: "Чебуреки ржаные",
-    price: 240,
+    price: 300,
     weight: 200,
     amount: 2,
     image: "cheburek-rzhanoy.jpg",
@@ -1012,7 +1012,7 @@ const rawItemsById = {
   },
   "99": {
     title: "Чебуреки с сыром и зеленью",
-    price: 230,
+    price: 250,
     weight: 200,
     amount: 2,
     image: "cheburek-sir-zelen.jpg",
@@ -1067,6 +1067,7 @@ const rawItemsById = {
       "соль",
       "перец",
     ],
+    amount: 4,
   },
   "104": {
     title: "Фрикасе из курицы",
@@ -1146,6 +1147,7 @@ const rawItemsById = {
       "перец",
       "куркума",
     ],
+    amount: 10,
   },
   "111": {
     title: "Фермерский фарш из говядины",
@@ -1164,16 +1166,16 @@ const rawItemsById = {
   },
   "113": {
     title: "Цыплёнок тапака",
-    price: 380,
-    weight: 900,
+    price: 400,
+    weight: 1000,
     image: "tciplyonok-tapaka.jpg",
     ingredients: ["курица", "соль", "специи"],
   },
   "119": {
     title: "Биточки с сыром",
-    price: 350,
-    weight: 400,
-    amount: 4,
+    price: 200,
+    weight: 200,
+    amount: 2,
     image: "bitochki-s-sirom.jpg",
     ingredients: [
       "индейка",
@@ -1191,7 +1193,7 @@ const rawItemsById = {
   },
   "120": {
     title: "Шашлычок",
-    price: 320,
+    price: 360,
     weight: 400,
     amount: 2,
     image: "empty.jpg",
@@ -1223,7 +1225,7 @@ const rawItemsById = {
   "122": {
     title: "Голень куриная в сливочно-горчином соусе",
     price: 420,
-    weight: 500,
+    weight: 400,
     amount: 4,
     image: "kurinuie-byodra-gortchitza.jpg",
     ingredients: [
@@ -1239,7 +1241,7 @@ const rawItemsById = {
   "123": {
     title: "Крылышки пикантные",
     price: 380,
-    weight: 400,
+    weight: 500,
     amount: 4,
     image: "krilishki-pikantniye.jpg",
     ingredients: ["аджика", "горчица", "масло оливк", "паприка", "чеснок"],
