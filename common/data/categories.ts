@@ -27,6 +27,8 @@ const rawCategoriesBySlug = {
   new: {
     title: "Новинки",
     items: [
+      itemsById["128"],
+      itemsById["127"],
       itemsById["126"],
       itemsById["125"],
       itemsById["124"],
@@ -34,17 +36,9 @@ const rawCategoriesBySlug = {
       itemsById["122"],
       itemsById["121"],
       itemsById["120"],
-      itemsById["119"],
       itemsById["113"],
       itemsById["112"],
       itemsById["111"],
-      itemsById["103"],
-      itemsById["97"],
-      itemsById["99"],
-      itemsById["100"],
-      itemsById["104"],
-      itemsById["106"],
-      itemsById["108"],
     ],
   },
   "for-man": {
@@ -96,6 +90,8 @@ const rawCategoriesBySlug = {
   "second-courses": {
     title: "Вторые блюда",
     items: [
+      itemsById["128"],
+      itemsById["127"],
       itemsById["126"],
       itemsById["125"],
       itemsById["123"],
