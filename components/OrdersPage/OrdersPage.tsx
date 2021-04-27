@@ -59,59 +59,59 @@ export const OrdersPage = (props: IProps) => {
       </Head>
       <Heading level="2">Последние {count} заказов</Heading>
 
-        <DataTable<TOrderRow>
-          sortable
-          resizeable
-          columns={[
-            {
-              property: "id",
-              header: "№",
-              primary: true,
-              render: ({ id }) => (
-                <Anchor target="_blank" href={`/admin/invoice/${id}`}>
-                  {id}
-                </Anchor>
-              ),
-            },
-            {
-              property: "date",
-              header: "Дата",
-              render: ({ dateIsoString }) =>
-                new Date(dateIsoString).toLocaleDateString("ru", {
-                  weekday: "short",
-                  day: "numeric",
-                  month: "short",
-                }),
-            },
-            {
-              property: "cart",
-              header: "Корзина",
-              sortable: false,
-              render: ({ cart, id }) => <Cart cart={cart} key={id} />,
-            },
-            {
-              property: "sum",
-              header: "Сумма",
-            },
-            {
-              property: "clientInfo.name",
-              header: "Имя",
-            },
-            {
-              property: "phone",
-              header: "Телефон",
-              render: ({ clientInfo: { phone } }) => (
-                <Anchor href={"tel:" + phone}>{phone}</Anchor>
-              ),
-            },
-            {
-              property: "address",
-              header: "Адрес",
-              render: ({ clientInfo }) => getCombinedAddress(clientInfo),
-            },
-          ]}
-          data={orders}
-        />
+      <DataTable<TOrderRow>
+        sortable
+        resizeable
+        columns={[
+          {
+            property: "id",
+            header: "№",
+            primary: true,
+            render: ({ id }) => (
+              <Anchor target="_blank" href={`/admin/invoice/${id}`}>
+                {id}
+              </Anchor>
+            ),
+          },
+          {
+            property: "date",
+            header: "Дата",
+            render: ({ dateIsoString }) =>
+              new Date(dateIsoString).toLocaleDateString("ru", {
+                weekday: "short",
+                day: "numeric",
+                month: "short",
+              }),
+          },
+          {
+            property: "cart",
+            header: "Корзина",
+            sortable: false,
+            render: ({ cart, id }) => <Cart cart={cart} key={id} />,
+          },
+          {
+            property: "sum",
+            header: "Сумма",
+          },
+          {
+            property: "clientInfo.name",
+            header: "Имя",
+          },
+          {
+            property: "phone",
+            header: "Телефон",
+            render: ({ clientInfo: { phone } }) => (
+              <Anchor href={"tel:" + phone}>{phone}</Anchor>
+            ),
+          },
+          {
+            property: "address",
+            header: "Адрес",
+            render: ({ clientInfo }) => getCombinedAddress(clientInfo),
+          },
+        ]}
+        data={orders}
+      />
     </>
   );
 };
