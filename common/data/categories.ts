@@ -28,6 +28,11 @@ const rawCategoriesBySlug = {
   new: {
     title: "Новинки",
     items: [
+      itemsById["133"],
+      itemsById["132"],
+      itemsById["131"],
+      itemsById["130"],
+      itemsById["129"],
       itemsById["128"],
       itemsById["127"],
       itemsById["126"],
@@ -68,6 +73,10 @@ const rawCategoriesBySlug = {
   grill: {
     title: "Мангал",
     items: [
+      itemsById["132"],
+      itemsById["131"],
+      itemsById["130"],
+      itemsById["129"],
       itemsById["128"],
       itemsById["127"],
       itemsById["123"],
@@ -104,6 +113,7 @@ const rawCategoriesBySlug = {
   "second-courses": {
     title: "Вторые блюда",
     items: [
+      itemsById["133"],
       itemsById["128"],
       itemsById["127"],
       itemsById["126"],
