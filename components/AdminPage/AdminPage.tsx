@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { signIn, signOut, useSession } from "next-auth/client";
 import { Session } from "next-auth";
-import { Anchor, Box, Button, Text } from "grommet";
+import { Anchor, Box, Button, Heading, Text } from "grommet";
 import Link from "next/link";
 import { Spinner } from "components/ui/Spinner";
 
@@ -15,6 +15,12 @@ const Content = ({ session }: { session?: Session | null }) => {
       <Text>Добро пожаловать, {session.user.name}!</Text>
       <Link passHref href="/admin/orders">
         <Anchor>Список заказов</Anchor>
+      </Link>
+      <Link passHref href="/admin/reports/sold?days=30">
+        <Anchor>Продано за 30 дней</Anchor>
+      </Link>
+      <Link passHref href="/admin/reports/sold?days=7">
+        <Anchor>Продано за неделю</Anchor>
       </Link>
       <Link passHref href="/admin/empty-images">
         <Anchor>Список блюд без картинок</Anchor>
@@ -34,6 +40,7 @@ export const AdminPage = () => {
         <meta name="robots" content="noindex" />
       </Head>
       <Box margin={{ top: "medium" }}>
+        <Heading>Админка</Heading>
         {isLoading ? <Spinner /> : <Content session={session} />}
       </Box>
     </>
