@@ -2,17 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Error from "next/error";
 
-import {
-  Anchor,
-  Box,
-  Button,
-  Collapsible,
-  ColumnConfig,
-  DataTable,
-  Heading,
-  Meter,
-  Text,
-} from "grommet";
+import { Anchor, ColumnConfig, DataTable, Heading } from "grommet";
 import { isMenuItemId, itemsById, TMenuItemId } from "common/data/menu";
 
 type IProps =
@@ -40,7 +30,11 @@ const columns: ColumnConfig<RowType>[] = [
     property: "title",
     header: "Название",
     render({ id, title }) {
-      return <Anchor href={`/dish/${id}`}>{title}</Anchor>;
+      return (
+        <Anchor href={`/dish/${id}`} target="_blank">
+          {title}
+        </Anchor>
+      );
     },
   },
   {
@@ -73,10 +67,10 @@ export const SoldPage = (props: IProps) => {
   return (
     <>
       <Head>
-        <title>Админка. Продано блюд за {days} дней</title>
+        <title>Админка. Продано за {days} дней</title>
         <meta name="robots" content="noindex" />
       </Head>
-      <Heading level="2">Продано блюд за {days} дней</Heading>
+      <Heading level="2">Продано за {days} дней</Heading>
       <DataTable sortable columns={columns} data={data} />
     </>
   );

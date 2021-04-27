@@ -4,7 +4,6 @@ import { GetServerSideProps } from "next";
 import { createDbClient, Index } from "server/faunadb";
 import { query as q } from "faunadb";
 import { getSession } from "next-auth/client";
-import { data } from "browserslist";
 
 export default SoldPage;
 
@@ -30,8 +29,9 @@ export const getServerSideProps: GetServerSideProps<
       ),
       {},
       q.Map(
-        q.Filter(q.Paginate(q.Match(q.Index(Index.ordersByDate))), (date, _) =>
-          q.GTE(date, q.TimeSubtract(q.Now(), days, "days"))
+        q.Filter(
+          q.Paginate(q.Match(q.Index(Index.ordersByDate)), { size: 10000 }),
+          (date, _) => q.GTE(date, q.TimeSubtract(q.Now(), days, "days"))
         ),
         (_, ref) => q.Select(["data", "countById"], q.Get(ref))
       )
