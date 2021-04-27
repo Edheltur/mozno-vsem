@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Error from "next/error";
-
 import { Anchor, ColumnConfig, DataTable, Heading } from "grommet";
+
 import { isMenuItemId, itemsById, TMenuItemId } from "common/data/menu";
 
 type IProps =

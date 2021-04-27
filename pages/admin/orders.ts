@@ -18,16 +18,20 @@ export const getServerSideProps: GetServerSideProps<
     return { props: {} };
   }
 
+  const rawCount = context.query["count"];
+  const count = Number.isFinite(Number(rawCount)) ? Math.min(0, Math.max(Number(rawCount), 100)) : 20;
+
   const db = createDbClient();
 
   const { data } = await db.query<any>(
     q.Map(
-      q.Paginate(q.Match(q.Index(Index.ordersByDate)), { size: 20 }),
+      q.Paginate(q.Match(q.Index(Index.ordersByDate)), { size: count }),
       q.Lambda(["date", "ref"], q.Get(q.Var("ref")))
     )
   );
 
   const props = {
+    count,
     orders: data.map(
       ({ data: { date, countById, ...rawClientInfo }, ref: { id } }: any) => {
         const cart = {

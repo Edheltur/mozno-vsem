@@ -2,15 +2,18 @@ import React from "react";
 import Head from "next/head";
 import Error from "next/error";
 
-import { Anchor, Box, Button, Collapsible, DataTable } from "grommet";
+import { Anchor, Box, Button, Collapsible, DataTable, Heading } from "grommet";
 import { Items } from "components/CartModal/Items";
 import { ICart } from "common/data/cart";
 import { useIsMounted } from "client/helpers/hooks";
 import { IClientInfo, getCombinedAddress } from "common/data/clientInfo";
 
-interface IProps {
-  orders?: TOrderRow[];
-}
+type IProps =
+  | {}
+  | {
+      orders: TOrderRow[];
+      count: number;
+    };
 
 type TOrderRow = {
   id: number;
@@ -42,21 +45,23 @@ const Cart = ({ cart }: { cart: ICart }) => {
     </Box>
   );
 };
-export const OrdersPage = ({ orders }: IProps) => {
-  if (!orders) {
+export const OrdersPage = (props: IProps) => {
+  if (!("orders" in props)) {
     return <Error statusCode={404} />;
   }
+
+  const { orders, count } = props;
   return (
     <>
       <Head>
-        <title>Админка. Заказы</title>
+        <title>Админка. Последние {count} заказов</title>
         <meta name="robots" content="noindex" />
       </Head>
-      <Box style={{ maxWidth: "100vw" }}>
+      <Heading level="2">Последние {count} заказов</Heading>
+
         <DataTable<TOrderRow>
           sortable
           resizeable
-          fill
           columns={[
             {
               property: "id",
@@ -107,7 +112,6 @@ export const OrdersPage = ({ orders }: IProps) => {
           ]}
           data={orders}
         />
-      </Box>
     </>
   );
 };
