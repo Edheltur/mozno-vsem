@@ -1342,6 +1342,6 @@ export const itemsById: Readonly<
 > = mapObject(rawItemsById, (id, item) => ({ ...item, id }));
 
 export function isMenuItemId(id?: string | null): id is TMenuItemId {
-  return typeof id === 'string' && id in itemsById;
+  return typeof id === "string" && id in itemsById;
 }
 export const items: ReadonlyArray<TMenuItem> = Object.values(itemsById);
