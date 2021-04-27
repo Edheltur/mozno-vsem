@@ -1225,9 +1225,9 @@ const rawItemsById = {
   "122": {
     title: "Голень куриная в сливочно-горчином соусе",
     price: 420,
-    weight: 400,
+    weight: 500,
     amount: 4,
-    image: "kurinuie-byodra-gortchitza.jpg",
+    image: "krilishki-pikantniye.jpg",
     ingredients: [
       "голень куриная",
       "кокосовое молоко",
@@ -1241,9 +1241,9 @@ const rawItemsById = {
   "123": {
     title: "Крылышки пикантные",
     price: 380,
-    weight: 500,
+    weight: 400,
     amount: 4,
-    image: "krilishki-pikantniye.jpg",
+    image: "kurinuie-byodra-gortchitza.jpg",
     ingredients: ["аджика", "горчица", "масло оливк", "паприка", "чеснок"],
   },
   "124": {
