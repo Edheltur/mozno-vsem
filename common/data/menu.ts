@@ -43,8 +43,8 @@ const rawItemsById = {
   },
   "2": {
     title: "Биточки из трески",
-    price: 350,
-    weight: 300,
+    price: 240,
+    weight: 200,
     amount: 2,
     image: "kotleti-treska.jpg",
     ingredients: [
@@ -59,8 +59,8 @@ const rawItemsById = {
   },
   "3": {
     title: "Ленивые голубцы",
-    price: 220,
-    weight: 300,
+    price: 180,
+    weight: 200,
     amount: 2,
     image: "lenivuie-golubtsi.jpg",
     ingredients: [
@@ -204,8 +204,8 @@ const rawItemsById = {
   },
   "11": {
     title: "Рыбные биточки из судака с минтаем",
-    price: 350,
-    weight: 300,
+    price: 270,
+    weight: 200,
     amount: 2,
     image: "kotleti-sudak-mintai.jpg",
     ingredients: [
