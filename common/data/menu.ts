@@ -1297,7 +1297,7 @@ const rawItemsById = {
   },
   "127": {
     title: "Купаты из курицы и индейки со шпинатом и сыром",
-    price: 480,
+    price: 560,
     weight: 400,
     amount: 4,
     image: "empty.jpg",
@@ -1317,7 +1317,7 @@ const rawItemsById = {
   },
   "128": {
     title: "Купаты из индейки",
-    price: 450,
+    price: 540,
     weight: 400,
     amount: 4,
     image: "empty.jpg",
