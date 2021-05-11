@@ -1,6 +1,6 @@
 export const config = {
   publicUrl: "https://mozno-vsem.ru",
-  freeDeliveryFrom: 3000,
+  freeDeliveryFrom: 2500,
   deliveryPrice: 300,
   telegramUsername: process.env.NEXT_PUBLIC_TELEGRAM_USER_NAME ?? "",
   whatsAppPhoneNumber: process.env.NEXT_PUBLIC_WHATS_APP_PHONE_NUMBER ?? "",

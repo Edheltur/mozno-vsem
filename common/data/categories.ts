@@ -68,7 +68,7 @@ const rawCategoriesBySlug = {
   },
   banquet: {
     title: "Банкетные блюда",
-    items: [itemsById["91"], itemsById["79"], itemsById["70"], itemsById["71"]],
+    items: [itemsById["79"], itemsById["70"], itemsById["71"]],
   },
   grill: {
     title: "Мангал",
@@ -159,7 +159,6 @@ const rawCategoriesBySlug = {
       itemsById["67"],
       itemsById["80"],
       itemsById["81"],
-      itemsById["91"],
     ],
   },
   bread: {
@@ -177,7 +176,6 @@ const rawCategoriesBySlug = {
     items: [
       itemsById["54"],
       itemsById["57"],
-      itemsById["68"],
       itemsById["98"],
       itemsById["109"],
     ],

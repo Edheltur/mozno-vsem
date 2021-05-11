@@ -736,13 +736,6 @@ const rawItemsById = {
     image: "kabachok.jpg",
     ingredients: ["кабачок"],
   },
-  "68": {
-    title: "Смесь для борща",
-    price: 100,
-    weight: 400,
-    image: "smes-borsh.jpg",
-    ingredients: ["картофель", "морковь", "свекла", "капуста", "лук", "томаты"],
-  },
   "70": {
     title: "Брусника",
     price: 350,
@@ -928,13 +921,7 @@ const rawItemsById = {
     image: "yazik-govyadina.jpg",
     ingredients: ["язык говяжий"],
   },
-  "91": {
-    title: "Винегрет",
-    price: 150,
-    weight: 400,
-    image: "vinegret.jpg",
-    ingredients: ["картофель", "морковь", "свекла", "зеленый горошек"],
-  },
+
   "92": {
     title: "Шиповник",
     price: 600,
