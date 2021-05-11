@@ -722,13 +722,6 @@ const rawItemsById = {
     image: "shampinyoni.jpg",
     ingredients: ["шампиньоны"],
   },
-  "65": {
-    title: "Лечо",
-    price: 150,
-    weight: 400,
-    image: "lecho.jpg",
-    ingredients: ["морковь", "перец", "томат", "лук", "цукини"],
-  },
   "66": {
     title: "Рататуй",
     price: 200,
