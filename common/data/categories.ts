@@ -17,7 +17,6 @@ const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "garnishes",
   "bread",
   "fruits-and-berries",
-  "bakery",
   "banquet",
   "farm-meat",
   "for-man",
@@ -196,10 +195,6 @@ const rawCategoriesBySlug = {
       itemsById["92"],
     ],
   },
-  bakery: {
-    title: "Выпечка",
-    items: [itemsById["50"], itemsById["51"], itemsById["52"]],
-  },
   mincemeat: {
     title: "Фарш",
     items: [
@@ -228,7 +223,6 @@ const rawCategoriesBySlug = {
         ...this["second-courses"].items,
         ...this["garnishes"].items,
         ...this["fruits-and-berries"].items,
-        ...this["bakery"].items,
         ...this["soups"].items,
         ...this["mincemeat"].items,
         ...this["bread"].items,
