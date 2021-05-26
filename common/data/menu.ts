@@ -251,9 +251,9 @@ const rawItemsById = {
   },
   "23": {
     title: "Капустники",
-    price: 320,
-    weight: 360,
-    amount: 3,
+    price: 190,
+    weight: 200,
+    amount: 2,
     image: "kapustniki.jpg",
     ingredients: [
       "капуста",
