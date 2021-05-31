@@ -187,14 +187,7 @@ const rawItemsById = {
     weight: 200,
     amount: 2,
     image: "kotleti-forel-kalmar.jpg",
-    ingredients: [
-      "форель",
-      "кета",
-      "кальмар",
-      "лук",
-      "яйцо куриное",
-      "соль",
-    ],
+    ingredients: ["форель", "кета", "кальмар", "лук", "яйцо куриное", "соль"],
   },
   "11": {
     title: "Рыбные биточки из судака с минтаем",
@@ -531,14 +524,7 @@ const rawItemsById = {
     price: 240,
     weight: 200,
     image: "ribnuie-frikadelki.jpg",
-    ingredients: [
-      "красная рыба",
-      "лук",
-      "яйцо",
-      "соль",
-      "перец",
-      "куркума",
-    ],
+    ingredients: ["красная рыба", "лук", "яйцо", "соль", "перец", "куркума"],
     amount: 20,
   },
   "54": {
@@ -666,13 +652,6 @@ const rawItemsById = {
     weight: 400,
     image: "shampinyoni.jpg",
     ingredients: ["шампиньоны"],
-  },
-  "66": {
-    title: "Рататуй",
-    price: 200,
-    weight: 400,
-    image: "raratui.jpg",
-    ingredients: ["цукини", "томаты", "перец", "лук", "баклажаны"],
   },
   "67": {
     title: "Кабачок",
@@ -993,21 +972,6 @@ const rawItemsById = {
       "перец",
     ],
     amount: 4,
-  },
-  "104": {
-    title: "Фрикасе из курицы",
-    price: 350,
-    weight: 400,
-    image: "frikase-kuritsa.jpg",
-    ingredients: [
-      "куриная грудка",
-      "лук",
-      "кокосовое молоко",
-      "кукурузная мука",
-      "соль",
-      "перец",
-      "куркума",
-    ],
   },
   "105": {
     title: "Гуляш из говядины",
