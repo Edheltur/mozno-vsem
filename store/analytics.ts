@@ -19,8 +19,8 @@ export const analytics: StoreonModule<State, Events> = (store) => {
   });
 };
 
-function reachGoal(name: TGoalName, userVars?: Lyam.UserVars) {
+function reachGoal(name: TGoalName, params?: Lyam.Params) {
   if (config.yandexMetrikaCounterId) {
-    reachGoalWithCounter(config.yandexMetrikaCounterId, name, userVars);
+    reachGoalWithCounter(config.yandexMetrikaCounterId, name, params);
   }
 }

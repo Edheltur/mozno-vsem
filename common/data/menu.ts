@@ -1321,9 +1321,10 @@ const rawItemsById = {
   },
 } as const;
 
-export const itemsById: Readonly<
-  Record<TMenuItemId, TMenuItem>
-> = mapObject(rawItemsById, (id, item) => ({ ...item, id }));
+export const itemsById: Readonly<Record<TMenuItemId, TMenuItem>> = mapObject(
+  rawItemsById,
+  (id, item) => ({ ...item, id })
+);
 
 export function isMenuItemId(id?: string | null): id is TMenuItemId {
   return typeof id === "string" && id in itemsById;

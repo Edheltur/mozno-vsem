@@ -4,7 +4,7 @@ import {
   hit,
   notBounce,
   reachGoal as reachGoalUntyped,
-  userVars,
+  params,
 } from "lyam";
 import { config } from "common/config";
 
@@ -15,7 +15,7 @@ const fakeMetrika = {
   hit: noop,
   reachGoal: noop,
   extLink: noop,
-  userVars: noop,
+  params: noop,
   notBounce: noop,
 };
 
@@ -30,7 +30,7 @@ export function useYandexMetrika() {
       hit: hit.bind(null, counterId),
       reachGoal: reachGoal.bind(null, counterId),
       extLink: extLink.bind(null, counterId),
-      userVars: userVars.bind(null, counterId),
+      params: params.bind(null, counterId),
       notBounce: notBounce.bind(null, counterId),
     };
   }, [counterId]);
@@ -39,9 +39,9 @@ export function useYandexMetrika() {
 export function reachGoal(
   counterId: string,
   name: TGoalName,
-  userVars?: Lyam.UserVars
+  params?: Lyam.Params
 ) {
-  reachGoalUntyped(counterId, name, userVars);
+  reachGoalUntyped(counterId, name, params);
 }
 
 export type TGoalName = typeof GOALS[keyof typeof GOALS];

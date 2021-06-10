@@ -231,16 +231,15 @@ const rawCategoriesBySlug = {
   },
 } as const;
 
-export const categoriesBySlug: Readonly<
-  Record<TCategorySlug, TCategory>
-> = orderedCategorySlugs.reduce((acc, slug) => {
-  acc[slug] = {
-    ...rawCategoriesBySlug[slug],
-    slug,
-  };
+export const categoriesBySlug: Readonly<Record<TCategorySlug, TCategory>> =
+  orderedCategorySlugs.reduce((acc, slug) => {
+    acc[slug] = {
+      ...rawCategoriesBySlug[slug],
+      slug,
+    };
 
-  return acc;
-}, {} as Record<TCategorySlug, TCategory>);
+    return acc;
+  }, {} as Record<TCategorySlug, TCategory>);
 export const categories = orderedCategorySlugs.map(
   (slug) => categoriesBySlug[slug]
 );
