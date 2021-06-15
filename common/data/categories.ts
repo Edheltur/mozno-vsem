@@ -161,12 +161,7 @@ const rawCategoriesBySlug = {
   },
   bread: {
     title: "Хлеб",
-    items: [
-      itemsById["24"],
-      itemsById["25"],
-      itemsById["26"],
-      itemsById["27"],
-    ],
+    items: [itemsById["24"], itemsById["25"], itemsById["26"], itemsById["27"]],
   },
   soups: {
     title: "Супы",
