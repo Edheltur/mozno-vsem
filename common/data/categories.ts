@@ -166,7 +166,6 @@ const rawCategoriesBySlug = {
       itemsById["25"],
       itemsById["26"],
       itemsById["27"],
-      itemsById["29"],
     ],
   },
   soups: {
