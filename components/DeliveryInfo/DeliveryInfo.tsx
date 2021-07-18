@@ -14,7 +14,8 @@ export const DeliveryInfo = () => {
       <p>
         По индивидуальной договорённости доставим в&nbsp;коттеджные посёлки
         и&nbsp;города-спутники в&nbsp;радиусе 20&nbsp;км. Стоимость доставки
-        составит от {config.farDeliveryPrice}&nbsp;₽ (в зависимости от удалённости).
+        составит от {config.farDeliveryPrice}&nbsp;₽ (в зависимости от
+        удалённости).
       </p>
     </InfoBlock>
   );
