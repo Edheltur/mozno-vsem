@@ -29,7 +29,6 @@ const rawCategoriesBySlug = {
     items: [
       itemsById["135"],
       itemsById["134"],
-      itemsById["133"],
       itemsById["132"],
       itemsById["131"],
       itemsById["130"],
@@ -56,7 +55,6 @@ const rawCategoriesBySlug = {
       itemsById["121"],
       itemsById["120"],
       itemsById["113"],
-      itemsById["108"],
       itemsById["106"],
       itemsById["103"],
       itemsById["48"],
@@ -114,7 +112,6 @@ const rawCategoriesBySlug = {
     items: [
       itemsById["135"],
       itemsById["134"],
-      itemsById["133"],
       itemsById["128"],
       itemsById["127"],
       itemsById["126"],
@@ -140,7 +137,6 @@ const rawCategoriesBySlug = {
       itemsById["86"],
       itemsById["103"],
       itemsById["106"],
-      itemsById["108"],
     ],
   },
   garnishes: {
