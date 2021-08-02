@@ -104,7 +104,6 @@ const rawCategoriesBySlug = {
       itemsById["31"],
       itemsById["53"],
       itemsById["79"],
-      itemsById["95"],
     ],
   },
   "second-courses": {
@@ -157,7 +156,7 @@ const rawCategoriesBySlug = {
   },
   bread: {
     title: "Хлеб",
-    items: [itemsById["24"], itemsById["25"], itemsById["26"], itemsById["27"]],
+    items: [itemsById["25"], itemsById["26"], itemsById["27"]],
   },
   soups: {
     title: "Супы",
