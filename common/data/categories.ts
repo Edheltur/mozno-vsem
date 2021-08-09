@@ -12,6 +12,7 @@ const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "grill",
   "cutlets",
   "second-courses",
+  "sauces",
   "soups",
   "mincemeat",
   "garnishes",
@@ -136,6 +137,15 @@ const rawCategoriesBySlug = {
       itemsById["86"],
       itemsById["103"],
       itemsById["106"],
+    ],
+  },
+  sauces: {
+    title: "Соусы",
+    items: [
+      itemsById["139"],
+      itemsById["138"],
+      itemsById["137"],
+      itemsById["136"],
     ],
   },
   garnishes: {
