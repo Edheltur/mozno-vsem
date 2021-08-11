@@ -88,6 +88,10 @@ const rawCategoriesBySlug = {
   cutlets: {
     title: "Котлеты",
     items: [
+      itemsById["143"],
+      itemsById["142"],
+      itemsById["141"],
+      itemsById["140"],
       itemsById["119"],
       itemsById["1"],
       itemsById["2"],
