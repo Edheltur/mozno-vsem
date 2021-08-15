@@ -13,6 +13,9 @@ const Content = ({ session }: { session?: Session | null }) => {
   return session ? (
     <Box gap="medium">
       <Text>Добро пожаловать, {session.user.name}!</Text>
+      <Link passHref href="/admin/dishes">
+        <Anchor>Список блюд</Anchor>
+      </Link>
       <Link passHref href="/admin/orders?count=20">
         <Anchor>Последние 20 заказов</Anchor>
       </Link>
