@@ -9,3 +9,11 @@ describe("ensure no duplicates", () => {
     });
   });
 });
+
+describe("ensure no deleted", () => {
+  Object.values(categoriesBySlug).forEach((category) => {
+    test(`in ${category.slug}`, () => {
+      expect(category.items.filter((x) => x.deleted)).toStrictEqual([]);
+    });
+  });
+});
