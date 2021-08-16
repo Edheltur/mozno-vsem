@@ -1,13 +1,13 @@
 import React from "react";
-import { Anchor, Box, DataTable } from "grommet";
+import { Anchor, Box, CheckBox, DataTable } from "grommet";
 
-import { items, TMenuItem } from "common/data/menu";
+import { itemsWithDeleted } from "common/data/menu";
 
 export const DishesAdminPage = () => {
   return (
     <Box margin={{ vertical: "large" }}>
       <h1>Список блюд</h1>
-      <DataTable<TMenuItem>
+      <DataTable
         sortable
         resizeable
         columns={[
@@ -15,15 +15,15 @@ export const DishesAdminPage = () => {
             property: "id",
             header: "№",
             primary: true,
-            render: ({ id }) => (
-              <Anchor target="_blank" href={`/dish/${id}`}>
-                {id}
-              </Anchor>
-            ),
           },
           {
             property: "title",
             header: "Название",
+            render: ({ id, title }) => (
+              <Anchor target="_blank" href={`/dish/${id}`}>
+                {title}
+              </Anchor>
+            ),
           },
           {
             property: "price",
@@ -35,10 +35,24 @@ export const DishesAdminPage = () => {
           },
           {
             property: "amount",
-            header: "Кол-во",
+            header: "Штук",
+          },
+          {
+            property: "deleted",
+            header: "Удалено",
+            render: ({ deleted }) => <CheckBox disabled checked={deleted} />,
+          },
+          {
+            property: "hasImage",
+            header: "Картинка",
+            render: ({ hasImage }) => <CheckBox disabled checked={hasImage} />,
           },
         ]}
-        data={items.slice()}
+        data={itemsWithDeleted.map(({ image, deleted, ...rest }) => ({
+          ...rest,
+          hasImage: image !== "empty.jpg",
+          deleted: Boolean(deleted),
+        }))}
       />
     </Box>
   );

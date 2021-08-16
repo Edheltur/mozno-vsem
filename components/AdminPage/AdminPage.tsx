@@ -25,9 +25,6 @@ const Content = ({ session }: { session?: Session | null }) => {
       <Link passHref href="/admin/reports/sold?days=7">
         <Anchor>Продано за неделю</Anchor>
       </Link>
-      <Link passHref href="/admin/empty-images">
-        <Anchor>Список блюд без картинок</Anchor>
-      </Link>
       <Button primary label="Выйти" onClick={handleSignOutClick} />
     </Box>
   ) : (
