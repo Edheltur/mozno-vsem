@@ -39,7 +39,6 @@ const rawCategoriesBySlug = {
       itemsById["126"],
       itemsById["125"],
       itemsById["124"],
-      itemsById["123"],
       itemsById["122"],
       itemsById["121"],
       itemsById["120"],
@@ -51,7 +50,6 @@ const rawCategoriesBySlug = {
   "for-man": {
     title: "Для мужчин",
     items: [
-      itemsById["123"],
       itemsById["122"],
       itemsById["121"],
       itemsById["120"],
@@ -77,7 +75,6 @@ const rawCategoriesBySlug = {
       itemsById["129"],
       itemsById["128"],
       itemsById["127"],
-      itemsById["123"],
       itemsById["122"],
       itemsById["121"],
       itemsById["120"],
@@ -120,7 +117,6 @@ const rawCategoriesBySlug = {
       itemsById["127"],
       itemsById["126"],
       itemsById["125"],
-      itemsById["123"],
       itemsById["122"],
       itemsById["121"],
       itemsById["120"],

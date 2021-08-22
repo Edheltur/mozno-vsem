@@ -1629,6 +1629,7 @@ const rawItemsById = {
     ],
   },
   "123": {
+    deleted: true,
     title: "Крылышки пикантные",
     price: 380,
     weight: 400,
