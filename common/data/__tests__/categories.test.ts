@@ -1,4 +1,5 @@
 import { categoriesBySlug } from "../categories";
+import { items } from "../menu";
 
 describe("ensure no duplicates", () => {
   Object.values(categoriesBySlug).forEach((category) => {
@@ -7,6 +8,14 @@ describe("ensure no duplicates", () => {
 
       expect(ids).toHaveLength(new Set(ids).size);
     });
+  });
+});
+
+test("ensure all non-deleted dishes exists in categories", () => {
+  items.forEach(({ id }) => {
+    expect(
+      items.filter((item) => !categoriesBySlug.all.items.includes(item))
+    ).toStrictEqual([]);
   });
 });
 
