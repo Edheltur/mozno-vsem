@@ -757,6 +757,7 @@ const rawItemsById = {
     nutrition: { whey: 7.2, fats: 21.2, carbs: 25, energyValue: 319.6 },
   },
   "57": {
+    deleted: true,
     title: "Набор для ухи",
     price: 310,
     weight: 700,
@@ -1187,6 +1188,7 @@ const rawItemsById = {
     ingredients: ["шиповник"],
   },
   "93": {
+    deleted: true,
     title: "Готовый холодец",
     price: 850,
     weight: 700,

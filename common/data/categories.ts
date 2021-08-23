@@ -45,7 +45,6 @@ const rawCategoriesBySlug = {
       itemsById["87"],
       itemsById["21"],
       itemsById["19"],
-      itemsById["57"],
     ],
   },
   meat: {
@@ -155,10 +154,6 @@ const rawCategoriesBySlug = {
     title: "Для животных",
     items: [itemsById["34"]],
   },
-  preorder: {
-    title: "По предзаказу",
-    items: [itemsById["88"], itemsById["93"], itemsById["90"], itemsById["87"]],
-  },
   get all() {
     return {
       title: "Все блюда",
@@ -169,7 +164,6 @@ const rawCategoriesBySlug = {
         ...this["sauces"].items,
         ...this["bakery"].items,
         ...this["for-pets"].items,
-        ...this["preorder"].items,
       ]),
     };
   },
