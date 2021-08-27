@@ -1913,8 +1913,8 @@ const rawItemsById = {
   },
   "140": {
     title: "Наггетсы куриные",
-    price: 600,
-    weight: 500,
+    price: 380,
+    weight: 250,
     image: "empty.jpg",
     ingredients: [
       "куриная грудка",
@@ -1928,8 +1928,7 @@ const rawItemsById = {
   "141": {
     title: "Стрипсы",
     price: 380,
-    weight: 300,
-    amount: 4,
+    weight: 250,
     image: "empty.jpg",
     ingredients: [
       "куриная грудка",
@@ -1947,8 +1946,8 @@ const rawItemsById = {
   "142": {
     title: "Шницель куриный",
     price: 380,
-    weight: 300,
-    amount: 4,
+    weight: 250,
+    amount: 2,
     image: "empty.jpg",
     ingredients: [
       "куриная грудка",
