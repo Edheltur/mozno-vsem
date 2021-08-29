@@ -1968,6 +1968,24 @@ const rawItemsById = {
     image: "empty.jpg",
     ingredients: ["курица", "морская капуста", "лук ", "соль", "белый перец"],
   },
+  "144": {
+    title: "Фаршированные окорочка",
+    price: 400,
+    weight: 400,
+    amount: 2,
+    image: "empty.jpg",
+    ingredients: [
+      "курица",
+      "шампиньоны",
+      "лук",
+      "чеснок",
+      "сыр",
+      "масло сливочное",
+      "масло оливковое",
+      "соль",
+      "перец",
+    ],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<TMenuItemId, TMenuItem>> = mapObject(
