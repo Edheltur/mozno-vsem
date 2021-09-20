@@ -81,7 +81,6 @@ const rawCategoriesBySlug = {
       itemsById["121"],
       itemsById["120"],
       itemsById["132"],
-      itemsById["129"],
       itemsById["125"],
       itemsById["128"],
       itemsById["127"],

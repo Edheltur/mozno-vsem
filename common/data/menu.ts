@@ -1729,6 +1729,7 @@ const rawItemsById = {
     ],
   },
   "129": {
+    deleted: true,
     title: "Шашлык фирменный",
     price: 600,
     weight: 1000,
