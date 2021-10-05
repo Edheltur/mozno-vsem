@@ -1390,6 +1390,7 @@ const rawItemsById = {
     ],
   },
   "106": {
+    deleted: true,
     title: "Сердце индейки пикантное",
     price: 300,
     weight: 400,
