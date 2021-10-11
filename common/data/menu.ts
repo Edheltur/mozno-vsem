@@ -217,6 +217,7 @@ const rawItemsById = {
     ingredients: ["говядина 50%", "филе курицы 50%"],
   },
   "13": {
+    deleted: true,
     title: "Фарш из говядины и курицы",
     price: 500,
     weight: 500,
@@ -232,6 +233,7 @@ const rawItemsById = {
     ingredients: ["филе индейки"],
   },
   "15": {
+    deleted: true,
     title: "Фарш из индейки",
     price: 500,
     weight: 500,
@@ -247,6 +249,7 @@ const rawItemsById = {
     ingredients: ["филе курицы"],
   },
   "17": {
+    deleted: true,
     title: "Фарш из курицы",
     price: 500,
     weight: 500,
@@ -262,6 +265,7 @@ const rawItemsById = {
     ingredients: ["филе трески"],
   },
   "19": {
+    deleted: true,
     title: "Фарш из белой рыбы",
     price: 500,
     weight: 500,
@@ -277,6 +281,7 @@ const rawItemsById = {
     ingredients: ["филе кеты"],
   },
   "21": {
+    deleted: true,
     title: "Фарш из красной рыбы",
     price: 500,
     weight: 500,
@@ -476,6 +481,7 @@ const rawItemsById = {
     nutrition: { whey: 1, fats: 1.5, carbs: 6, energyValue: 40.2 },
   },
   "33": {
+    deleted: true,
     title: "Фарш из говядины",
     price: 500,
     weight: 500,
@@ -1135,6 +1141,7 @@ const rawItemsById = {
     ],
   },
   "87": {
+    deleted: true,
     title: "Кальмары отварные",
     price: 800,
     weight: 400,
@@ -1166,6 +1173,7 @@ const rawItemsById = {
     ingredients: ["карп", "соль", "перец"],
   },
   "90": {
+    deleted: true,
     title: "Язык говяжий отварной",
     price: 750,
     weight: 400,
@@ -1464,6 +1472,7 @@ const rawItemsById = {
     ingredients: ["говядина"],
   },
   "111": {
+    deleted: true,
     title: "Фермерский фарш из говядины",
     price: 750,
     weight: 500,
@@ -1616,6 +1625,7 @@ const rawItemsById = {
     ],
   },
   "122": {
+    deleted: true,
     title: "Голень куриная в сливочно-горчином соусе",
     price: 420,
     weight: 500,
@@ -1770,6 +1780,7 @@ const rawItemsById = {
     ],
   },
   "132": {
+    deleted: true,
     title: "Шашлык из индейки",
     price: 600,
     weight: 1000,
