@@ -150,6 +150,7 @@ const rawItemsById = {
     nutrition: { whey: 10.7, fats: 6.4, carbs: 7, energyValue: 132.4 },
   },
   "8": {
+    deleted: true,
     title: "Котлеты из курицы с имбирём",
     price: 520,
     weight: 520,
