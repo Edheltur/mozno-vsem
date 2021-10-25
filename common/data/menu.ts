@@ -1766,6 +1766,7 @@ const rawItemsById = {
     ],
   },
   "131": {
+    deleted: true,
     title: "Купаты румынские",
     price: 590,
     weight: 400,
