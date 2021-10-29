@@ -1351,6 +1351,7 @@ const rawItemsById = {
     ],
   },
   "103": {
+    deleted: true,
     title: "Рулетики из индейки с сыром и зеленью",
     price: 710,
     weight: 520,
