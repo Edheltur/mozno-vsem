@@ -1866,6 +1866,7 @@ const rawItemsById = {
     ],
   },
   "136": {
+    deleted: true,
     title: "Соус кисло-сладкий",
     price: 250,
     weight: 200,

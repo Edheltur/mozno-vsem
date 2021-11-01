@@ -26,7 +26,6 @@ const rawCategoriesBySlug = {
       itemsById["142"],
       itemsById["141"],
       itemsById["140"],
-      itemsById["136"],
       itemsById["137"],
       itemsById["138"],
       itemsById["139"],
@@ -130,7 +129,6 @@ const rawCategoriesBySlug = {
     title: "Соусы",
     items: [
       itemsById["101"],
-      itemsById["136"],
       itemsById["137"],
       itemsById["138"],
       itemsById["139"],
