@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps<
 
   const rawCount = context.query["count"];
   const count = Number.isFinite(Number(rawCount))
-    ? Math.min(0, Math.max(Number(rawCount), 100))
+    ? Math.max(0, Math.min(Number(rawCount), 100))
     : 20;
 
   const db = createDbClient();
