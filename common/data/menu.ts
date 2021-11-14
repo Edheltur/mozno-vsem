@@ -1478,7 +1478,7 @@ const rawItemsById = {
     title: "Фермерский фарш из говядины",
     price: 750,
     weight: 500,
-    image: "farsh-govyadina-farm.jpg",
+    image: "empty.jpg",
     ingredients: ["говядина"],
   },
   "112": {
@@ -1523,7 +1523,7 @@ const rawItemsById = {
     price: 320,
     weight: 400,
     amount: 2,
-    image: "empty.jpg",
+    image: "shahlichok.jpg",
     ingredients: [
       "индейка",
       "перец сладкий",
@@ -1600,7 +1600,7 @@ const rawItemsById = {
     price: 360,
     weight: 400,
     amount: 2,
-    image: "empty.jpg",
+    image: "shahlichok.jpg",
     ingredients: [
       "индейка",
       "перец сладкий",
@@ -1754,7 +1754,7 @@ const rawItemsById = {
     price: 590,
     weight: 400,
     amount: 4,
-    image: "empty.jpg",
+    image: "kupati.jpg",
     ingredients: [
       "говядина",
       "лук",
@@ -1870,7 +1870,7 @@ const rawItemsById = {
     title: "Соус кисло-сладкий",
     price: 250,
     weight: 200,
-    image: "empty.jpg",
+    image: "sous-kislo-sladkiy.jpg",
     ingredients: [
       "смородина красная",
       "чеснок",
@@ -1884,7 +1884,7 @@ const rawItemsById = {
     title: "Соус грибной",
     price: 200,
     weight: 200,
-    image: "empty.jpg",
+    image: "sous-gribnoy.jpg",
     ingredients: [
       "грибы шампиньоны",
       "лук",
@@ -1898,7 +1898,7 @@ const rawItemsById = {
     title: "Соус летний",
     price: 300,
     weight: 200,
-    image: "empty.jpg",
+    image: "sous-letniy.jpg",
     ingredients: [
       "кинза",
       "петрушка",
@@ -1918,7 +1918,7 @@ const rawItemsById = {
     title: "Соус томатный",
     price: 220,
     weight: 200,
-    image: "empty.jpg",
+    image: "sous-tomaniy.jpg",
     ingredients: [
       "томатная паста",
       "укроп",
@@ -1929,10 +1929,11 @@ const rawItemsById = {
     ],
   },
   "140": {
+    deleted: true,
     title: "Наггетсы куриные",
     price: 380,
     weight: 250,
-    image: "empty.jpg",
+    image: "nagetsi.jpg",
     ingredients: [
       "куриная грудка",
       "сок лимона",
@@ -1946,7 +1947,7 @@ const rawItemsById = {
     title: "Стрипсы",
     price: 380,
     weight: 250,
-    image: "empty.jpg",
+    image: "stripsi.jpg",
     ingredients: [
       "куриная грудка",
       "сок лимона",
@@ -1961,11 +1962,12 @@ const rawItemsById = {
     ],
   },
   "142": {
+    deleted: true,
     title: "Шницель куриный",
     price: 380,
     weight: 250,
     amount: 2,
-    image: "empty.jpg",
+    image: "shnitcel-kuriniy.jpg",
     ingredients: [
       "куриная грудка",
       "аджика",
@@ -1982,7 +1984,7 @@ const rawItemsById = {
     price: 270,
     weight: 200,
     amount: 2,
-    image: "empty.jpg",
+    image: "kotleti-laminariya.jpg",
     ingredients: ["курица", "морская капуста", "лук ", "соль", "белый перец"],
   },
   "144": {
