@@ -1174,7 +1174,6 @@ const rawItemsById = {
     ingredients: ["карп", "соль", "перец"],
   },
   "90": {
-    deleted: true,
     title: "Язык говяжий отварной",
     price: 750,
     weight: 400,
@@ -1596,6 +1595,7 @@ const rawItemsById = {
     ],
   },
   "120": {
+    deleted: true,
     title: "Шашлычок",
     price: 360,
     weight: 400,
@@ -1722,6 +1722,7 @@ const rawItemsById = {
     ],
   },
   "128": {
+    deleted: true,
     title: "Купаты из индейки",
     price: 470,
     weight: 400,

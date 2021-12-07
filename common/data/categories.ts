@@ -21,6 +21,7 @@ const rawCategoriesBySlug = {
   new: {
     title: "Новинки",
     items: [
+      itemsById["90"],
       itemsById["144"],
       itemsById["143"],
       itemsById["141"],
@@ -60,6 +61,7 @@ const rawCategoriesBySlug = {
       itemsById["48"],
       itemsById["85"],
       itemsById["86"],
+      itemsById["90"],
       itemsById["112"],
       itemsById["141"],
       itemsById["56"],
@@ -67,9 +69,7 @@ const rawCategoriesBySlug = {
       itemsById["98"],
       itemsById["113"],
       itemsById["121"],
-      itemsById["120"],
       itemsById["125"],
-      itemsById["128"],
       itemsById["127"],
       itemsById["130"],
       itemsById["88"],
