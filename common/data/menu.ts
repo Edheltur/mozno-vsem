@@ -944,6 +944,7 @@ const rawItemsById = {
     ingredients: ["ананас"],
   },
   "70": {
+    deleted: true,
     title: "Брусника",
     price: 350,
     weight: 300,
@@ -1098,6 +1099,7 @@ const rawItemsById = {
     ingredients: ["жимолость"],
   },
   "84": {
+    deleted: true,
     title: "Черника",
     price: 350,
     weight: 300,
