@@ -37,9 +37,9 @@ const rawItemsById = {
       "мускатный орех",
       "паприка молотая",
       "перец белый",
-      "мука греченевая",
+      "мука греченевая"
     ],
-    nutrition: { whey: 10.3, fats: 7.2, carbs: 16, energyValue: 140.3 },
+    nutrition: { whey: 10.3, fats: 7.2, carbs: 16, energyValue: 140.3 }
   },
   "2": {
     title: "Биточки из трески",
@@ -54,8 +54,8 @@ const rawItemsById = {
       "яйцо куриное",
       "розмарин",
       "мускатный орех",
-      "тимьян",
-    ],
+      "тимьян"
+    ]
   },
   "3": {
     title: "Ленивые голубцы",
@@ -74,9 +74,9 @@ const rawItemsById = {
       "чеснок",
       "соль",
       "тимьян",
-      "мука рисовая",
+      "мука рисовая"
     ],
-    nutrition: { whey: 8, fats: 4.3, carbs: 6, energyValue: 94.2 },
+    nutrition: { whey: 8, fats: 4.3, carbs: 6, energyValue: 94.2 }
   },
   "4": {
     title: "Фрикадельки из индейки с луком",
@@ -92,9 +92,9 @@ const rawItemsById = {
       "перец чёрный",
       "паприка молотая",
       "кориандр",
-      "мука рисовая",
+      "мука рисовая"
     ],
-    nutrition: { whey: 13.7, fats: 6.4, carbs: 5, energyValue: 130.3 },
+    nutrition: { whey: 13.7, fats: 6.4, carbs: 5, energyValue: 130.3 }
   },
   "5": {
     title: "Котлеты из телятины с кабачком",
@@ -111,9 +111,9 @@ const rawItemsById = {
       "зелень петрушки",
       "соль",
       "хмели-сунели",
-      "мука рисовая",
+      "мука рисовая"
     ],
-    nutrition: { whey: 10.7, fats: 6.4, carbs: 7, energyValue: 319.6 },
+    nutrition: { whey: 10.7, fats: 6.4, carbs: 7, energyValue: 319.6 }
   },
   "6": {
     title: "Фрикадельки из индейки со шпинатом",
@@ -129,9 +129,9 @@ const rawItemsById = {
       "базилик",
       "тимьян",
       "соль",
-      "мука рисовая",
+      "мука рисовая"
     ],
-    nutrition: { whey: 11.4, fats: 5.1, carbs: 5, energyValue: 113 },
+    nutrition: { whey: 11.4, fats: 5.1, carbs: 5, energyValue: 113 }
   },
   "7": {
     title: "Котлеты из телятины и булгура",
@@ -145,9 +145,9 @@ const rawItemsById = {
       "лук белый",
       "прованские травы",
       "соль",
-      "мука рисовая",
+      "мука рисовая"
     ],
-    nutrition: { whey: 10.7, fats: 6.4, carbs: 7, energyValue: 132.4 },
+    nutrition: { whey: 10.7, fats: 6.4, carbs: 7, energyValue: 132.4 }
   },
   "8": {
     deleted: true,
@@ -161,9 +161,9 @@ const rawItemsById = {
       "имбирь",
       "зелёный лук",
       "соевый соус",
-      "зелень петрушки",
+      "зелень петрушки"
     ],
-    nutrition: { whey: 15.8, fats: 7.7, carbs: 4, energyValue: 146.6 },
+    nutrition: { whey: 15.8, fats: 7.7, carbs: 4, energyValue: 146.6 }
   },
   "9": {
     title: "Перец фаршированный",
@@ -179,9 +179,9 @@ const rawItemsById = {
       "зелень петрушки",
       "брокколи",
       "соль",
-      "паприка",
+      "паприка"
     ],
-    nutrition: { whey: 9, fats: 5.9, carbs: 5, energyValue: 107.9 },
+    nutrition: { whey: 9, fats: 5.9, carbs: 5, energyValue: 107.9 }
   },
   "10": {
     title: "Котлетки из красной рыбы с кальмаром",
@@ -189,7 +189,7 @@ const rawItemsById = {
     weight: 200,
     amount: 2,
     image: "kotleti-forel-kalmar.jpg",
-    ingredients: ["форель", "кета", "кальмар", "лук", "яйцо куриное", "соль"],
+    ingredients: ["форель", "кета", "кальмар", "лук", "яйцо куриное", "соль"]
   },
   "11": {
     title: "Рыбные биточки из судака с минтаем",
@@ -205,9 +205,9 @@ const rawItemsById = {
       "яйцо куриное",
       "розмарин",
       "мускатный орех",
-      "тимьян",
+      "тимьян"
     ],
-    nutrition: { whey: 14.3, fats: 3.2, carbs: 6, energyValue: 107.9 },
+    nutrition: { whey: 14.3, fats: 3.2, carbs: 6, energyValue: 107.9 }
   },
   "12": {
     deleted: true,
@@ -215,7 +215,7 @@ const rawItemsById = {
     price: 500,
     weight: 1000,
     image: "farsh-govyadina-kurtisa.jpg",
-    ingredients: ["говядина 50%", "филе курицы 50%"],
+    ingredients: ["говядина 50%", "филе курицы 50%"]
   },
   "13": {
     deleted: true,
@@ -223,7 +223,7 @@ const rawItemsById = {
     price: 500,
     weight: 500,
     image: "farsh-govyadina-kurtisa.jpg",
-    ingredients: ["говядина 50%", "филе курицы 50%"],
+    ingredients: ["говядина 50%", "филе курицы 50%"]
   },
   "14": {
     deleted: true,
@@ -231,7 +231,7 @@ const rawItemsById = {
     price: 500,
     weight: 1000,
     image: "farsh-indeyka.jpg",
-    ingredients: ["филе индейки"],
+    ingredients: ["филе индейки"]
   },
   "15": {
     deleted: true,
@@ -239,7 +239,7 @@ const rawItemsById = {
     price: 500,
     weight: 500,
     image: "farsh-indeyka.jpg",
-    ingredients: ["филе индейки"],
+    ingredients: ["филе индейки"]
   },
   "16": {
     deleted: true,
@@ -247,7 +247,7 @@ const rawItemsById = {
     price: 500,
     weight: 1000,
     image: "farsh-kuritsa.jpg",
-    ingredients: ["филе курицы"],
+    ingredients: ["филе курицы"]
   },
   "17": {
     deleted: true,
@@ -255,7 +255,7 @@ const rawItemsById = {
     price: 500,
     weight: 500,
     image: "farsh-kuritsa.jpg",
-    ingredients: ["филе курицы"],
+    ingredients: ["филе курицы"]
   },
   "18": {
     deleted: true,
@@ -263,7 +263,7 @@ const rawItemsById = {
     price: 500,
     weight: 1000,
     image: "farsh-treska.jpg",
-    ingredients: ["филе трески"],
+    ingredients: ["филе трески"]
   },
   "19": {
     deleted: true,
@@ -271,7 +271,7 @@ const rawItemsById = {
     price: 500,
     weight: 500,
     image: "farsh-treska.jpg",
-    ingredients: ["филе трески"],
+    ingredients: ["филе трески"]
   },
   "20": {
     deleted: true,
@@ -279,7 +279,7 @@ const rawItemsById = {
     price: 500,
     weight: 1000,
     image: "farsh-keta.jpg",
-    ingredients: ["филе кеты"],
+    ingredients: ["филе кеты"]
   },
   "21": {
     deleted: true,
@@ -287,7 +287,7 @@ const rawItemsById = {
     price: 500,
     weight: 500,
     image: "farsh-keta.jpg",
-    ingredients: ["филе кеты"],
+    ingredients: ["филе кеты"]
   },
   "22": {
     deleted: true,
@@ -302,8 +302,8 @@ const rawItemsById = {
       "фарш трески",
       "рис бурый",
       "лук",
-      "специи",
-    ],
+      "специи"
+    ]
   },
   "23": {
     title: "Капустники",
@@ -318,9 +318,9 @@ const rawItemsById = {
       "чеснок",
       "соль",
       "тимьян",
-      "мука рисовая",
+      "мука рисовая"
     ],
-    nutrition: { whey: 9.8, fats: 4.4, carbs: 6, energyValue: 100.3 },
+    nutrition: { whey: 9.8, fats: 4.4, carbs: 6, energyValue: 100.3 }
   },
   "24": {
     deleted: true,
@@ -334,8 +334,8 @@ const rawItemsById = {
       "мука пшеничная цельнозерновая",
       "закваска ржаная (мука ржаная, вода)",
       "закваска пшеничная (мука пшеничная в/с, вода, в процентах ниже 2)",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "25": {
     title: "Хлеб бездрожжевой ржаной",
@@ -346,8 +346,8 @@ const rawItemsById = {
       "вода",
       "мука ржаная обдирная",
       "закваска ржаная (вода, мука ржаная обдирная)",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "26": {
     title: "Хлеб бездрожжевой цельнозерновой с прованскими травами",
@@ -362,8 +362,8 @@ const rawItemsById = {
       "сахар",
       "соль",
       "масло оливковое",
-      "прованские травы",
-    ],
+      "прованские травы"
+    ]
   },
   "27": {
     title: "Хлеб бездрожжевой Бородинский",
@@ -378,8 +378,8 @@ const rawItemsById = {
       "сахар",
       "патока",
       "соль",
-      "кориандр",
-    ],
+      "кориандр"
+    ]
   },
   "28": {
     deleted: true,
@@ -397,8 +397,8 @@ const rawItemsById = {
       "соль",
       "смесь орехов",
       "курага",
-      "изюм",
-    ],
+      "изюм"
+    ]
   },
   "29": {
     deleted: true,
@@ -416,8 +416,8 @@ const rawItemsById = {
       "масло оливковое",
       "семена подсолнечника",
       "семена подсолнечника",
-      "кунжут",
-    ],
+      "кунжут"
+    ]
   },
   "30": {
     title: "Котлеты куриные с брокколи",
@@ -433,9 +433,9 @@ const rawItemsById = {
       "специи",
       "яйцо куриное",
       "чеснок",
-      "соль",
+      "соль"
     ],
-    nutrition: { whey: 10.9, fats: 5, carbs: 6, energyValue: 110.5 },
+    nutrition: { whey: 10.9, fats: 5, carbs: 6, energyValue: 110.5 }
   },
   "31": {
     title: "Биточки из минтая с креветками",
@@ -453,9 +453,9 @@ const rawItemsById = {
       "чеснок",
       "лимон",
       "соль",
-      "перец",
+      "перец"
     ],
-    nutrition: { whey: 16.6, fats: 1.1, carbs: 3, energyValue: 88.2 },
+    nutrition: { whey: 16.6, fats: 1.1, carbs: 3, energyValue: 88.2 }
   },
   "32": {
     title: "Перец фаршированный овощной",
@@ -477,9 +477,9 @@ const rawItemsById = {
       "куркума",
       "прованские травы",
       "мускатный орех",
-      "соль",
+      "соль"
     ],
-    nutrition: { whey: 1, fats: 1.5, carbs: 6, energyValue: 40.2 },
+    nutrition: { whey: 1, fats: 1.5, carbs: 6, energyValue: 40.2 }
   },
   "33": {
     deleted: true,
@@ -487,14 +487,14 @@ const rawItemsById = {
     price: 500,
     weight: 500,
     image: "farsh-govyadina-kurtisa.jpg",
-    ingredients: ["говядина"],
+    ingredients: ["говядина"]
   },
   "34": {
     title: "Фарш для животных",
     price: 100,
     weight: 500,
     image: "farsh-kuritsa.jpg",
-    ingredients: ["обрезь говядины", "обрезь курицы", "обрезь индейки"],
+    ingredients: ["обрезь говядины", "обрезь курицы", "обрезь индейки"]
   },
   "35": {
     deleted: true,
@@ -503,7 +503,7 @@ const rawItemsById = {
     weight: 450,
     amount: 2,
     image: "kalmari-po-russki.jpg",
-    ingredients: ["греча", "шампиньоны", "лук", "соль", "специи"],
+    ingredients: ["греча", "шампиньоны", "лук", "соль", "специи"]
   },
   "36": {
     deleted: true,
@@ -521,22 +521,22 @@ const rawItemsById = {
       "яйцо куриное",
       "соль",
       "перец",
-      "специи",
-    ],
+      "специи"
+    ]
   },
   "37": {
     title: "Капуста брокколи",
     price: 150,
     weight: 400,
     image: "brokkoli.jpg",
-    ingredients: ["капуста брокколи"],
+    ingredients: ["капуста брокколи"]
   },
   "38": {
     title: "Капуста цветная",
     price: 150,
     weight: 400,
     image: "tsvetnaya-kapusta.jpg",
-    ingredients: ["капуста цветная"],
+    ingredients: ["капуста цветная"]
   },
   "39": {
     deleted: true,
@@ -544,7 +544,7 @@ const rawItemsById = {
     price: 150,
     weight: 400,
     image: "empty.jpg",
-    ingredients: ["мини-морковака"],
+    ingredients: ["мини-морковака"]
   },
   "40": {
     deleted: true,
@@ -552,7 +552,7 @@ const rawItemsById = {
     price: 140,
     weight: 400,
     image: "evropeyskaya-smes.jpg",
-    ingredients: ["брокколи", "цветная капуста", "фасоль", "морковь"],
+    ingredients: ["брокколи", "цветная капуста", "фасоль", "морковь"]
   },
   "41": {
     title: "Мексиканская смесь",
@@ -566,8 +566,8 @@ const rawItemsById = {
       "зеленый горошек",
       "лук",
       "кукуруза",
-      "морковь",
-    ],
+      "морковь"
+    ]
   },
   "42": {
     title: "Овощной букет",
@@ -579,8 +579,8 @@ const rawItemsById = {
       "фасоль",
       "брокколи",
       "морковь",
-      "зеленый горошек",
-    ],
+      "зеленый горошек"
+    ]
   },
   "43": {
     deleted: true,
@@ -588,21 +588,21 @@ const rawItemsById = {
     price: 130,
     weight: 400,
     image: "smes-s-brokkoli.jpg",
-    ingredients: ["брокколи", "цветная капуста", "морковь"],
+    ingredients: ["брокколи", "цветная капуста", "морковь"]
   },
   "44": {
     title: "Смесь для жарки яиц",
     price: 130,
     weight: 400,
     image: "smes-dlya-zarki-yaits.jpg",
-    ingredients: ["перец", "томаты", "фасоль", "лук"],
+    ingredients: ["перец", "томаты", "фасоль", "лук"]
   },
   "45": {
     title: "Шпинат резаный",
     price: 150,
     weight: 400,
     image: "shpinat.jpg",
-    ingredients: ["шпинат"],
+    ingredients: ["шпинат"]
   },
   "46": {
     deleted: true,
@@ -610,14 +610,14 @@ const rawItemsById = {
     price: 340,
     weight: 300,
     image: "mango.jpg",
-    ingredients: ["манго"],
+    ingredients: ["манго"]
   },
   "47": {
     title: "Клубника",
     price: 150,
     weight: 300,
     image: "klubnika.jpg",
-    ingredients: ["клубника"],
+    ingredients: ["клубника"]
   },
   "48": {
     title: "Долма",
@@ -638,9 +638,9 @@ const rawItemsById = {
       "орегано",
       "укроп сухой",
       "петрушка сухая",
-      "масло оливковое",
+      "масло оливковое"
     ],
-    nutrition: { whey: 13.9, fats: 9.5, carbs: 2, energyValue: 152.2 },
+    nutrition: { whey: 13.9, fats: 9.5, carbs: 2, energyValue: 152.2 }
   },
   "49": {
     title: "Голубцы Пекинские",
@@ -660,9 +660,9 @@ const rawItemsById = {
       "куркума",
       "мускатный орех",
       "паприка",
-      "укроп сухой",
+      "укроп сухой"
     ],
-    nutrition: { whey: 8.4, fats: 3.6, carbs: 2, energyValue: 75.9 },
+    nutrition: { whey: 8.4, fats: 3.6, carbs: 2, energyValue: 75.9 }
   },
   "50": {
     deleted: true,
@@ -678,8 +678,8 @@ const rawItemsById = {
       "яйцо",
       "сироп топинамбура",
       "разрыхлитель",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "51": {
     deleted: true,
@@ -695,8 +695,8 @@ const rawItemsById = {
       "яйцо",
       "сироп топинамбура",
       "разрыхлитель",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "52": {
     deleted: true,
@@ -712,8 +712,8 @@ const rawItemsById = {
       "яйцо",
       "сироп топинамбура",
       "разрыхлитель",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "53": {
     title: "Фрикадельки для ухи",
@@ -721,7 +721,7 @@ const rawItemsById = {
     weight: 200,
     image: "ribnuie-frikadelki.jpg",
     ingredients: ["красная рыба", "лук", "яйцо", "соль", "перец", "куркума"],
-    amount: 20,
+    amount: 20
   },
   "54": {
     title: "Бульон рыбный замороженный",
@@ -729,7 +729,7 @@ const rawItemsById = {
     weight: 500,
     image: "empty.jpg",
     ingredients: ["вода", "красная рыба", "белая рыба", "соль"],
-    nutrition: { whey: 2.9, fats: 0.7, carbs: 0, energyValue: 19.1 },
+    nutrition: { whey: 2.9, fats: 0.7, carbs: 0, energyValue: 19.1 }
   },
   "55": {
     title: "Чебуреки мясные",
@@ -744,8 +744,8 @@ const rawItemsById = {
       "курица",
       "лук",
       "соль",
-      "перец",
-    ],
+      "перец"
+    ]
   },
   "56": {
     title: "Детские котлетки",
@@ -759,9 +759,9 @@ const rawItemsById = {
       "яйцо",
       "соль",
       "куркума",
-      "мука безглютеновая",
+      "мука безглютеновая"
     ],
-    nutrition: { whey: 7.2, fats: 21.2, carbs: 25, energyValue: 319.6 },
+    nutrition: { whey: 7.2, fats: 21.2, carbs: 25, energyValue: 319.6 }
   },
   "57": {
     deleted: true,
@@ -770,7 +770,7 @@ const rawItemsById = {
     weight: 700,
     amount: 4,
     image: "ribnui-bulyon-s-frikadelkami.jpg",
-    ingredients: ["бульон из рыбы", "фрикадельки из красной рыбы", "соль"],
+    ingredients: ["бульон из рыбы", "фрикадельки из красной рыбы", "соль"]
   },
   "58": {
     deleted: true,
@@ -792,8 +792,8 @@ const rawItemsById = {
       "перец черный молотый",
       "перец белый",
       "куркума",
-      "мускат",
-    ],
+      "мускат"
+    ]
   },
   "59": {
     deleted: true,
@@ -815,8 +815,8 @@ const rawItemsById = {
       "перец белый",
       "перец лимонный",
       "лимонный сок",
-      "куркума",
-    ],
+      "куркума"
+    ]
   },
   "60": {
     title: "Блины безглютеновые",
@@ -836,8 +836,8 @@ const rawItemsById = {
       "молоко",
       "сахар",
       "соль",
-      "лимонная кислота",
-    ],
+      "лимонная кислота"
+    ]
   },
   "61": {
     title: "Блины б/г с фаршем из куриных сердечек",
@@ -862,8 +862,8 @@ const rawItemsById = {
       "лук репчатый",
       "соль",
       "перец белый",
-      "мускат",
-    ],
+      "мускат"
+    ]
   },
   "62": {
     title: "Блины б/г с яблоком и корицей",
@@ -886,15 +886,15 @@ const rawItemsById = {
       "лимонная кислота",
       "яблоко",
       "сироп топинамбура",
-      "корица",
-    ],
+      "корица"
+    ]
   },
   "63": {
     title: "Шампиньоны резаные",
     price: 150,
     weight: 400,
     image: "shampinyoni.jpg",
-    ingredients: ["шампиньоны"],
+    ingredients: ["шампиньоны"]
   },
   "64": {
     deleted: true,
@@ -902,7 +902,7 @@ const rawItemsById = {
     price: 130,
     weight: 400,
     image: "goroh.jpg",
-    ingredients: ["Зелёный горошек"],
+    ingredients: ["Зелёный горошек"]
   },
   "65": {
     deleted: true,
@@ -910,7 +910,7 @@ const rawItemsById = {
     price: 150,
     weight: 400,
     image: "lecho.jpg",
-    ingredients: ["морковь", "перец", "томат", "лук", "цукини"],
+    ingredients: ["морковь", "перец", "томат", "лук", "цукини"]
   },
   "66": {
     deleted: true,
@@ -918,14 +918,14 @@ const rawItemsById = {
     price: 200,
     weight: 400,
     image: "raratui.jpg",
-    ingredients: ["цукини", "томаты", "перец", "лук", "баклажаны"],
+    ingredients: ["цукини", "томаты", "перец", "лук", "баклажаны"]
   },
   "67": {
     title: "Кабачок",
     price: 130,
     weight: 400,
     image: "kabachok.jpg",
-    ingredients: ["кабачок"],
+    ingredients: ["кабачок"]
   },
   "68": {
     deleted: true,
@@ -933,7 +933,7 @@ const rawItemsById = {
     price: 100,
     weight: 400,
     image: "smes-borsh.jpg",
-    ingredients: ["картофель", "морковь", "свекла", "капуста", "лук", "томаты"],
+    ingredients: ["картофель", "морковь", "свекла", "капуста", "лук", "томаты"]
   },
   "69": {
     deleted: true,
@@ -941,7 +941,7 @@ const rawItemsById = {
     price: 210,
     weight: 300,
     image: "ananas.jpg",
-    ingredients: ["ананас"],
+    ingredients: ["ананас"]
   },
   "70": {
     deleted: true,
@@ -949,42 +949,42 @@ const rawItemsById = {
     price: 350,
     weight: 300,
     image: "brusnika.jpg",
-    ingredients: ["брусника"],
+    ingredients: ["брусника"]
   },
   "71": {
     title: "Клюква",
     price: 350,
     weight: 300,
     image: "klyukva.jpg",
-    ingredients: ["клюква"],
+    ingredients: ["клюква"]
   },
   "72": {
     title: "Голубика",
     price: 350,
     weight: 300,
     image: "golubika.jpg",
-    ingredients: ["голубика"],
+    ingredients: ["голубика"]
   },
   "73": {
     title: "Ежевика",
     price: 350,
     weight: 300,
     image: "ezevika.jpg",
-    ingredients: ["ежевика"],
+    ingredients: ["ежевика"]
   },
   "74": {
     title: "Смородина красная",
     price: 200,
     weight: 300,
     image: "smorodina-krasnaya.jpg",
-    ingredients: ["смородина красная"],
+    ingredients: ["смородина красная"]
   },
   "75": {
     title: "Смородина чёрная",
     price: 200,
     weight: 300,
     image: "smorodina-chernaya.jpg",
-    ingredients: ["смородина чёрная"],
+    ingredients: ["смородина чёрная"]
   },
   "76": {
     deleted: true,
@@ -992,14 +992,14 @@ const rawItemsById = {
     price: 350,
     weight: 300,
     image: "malina.jpg",
-    ingredients: ["малина"],
+    ingredients: ["малина"]
   },
   "77": {
     title: "Облепиха",
     price: 250,
     weight: 300,
     image: "oblepikha.jpg",
-    ingredients: ["облепиха"],
+    ingredients: ["облепиха"]
   },
   "78": {
     deleted: true,
@@ -1013,8 +1013,8 @@ const rawItemsById = {
       "крыжовник",
       "слива",
       "клубника",
-      "рябина черноплодная",
-    ],
+      "рябина черноплодная"
+    ]
   },
   "79": {
     title: "Котлеты из форели с креветками",
@@ -1031,8 +1031,8 @@ const rawItemsById = {
       "перец",
       "лимонный сок",
       "мука кукурузная",
-      "мука уневерсальная б/г",
-    ],
+      "мука уневерсальная б/г"
+    ]
   },
   "80": {
     title: "Котлеты свекольные",
@@ -1048,9 +1048,9 @@ const rawItemsById = {
       "мука льняная",
       "соль",
       "перец",
-      "мускат",
+      "мускат"
     ],
-    nutrition: { whey: 8.9, fats: 5.1, carbs: 34, energyValue: 217.6 },
+    nutrition: { whey: 8.9, fats: 5.1, carbs: 34, energyValue: 217.6 }
   },
   "81": {
     title: "Котлеты морковные",
@@ -1067,9 +1067,9 @@ const rawItemsById = {
       "масло оливковое",
       "соль",
       "перец",
-      "мускат",
+      "мускат"
     ],
-    nutrition: { whey: 3, fats: 1.6, carbs: 13, energyValue: 78.1 },
+    nutrition: { whey: 3, fats: 1.6, carbs: 13, energyValue: 78.1 }
   },
   "82": {
     deleted: true,
@@ -1088,15 +1088,15 @@ const rawItemsById = {
       "соль",
       "перец",
       "мускат",
-      "масло оливковое",
-    ],
+      "масло оливковое"
+    ]
   },
   "83": {
     title: "Жимолость",
     price: 400,
     weight: 300,
     image: "zhimolost.jpg",
-    ingredients: ["жимолость"],
+    ingredients: ["жимолость"]
   },
   "84": {
     deleted: true,
@@ -1104,7 +1104,7 @@ const rawItemsById = {
     price: 350,
     weight: 300,
     image: "chernika.jpg",
-    ingredients: ["черника"],
+    ingredients: ["черника"]
   },
   "85": {
     title: "Рулет куриный с грибами",
@@ -1121,8 +1121,8 @@ const rawItemsById = {
       "мускат",
       "масло оливковое",
       "грибы шампиньоны",
-      "лук репчатый",
-    ],
+      "лук репчатый"
+    ]
   },
   "86": {
     title: "Рулет с черносливом",
@@ -1140,8 +1140,8 @@ const rawItemsById = {
       "мука универсальная б/г",
       "соль",
       "перец",
-      "чернослив",
-    ],
+      "чернослив"
+    ]
   },
   "87": {
     deleted: true,
@@ -1149,7 +1149,7 @@ const rawItemsById = {
     price: 800,
     weight: 400,
     image: "kalmar.jpg",
-    ingredients: ["кальмар"],
+    ingredients: ["кальмар"]
   },
   "88": {
     title: "Холодец",
@@ -1164,8 +1164,8 @@ const rawItemsById = {
       "лук",
       "лавровый лист",
       "укроп",
-      "перец",
-    ],
+      "перец"
+    ]
   },
   "89": {
     deleted: true,
@@ -1173,14 +1173,14 @@ const rawItemsById = {
     price: 700,
     weight: 650,
     image: "karp-zapekanie.jpg",
-    ingredients: ["карп", "соль", "перец"],
+    ingredients: ["карп", "соль", "перец"]
   },
   "90": {
     title: "Язык говяжий отварной",
     price: 750,
     weight: 400,
     image: "yazik-govyadina.jpg",
-    ingredients: ["язык говяжий"],
+    ingredients: ["язык говяжий"]
   },
   "91": {
     deleted: true,
@@ -1188,14 +1188,14 @@ const rawItemsById = {
     price: 150,
     weight: 400,
     image: "vinegret.jpg",
-    ingredients: ["картофель", "морковь", "свекла", "зеленый горошек"],
+    ingredients: ["картофель", "морковь", "свекла", "зеленый горошек"]
   },
   "92": {
     title: "Шиповник",
     price: 600,
     weight: 500,
     image: "shipovnik.jpg",
-    ingredients: ["шиповник"],
+    ingredients: ["шиповник"]
   },
   "93": {
     deleted: true,
@@ -1211,8 +1211,8 @@ const rawItemsById = {
       "лук",
       "лавровый лист",
       "укроп перец",
-      "желатин",
-    ],
+      "желатин"
+    ]
   },
   "94": {
     deleted: true,
@@ -1220,7 +1220,7 @@ const rawItemsById = {
     price: 120,
     weight: 400,
     image: "tikva.jpg",
-    ingredients: ["тыква"],
+    ingredients: ["тыква"]
   },
   "95": {
     deleted: true,
@@ -1239,8 +1239,8 @@ const rawItemsById = {
       "мускат",
       "мука б/г",
       "мука кукурузная",
-      "масло оливковое",
-    ],
+      "масло оливковое"
+    ]
   },
   "96": {
     deleted: true,
@@ -1262,8 +1262,8 @@ const rawItemsById = {
       "соль",
       "смесь перецев",
       "мука льняная",
-      "мука кукурузная",
-    ],
+      "мука кукурузная"
+    ]
   },
   "97": {
     title: "Чебуреки ржаные",
@@ -1281,15 +1281,15 @@ const rawItemsById = {
       "соль",
       "перец черный",
       "перец белый",
-      "мускат",
-    ],
+      "мускат"
+    ]
   },
   "98": {
     title: "Бульон куриный замороженный",
     price: 100,
     weight: 500,
     image: "bulyon-kuritsa.jpg",
-    ingredients: ["вода", "курица", "соль"],
+    ingredients: ["вода", "курица", "соль"]
   },
   "99": {
     title: "Чебуреки с сыром и зеленью",
@@ -1302,8 +1302,8 @@ const rawItemsById = {
       "сыр 40%",
       "петрушка",
       "укроп",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "100": {
     title: "Чебуреки ржаные с сыром и зеленью",
@@ -1317,8 +1317,8 @@ const rawItemsById = {
       "сыр 40%",
       "петрушка",
       "укроп",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "101": {
     title: "Аджика",
@@ -1331,8 +1331,8 @@ const rawItemsById = {
       "соль",
       "базилик",
       "хмели-сунели",
-      "кинза",
-    ],
+      "кинза"
+    ]
   },
   "102": {
     deleted: true,
@@ -1348,8 +1348,8 @@ const rawItemsById = {
       "корица",
       "соль",
       "куркума",
-      "перец",
-    ],
+      "перец"
+    ]
   },
   "103": {
     deleted: true,
@@ -1364,9 +1364,9 @@ const rawItemsById = {
       "укроп",
       "чеснок",
       "соль",
-      "перец",
+      "перец"
     ],
-    amount: 4,
+    amount: 4
   },
   "104": {
     deleted: true,
@@ -1381,8 +1381,8 @@ const rawItemsById = {
       "кукурузная мука",
       "соль",
       "перец",
-      "куркума",
-    ],
+      "куркума"
+    ]
   },
   "105": {
     deleted: true,
@@ -1397,8 +1397,8 @@ const rawItemsById = {
       "горчица",
       "сироп топинамбура",
       "соль",
-      "перец",
-    ],
+      "перец"
+    ]
   },
   "106": {
     deleted: true,
@@ -1414,8 +1414,8 @@ const rawItemsById = {
       "сироп топинамбура",
       "лук",
       "соль",
-      "перец",
-    ],
+      "перец"
+    ]
   },
   "107": {
     deleted: true,
@@ -1429,8 +1429,8 @@ const rawItemsById = {
       "лук",
       "мука кукурузная",
       "соль",
-      "перец",
-    ],
+      "перец"
+    ]
   },
   "108": {
     deleted: true,
@@ -1447,8 +1447,8 @@ const rawItemsById = {
       "перец",
       "чеснок сухой",
       "паприка",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "109": {
     title: "Фрикадельки куриные",
@@ -1462,9 +1462,9 @@ const rawItemsById = {
       "яйцо куриное",
       "соль",
       "перец",
-      "куркума",
+      "куркума"
     ],
-    amount: 10,
+    amount: 10
   },
   "110": {
     deleted: true,
@@ -1472,7 +1472,7 @@ const rawItemsById = {
     price: 750,
     weight: 400,
     image: "empty.jpg",
-    ingredients: ["говядина"],
+    ingredients: ["говядина"]
   },
   "111": {
     deleted: true,
@@ -1480,7 +1480,7 @@ const rawItemsById = {
     price: 750,
     weight: 500,
     image: "empty.jpg",
-    ingredients: ["говядина"],
+    ingredients: ["говядина"]
   },
   "112": {
     title: "Рубленый бифштекс",
@@ -1488,14 +1488,14 @@ const rawItemsById = {
     weight: 300,
     amount: 2,
     image: "beefshteks-rublennui.jpg",
-    ingredients: ["говядина", "соль", "перец"],
+    ingredients: ["говядина", "соль", "перец"]
   },
   "113": {
     title: "Цыплёнок тапака",
     price: 400,
     weight: 1000,
     image: "tciplyonok-tapaka.jpg",
-    ingredients: ["курица", "соль", "специи"],
+    ingredients: ["курица", "соль", "специи"]
   },
   "114": {
     deleted: true,
@@ -1515,8 +1515,8 @@ const rawItemsById = {
       "мука кукурузная",
       "мука безглютеновая",
       "перец",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "115": {
     deleted: true,
@@ -1532,8 +1532,8 @@ const rawItemsById = {
       "горчица",
       "сок лимона",
       "соль",
-      "перец",
-    ],
+      "перец"
+    ]
   },
   "116": {
     deleted: true,
@@ -1548,8 +1548,8 @@ const rawItemsById = {
       "перец острый",
       "сироп топинамбура",
       "томатная паста",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "117": {
     deleted: true,
@@ -1565,8 +1565,8 @@ const rawItemsById = {
       "сироп топинамбура",
       "чеснок",
       "соль",
-      "куркума",
-    ],
+      "куркума"
+    ]
   },
   "118": {
     deleted: true,
@@ -1574,7 +1574,7 @@ const rawItemsById = {
     price: 380,
     weight: 400,
     image: "empty.jpg",
-    ingredients: ["аджика", "горчица", "масло оливк", "паприка", "чеснок"],
+    ingredients: ["аджика", "горчица", "масло оливк", "паприка", "чеснок"]
   },
   "119": {
     title: "Биточки с сыром",
@@ -1593,8 +1593,8 @@ const rawItemsById = {
       "мука кукурузная",
       "мука б/г",
       "перец",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "120": {
     deleted: true,
@@ -1610,8 +1610,8 @@ const rawItemsById = {
       "горчица",
       "сок лимона",
       "соль",
-      "перец",
-    ],
+      "перец"
+    ]
   },
   "121": {
     title: "Куриное бедро в брусничном соусе",
@@ -1625,8 +1625,8 @@ const rawItemsById = {
       "перец острый",
       "сироп топинамбура",
       "томатная паста",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "122": {
     deleted: true,
@@ -1642,8 +1642,8 @@ const rawItemsById = {
       "сироп топинамбура",
       "чеснок",
       "соль",
-      "куркума",
-    ],
+      "куркума"
+    ]
   },
   "123": {
     deleted: true,
@@ -1652,7 +1652,7 @@ const rawItemsById = {
     weight: 400,
     amount: 4,
     image: "kurinuie-byodra-gortchitza.jpg",
-    ingredients: ["аджика", "горчица", "масло оливк", "паприка", "чеснок"],
+    ingredients: ["аджика", "горчица", "масло оливк", "паприка", "чеснок"]
   },
   "124": {
     title: "Блины б/г с куриным мясом",
@@ -1671,8 +1671,8 @@ const rawItemsById = {
       "молоко сухое",
       "сахар",
       "соль",
-      "лимонная кислота",
-    ],
+      "лимонная кислота"
+    ]
   },
   "125": {
     title: "Запеканка из индейки с грибами и цветной капустой",
@@ -1685,8 +1685,8 @@ const rawItemsById = {
       "лук",
       "цветная капуста",
       "сыр",
-      "масло оливковое",
-    ],
+      "масло оливковое"
+    ]
   },
   "126": {
     title: "Запеканка из форели с брокколи",
@@ -1700,8 +1700,8 @@ const rawItemsById = {
       "сыр",
       "масло оливковое",
       "орегано",
-      "базилик",
-    ],
+      "базилик"
+    ]
   },
   "127": {
     title: "Купаты из курицы и индейки со шпинатом и сыром",
@@ -1720,8 +1720,8 @@ const rawItemsById = {
       "соль",
       "перец",
       "мускат",
-      "кориандр",
-    ],
+      "кориандр"
+    ]
   },
   "128": {
     deleted: true,
@@ -1741,8 +1741,8 @@ const rawItemsById = {
       "мускат",
       "перец",
       "соль",
-      "кориандр",
-    ],
+      "кориандр"
+    ]
   },
   "129": {
     deleted: true,
@@ -1750,7 +1750,7 @@ const rawItemsById = {
     price: 600,
     weight: 1000,
     image: "empty.jpg",
-    ingredients: ["индейка", "соль", "специи", "минеральная вода", "лимон"],
+    ingredients: ["индейка", "соль", "специи", "минеральная вода", "лимон"]
   },
   "130": {
     title: "Купаты по-русски из говядины",
@@ -1766,8 +1766,8 @@ const rawItemsById = {
       "вода",
       "соль",
       "перец",
-      "кориандр",
-    ],
+      "кориандр"
+    ]
   },
   "131": {
     deleted: true,
@@ -1782,8 +1782,8 @@ const rawItemsById = {
       "лук",
       "масло олив",
       "чеснок",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "132": {
     deleted: true,
@@ -1797,8 +1797,8 @@ const rawItemsById = {
       "лимон",
       "минеральная вода",
       "горчица",
-      "соль перец",
-    ],
+      "соль перец"
+    ]
   },
   "133": {
     deleted: true,
@@ -1818,8 +1818,8 @@ const rawItemsById = {
       "сок шпината",
       "сок укропа",
       "яйцо",
-      "соль",
-    ],
+      "соль"
+    ]
   },
   "134": {
     title: "Блины безглютеновые с клубникой",
@@ -1841,8 +1841,8 @@ const rawItemsById = {
       "соль",
       "клубника",
       "кокосовый сахар",
-      "кукурузный крахмал",
-    ],
+      "кукурузный крахмал"
+    ]
   },
   "135": {
     title: "Блины безглютеновые с яблоком и красной смородиной",
@@ -1865,8 +1865,8 @@ const rawItemsById = {
       "яблоко",
       "красная смородина",
       "кокосовый сахар",
-      "кукурузный крахмал",
-    ],
+      "кукурузный крахмал"
+    ]
   },
   "136": {
     deleted: true,
@@ -1880,8 +1880,8 @@ const rawItemsById = {
       "Аджика",
       "сироп топинамбура",
       "масло оливковое",
-      "крахмал рисовый",
-    ],
+      "крахмал рисовый"
+    ]
   },
   "137": {
     title: "Соус грибной",
@@ -1894,8 +1894,8 @@ const rawItemsById = {
       "масло оливковое",
       "молоко кокосовое",
       "бульон куриный",
-      "крахмал рисовый",
-    ],
+      "крахмал рисовый"
+    ]
   },
   "138": {
     title: "Соус летний",
@@ -1914,8 +1914,8 @@ const rawItemsById = {
       "сок лимона",
       "масло оливковое",
       "соль",
-      "белый перец",
-    ],
+      "белый перец"
+    ]
   },
   "139": {
     title: "Соус томатный",
@@ -1928,8 +1928,8 @@ const rawItemsById = {
       "петрушка",
       "чеснок",
       "оливковое масло",
-      "сироп топинамбура",
-    ],
+      "сироп топинамбура"
+    ]
   },
   "140": {
     deleted: true,
@@ -1943,8 +1943,8 @@ const rawItemsById = {
       "соль",
       "перец белый",
       "яйцо",
-      "крупа кукурузная",
-    ],
+      "крупа кукурузная"
+    ]
   },
   "141": {
     title: "Стрипсы",
@@ -1961,8 +1961,8 @@ const rawItemsById = {
       "шафран",
       "смесь перцев",
       "яйцо",
-      "крупа кукурузная",
-    ],
+      "крупа кукурузная"
+    ]
   },
   "142": {
     deleted: true,
@@ -1979,8 +1979,8 @@ const rawItemsById = {
       "смесь перцев",
       "обвалка",
       "яйцо",
-      "крупа кукурузная",
-    ],
+      "крупа кукурузная"
+    ]
   },
   "143": {
     title: "Котлеты с ламинарией",
@@ -1988,7 +1988,7 @@ const rawItemsById = {
     weight: 200,
     amount: 2,
     image: "kotleti-laminariya.jpg",
-    ingredients: ["курица", "морская капуста", "лук ", "соль", "белый перец"],
+    ingredients: ["курица", "морская капуста", "лук ", "соль", "белый перец"]
   },
   "144": {
     title: "Фаршированные окорочка",
@@ -2005,9 +2005,25 @@ const rawItemsById = {
       "масло сливочное",
       "масло оливковое",
       "соль",
-      "перец",
-    ],
+      "перец"
+    ]
   },
+  "145": {
+    title: "Котлеты для мужчин",
+    price: 270,
+    weight: 260,
+    amount: 2,
+    image: "empty.jpg",
+    ingredients: [
+      "говядина",
+      "будро куриное",
+      "лук",
+      "чеснок",
+      "соль",
+      "перец",
+      "масло оливковое"
+    ]
+  }
 } as const;
 
 export const itemsById: Readonly<Record<TMenuItemId, TMenuItem>> = mapObject(
@@ -2018,6 +2034,7 @@ export const itemsById: Readonly<Record<TMenuItemId, TMenuItem>> = mapObject(
 export function isMenuItemId(id?: string | null): id is TMenuItemId {
   return typeof id === "string" && id in itemsById;
 }
+
 export const itemsWithDeleted: ReadonlyArray<TMenuItem> =
   Object.values(itemsById);
 

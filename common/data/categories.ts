@@ -14,21 +14,22 @@ const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "vegetables-and-berries",
   "sauces",
   "bakery",
-  "for-pets",
+  "for-pets"
 ];
 
 const rawCategoriesBySlug = {
   new: {
     title: "Новинки",
     items: [
+      itemsById["145"],
       itemsById["90"],
       itemsById["144"],
       itemsById["143"],
       itemsById["141"],
       itemsById["137"],
       itemsById["138"],
-      itemsById["139"],
-    ],
+      itemsById["139"]
+    ]
   },
   fish: {
     title: "Рыба",
@@ -40,12 +41,13 @@ const rawCategoriesBySlug = {
       itemsById["79"],
       itemsById["54"],
       itemsById["53"],
-      itemsById["126"],
-    ],
+      itemsById["126"]
+    ]
   },
   meat: {
     title: "Мясо",
     items: [
+      itemsById["145"],
       itemsById["1"],
       itemsById["7"],
       itemsById["4"],
@@ -73,8 +75,8 @@ const rawCategoriesBySlug = {
       itemsById["127"],
       itemsById["130"],
       itemsById["88"],
-      itemsById["144"],
-    ],
+      itemsById["144"]
+    ]
   },
   "vegetables-and-berries": {
     title: "Овощи и ягоды",
@@ -98,8 +100,8 @@ const rawCategoriesBySlug = {
       itemsById["72"],
       itemsById["71"],
       itemsById["47"],
-      itemsById["92"],
-    ],
+      itemsById["92"]
+    ]
   },
   bakery: {
     title: "Выпечка",
@@ -116,8 +118,8 @@ const rawCategoriesBySlug = {
       itemsById["62"],
       itemsById["124"],
       itemsById["135"],
-      itemsById["134"],
-    ],
+      itemsById["134"]
+    ]
   },
   sauces: {
     title: "Соусы",
@@ -125,12 +127,12 @@ const rawCategoriesBySlug = {
       itemsById["101"],
       itemsById["137"],
       itemsById["138"],
-      itemsById["139"],
-    ],
+      itemsById["139"]
+    ]
   },
   "for-pets": {
     title: "Для животных",
-    items: [itemsById["34"]],
+    items: [itemsById["34"]]
   },
   get all() {
     return {
@@ -141,17 +143,17 @@ const rawCategoriesBySlug = {
         ...this["vegetables-and-berries"].items,
         ...this["sauces"].items,
         ...this["bakery"].items,
-        ...this["for-pets"].items,
-      ]),
+        ...this["for-pets"].items
+      ])
     };
-  },
+  }
 } as const;
 
 export const categoriesBySlug: Readonly<Record<TCategorySlug, TCategory>> =
   orderedCategorySlugs.reduce((acc, slug) => {
     acc[slug] = {
       ...rawCategoriesBySlug[slug],
-      slug,
+      slug
     };
 
     return acc;
