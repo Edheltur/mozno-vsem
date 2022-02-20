@@ -966,6 +966,7 @@ const rawItemsById = {
     ingredients: ["голубика"],
   },
   "73": {
+    deleted: true,
     title: "Ежевика",
     price: 350,
     weight: 300,
@@ -973,6 +974,7 @@ const rawItemsById = {
     ingredients: ["ежевика"],
   },
   "74": {
+    deleted: true,
     title: "Смородина красная",
     price: 200,
     weight: 300,
@@ -980,6 +982,7 @@ const rawItemsById = {
     ingredients: ["смородина красная"],
   },
   "75": {
+    deleted: true,
     title: "Смородина чёрная",
     price: 200,
     weight: 300,
@@ -1753,6 +1756,7 @@ const rawItemsById = {
     ingredients: ["индейка", "соль", "специи", "минеральная вода", "лимон"],
   },
   "130": {
+    deleted: true,
     title: "Купаты по-русски из говядины",
     price: 590,
     weight: 400,
