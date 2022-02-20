@@ -6,7 +6,6 @@ export type TOrder = {
   cart: ICart;
 };
 
-type A = Parameters<any>
 export function isOrder(order: any): order is TOrder {
   return isUser(order?.user) && isCart(order?.cart);
 }
