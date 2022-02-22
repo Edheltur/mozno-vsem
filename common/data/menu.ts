@@ -2028,6 +2028,44 @@ const rawItemsById = {
       "масло оливковое",
     ],
   },
+  "146": {
+    title: "Говяжий бульон",
+    price: 200,
+    weight: 500,
+    image: "empty.jpg",
+    ingredients: [
+      "говядина",
+      "лук",
+      "морковь",
+      "соль",
+      "перец",
+      "лавровый лист",
+    ],
+  },
+  "147": {
+    title: "Суп-пюре шпинат",
+    price: 270,
+    weight: 500,
+    image: "empty.jpg",
+    ingredients: ["куриный бульон", "шпинат", "кокосовое молоко", "соль"],
+  },
+  "148": {
+    title: "Суп-пюре овощной",
+    price: 250,
+    weight: 500,
+    image: "empty.jpg",
+    ingredients: [
+      "цветная капуста",
+      "фасоль",
+      "брокколи",
+      "морковь",
+      "зеленый горошек",
+      "куриный бульон",
+      "соль",
+      "перец",
+      "лавровый лист",
+    ],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<TMenuItemId, TMenuItem>> = mapObject(

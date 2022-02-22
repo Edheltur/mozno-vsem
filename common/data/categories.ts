@@ -9,6 +9,7 @@ export type TCategorySlug = keyof typeof rawCategoriesBySlug;
 const orderedCategorySlugs: ReadonlyArray<TCategorySlug> = [
   "all",
   "new",
+  "soups",
   "fish",
   "meat",
   "vegetables-and-berries",
@@ -21,6 +22,9 @@ const rawCategoriesBySlug = {
   new: {
     title: "Новинки",
     items: [
+      itemsById["146"],
+      itemsById["147"],
+      itemsById["148"],
       itemsById["145"],
       itemsById["90"],
       itemsById["144"],
@@ -29,6 +33,16 @@ const rawCategoriesBySlug = {
       itemsById["137"],
       itemsById["138"],
       itemsById["139"],
+    ],
+  },
+  soups: {
+    title: "Супы",
+    items: [
+      itemsById["146"],
+      itemsById["147"],
+      itemsById["148"],
+      itemsById["54"],
+      itemsById["98"],
     ],
   },
   fish: {
@@ -134,6 +148,7 @@ const rawCategoriesBySlug = {
     return {
       title: "Все блюда",
       items: uniq([
+        ...this["soups"].items,
         ...this["fish"].items,
         ...this["meat"].items,
         ...this["vegetables-and-berries"].items,
