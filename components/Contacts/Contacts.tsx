@@ -20,14 +20,16 @@ function formatPhone(phone: string) {
 type LinkProps = {
   href: string;
   Icon?: Icon;
-  text: string
-}
-const Link: React.FC<LinkProps> = ({href, Icon, text}) =>           <Anchor href={href} target="_blank">
-  <Box direction="row" align="center">
-    {Icon && <Icon color="brand" className={styles.Contacts__icon} />}
-    {text}
-  </Box>
-</Anchor>
+  text: string;
+};
+const Link: React.FC<LinkProps> = ({ href, Icon, text }) => (
+  <Anchor href={href} target="_blank">
+    <Box direction="row" align="center">
+      {Icon && <Icon color="brand" className={styles.Contacts__icon} />}
+      {text}
+    </Box>
+  </Anchor>
+);
 
 export const Contacts = () => {
   const formattedPhone = formatPhone(config.whatsAppPhoneNumber);
@@ -37,20 +39,48 @@ export const Contacts = () => {
         <Box align="center">
           <Heading level="3">Приём заказов</Heading>
           <Box align="center" gap="small">
-            <Link href={`tel:+${config.whatsAppPhoneNumber}`} Icon={Phone} text={formattedPhone}/>
-            <Link href={`https://wa.me/${config.whatsAppPhoneNumber}`} Icon={WhatsApp} text={formattedPhone}/>
-            <Link href={`https://t.me/${config.telegramUsername}`} Icon={Telegram} text={config.telegramUsername}/>
+            <Link
+              href={`tel:+${config.whatsAppPhoneNumber}`}
+              Icon={Phone}
+              text={formattedPhone}
+            />
+            <Link
+              href={`https://wa.me/${config.whatsAppPhoneNumber}`}
+              Icon={WhatsApp}
+              text={formattedPhone}
+            />
+            <Link
+              href={`https://t.me/${config.telegramUsername}`}
+              Icon={Telegram}
+              text={config.telegramUsername}
+            />
           </Box>
 
           <Heading level="3">Наши блюда</Heading>
-          <Link href="https://vk.com/mozno_vsem" Icon={Vkontakte} text="mozno_vsem"/>
-          <Link href="https://t.me/mozno_vsem" Icon={Telegram} text="mozno_vsem"/>
-          <Link href="https://www.instagram.com/mozno_vsem" text="mozno_vsem"/>
+          <Link
+            href="https://vk.com/mozno_vsem"
+            Icon={Vkontakte}
+            text="mozno_vsem"
+          />
+          <Link
+            href="https://t.me/mozno_vsem"
+            Icon={Telegram}
+            text="mozno_vsem"
+          />
+          <Link href="https://www.instagram.com/mozno_vsem" text="mozno_vsem" />
 
           <Heading level="3">Блог Ирины Рыль</Heading>
-          <Link href="https://vk.com/ryl.school" Icon={Vkontakte} text="ryl.school"/>
-          <Link href="https://t.me/rylschool" Icon={Telegram} text="rylschool"/>
-          <Link href="https://www.instagram.com/rylschool" text="rylschool"/>
+          <Link
+            href="https://vk.com/ryl.school"
+            Icon={Vkontakte}
+            text="ryl.school"
+          />
+          <Link
+            href="https://t.me/rylschool"
+            Icon={Telegram}
+            text="rylschool"
+          />
+          <Link href="https://www.instagram.com/rylschool" text="rylschool" />
         </Box>
       </Text>
     </InfoBlock>
