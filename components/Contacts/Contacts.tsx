@@ -1,6 +1,6 @@
 import React from "react";
 import { Anchor, Box, Heading, Text } from "grommet";
-import { Instagram, Phone } from "grommet-icons";
+import { Phone } from "grommet-icons";
 
 import { InfoBlock } from "components/ui/InfoBlock";
 import { Telegram, WhatsApp } from "components/ui/icons";
@@ -50,7 +50,6 @@ export const Contacts = () => {
           <Heading level="3">Наши блюда</Heading>
           <InstagramLink profile="mozno_vsem">
             <Box direction="row" align="center">
-              <Instagram color="brand" className={styles.Contacts__icon} />
               mozno_vsem
             </Box>
           </InstagramLink>
@@ -58,7 +57,6 @@ export const Contacts = () => {
           <Heading level="3">Блог Ирины Рыль</Heading>
           <InstagramLink profile="rylschool">
             <Box direction="row" align="center">
-              <Instagram color="brand" className={styles.Contacts__icon} />
               rylschool
             </Box>
           </InstagramLink>
