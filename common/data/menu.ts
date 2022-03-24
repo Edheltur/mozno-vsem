@@ -421,7 +421,7 @@ const rawItemsById = {
   },
   "30": {
     title: "Котлеты куриные с брокколи",
-    price: 210,
+    price: 250,
     weight: 200,
     amount: 2,
     image: "kotleti-kuritsa-brokkoli.jpg",
