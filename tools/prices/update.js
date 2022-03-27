@@ -13,13 +13,13 @@ const [nodePath, filename, pricesPath, menuJsonPath] = process.argv;
     .split("\r\n")
     .slice(1)
     .forEach((line) => {
-      const [title, id, amount, weight, price] = line.split(";");
-      if (id in menu) {
+      const [id, amount, weight, price] = line.split(";");
+      if (id in menu && price) {
         const dish = menu[id];
 
         dish.price = Number(price);
         dish.weight = Number(weight);
-        if (amount !== "1") {
+        if (amount !== "1" && amount !== "0") {
           dish.amount = Number(amount);
         }
       } else {
@@ -27,5 +27,7 @@ const [nodePath, filename, pricesPath, menuJsonPath] = process.argv;
       }
     });
 
-  await fs.writeFile(menuJsonPath, JSON.stringify(menu), { encoding: "utf-8" });
+  await fs.writeFile(menuJsonPath, JSON.stringify(menu, null, 2), {
+    encoding: "utf-8",
+  });
 })();
