@@ -1110,6 +1110,7 @@ const rawItemsById = {
     ingredients: ["черника"],
   },
   "85": {
+    deleted: true,
     title: "Рулет куриный с грибами",
     price: 660,
     weight: 500,
@@ -1486,6 +1487,7 @@ const rawItemsById = {
     ingredients: ["говядина"],
   },
   "112": {
+    deleted: true,
     title: "Рубленый бифштекс",
     price: 660,
     weight: 300,
@@ -1826,6 +1828,7 @@ const rawItemsById = {
     ],
   },
   "134": {
+    deleted: true,
     title: "Блины безглютеновые с клубникой",
     price: 360,
     weight: 250,
@@ -1849,6 +1852,7 @@ const rawItemsById = {
     ],
   },
   "135": {
+    deleted: true,
     title: "Блины безглютеновые с яблоком и красной смородиной",
     price: 350,
     weight: 250,
