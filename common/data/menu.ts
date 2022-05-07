@@ -458,6 +458,7 @@ const rawItemsById = {
     nutrition: { whey: 16.6, fats: 1.1, carbs: 3, energyValue: 88.2 },
   },
   "32": {
+    deleted: true,
     title: "Перец фаршированный овощной",
     price: 340,
     weight: 400,
@@ -525,6 +526,7 @@ const rawItemsById = {
     ],
   },
   "37": {
+    deleted: true,
     title: "Капуста брокколи",
     price: 290,
     weight: 400,
@@ -532,6 +534,7 @@ const rawItemsById = {
     ingredients: ["капуста брокколи"],
   },
   "38": {
+    deleted: true,
     title: "Капуста цветная",
     price: 250,
     weight: 400,
@@ -555,6 +558,7 @@ const rawItemsById = {
     ingredients: ["брокколи", "цветная капуста", "фасоль", "морковь"],
   },
   "41": {
+    deleted: true,
     title: "Мексиканская смесь",
     price: 190,
     weight: 400,
@@ -570,6 +574,7 @@ const rawItemsById = {
     ],
   },
   "42": {
+    deleted: true,
     title: "Овощной букет",
     price: 190,
     weight: 400,
@@ -591,6 +596,7 @@ const rawItemsById = {
     ingredients: ["брокколи", "цветная капуста", "морковь"],
   },
   "44": {
+    deleted: true,
     title: "Смесь для жарки яиц",
     price: 120,
     weight: 400,
@@ -598,6 +604,7 @@ const rawItemsById = {
     ingredients: ["перец", "томаты", "фасоль", "лук"],
   },
   "45": {
+    deleted: true,
     title: "Шпинат резаный",
     price: 200,
     weight: 400,
@@ -613,6 +620,7 @@ const rawItemsById = {
     ingredients: ["манго"],
   },
   "47": {
+    deleted: true,
     title: "Клубника",
     price: 250,
     weight: 300,
@@ -890,6 +898,7 @@ const rawItemsById = {
     ],
   },
   "63": {
+    deleted: true,
     title: "Шампиньоны резаные",
     price: 250,
     weight: 400,
@@ -921,6 +930,7 @@ const rawItemsById = {
     ingredients: ["цукини", "томаты", "перец", "лук", "баклажаны"],
   },
   "67": {
+    deleted: true,
     title: "Кабачок",
     price: 190,
     weight: 400,
@@ -952,6 +962,7 @@ const rawItemsById = {
     ingredients: ["брусника"],
   },
   "71": {
+    deleted: true,
     title: "Клюква",
     price: 350,
     weight: 300,
@@ -959,6 +970,7 @@ const rawItemsById = {
     ingredients: ["клюква"],
   },
   "72": {
+    deleted: true,
     title: "Голубика",
     price: 350,
     weight: 300,
@@ -998,6 +1010,7 @@ const rawItemsById = {
     ingredients: ["малина"],
   },
   "77": {
+    deleted: true,
     title: "Облепиха",
     price: 250,
     weight: 300,
@@ -1095,6 +1108,7 @@ const rawItemsById = {
     ],
   },
   "83": {
+    deleted: true,
     title: "Жимолость",
     price: 400,
     weight: 300,
@@ -1195,6 +1209,7 @@ const rawItemsById = {
     ingredients: ["картофель", "морковь", "свекла", "зеленый горошек"],
   },
   "92": {
+    deleted: true,
     title: "Шиповник",
     price: 600,
     weight: 500,
