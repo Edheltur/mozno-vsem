@@ -76,7 +76,7 @@ export function Items({ cart, readonly }: IProps) {
                 {readonly ? itemsById[id].title : <Title id={id} />}
               </TableCell>
               <TableCell
-                align={"end" as any}
+                align="right"
                 verticalAlign="top"
                 pad={{
                   horizontal: "none",
@@ -87,7 +87,7 @@ export function Items({ cart, readonly }: IProps) {
               </TableCell>
 
               <TableCell
-                align={"end" as any}
+                align="right"
                 verticalAlign="top"
                 width={{ min: "50px" } as any}
               >
@@ -97,7 +97,7 @@ export function Items({ cart, readonly }: IProps) {
           ))}
           <TableRow>
             <TableCell colSpan={2}>Доставка</TableCell>
-            <TableCell align={"end" as any} verticalAlign="top">
+            <TableCell align="right" verticalAlign="top">
               {deliveryCost}&nbsp;₽
             </TableCell>
           </TableRow>
@@ -105,7 +105,7 @@ export function Items({ cart, readonly }: IProps) {
         <TableFooter>
           <TableRow>
             <TableCell colSpan={2}>Итого</TableCell>
-            <TableCell align={"end" as any} verticalAlign="top">
+            <TableCell align="right" verticalAlign="top">
               {totalPrice + deliveryCost}&nbsp;₽
             </TableCell>
           </TableRow>

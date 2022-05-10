@@ -14,7 +14,8 @@ export const PageMenu = React.memo(function PageHeader() {
     >
       <NavLink label="Меню" href="/" />
       <NavLink label="Контакты" href="/contacts" />
-      <NavLink label="О нас" href="/about" />
+      <NavLink label="Обо мне" href="/about" />
+      <NavLink label="О компании" href="/about-company" />
     </Box>
   );
 });

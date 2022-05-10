@@ -13,7 +13,7 @@ export const AboutIrinaRyl = () => (
     >
       <Image url="/images/about/irina-ryl.jpg" />
     </Box>
-    <InfoBlock title="Кто я?">
+    <InfoBlock>
       Меня зовут Ирина Рыль, я практикующий врач-диетолог (стаж в профессии 24
       года). Веду <InstagramLink profile="rylschool">блог</InstagramLink>{" "}
       о&nbsp;рациональном питании, организую школу-марафон для&nbsp;желающих
