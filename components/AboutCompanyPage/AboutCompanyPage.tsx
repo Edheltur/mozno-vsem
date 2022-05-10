@@ -24,7 +24,7 @@ export const AboutCompanyPage = () => (
       Мы занимаемся приготовлением и&nbsp;доставкой полезных полуфабрикатов.
       Не&nbsp;используем вредные добавки, только натуральные специи
       и&nbsp;пряности. А&nbsp;ещё у&nbsp;нас есть&nbsp;
-      <Anchor href="https://www.instagram.com/mozno_vsem">Instagram</Anchor>.
+      <Anchor href="https://vk.com/mozno_vsem">ВКонтакте</Anchor>.
     </InfoBlock>
     <InfoBlock title="Для кого?">
       Наши полуфабрикаты предназначены для&nbsp;людей, которые хотят заботиться
