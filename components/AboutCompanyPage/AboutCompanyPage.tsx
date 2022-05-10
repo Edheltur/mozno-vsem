@@ -5,9 +5,9 @@ import { config } from "common/config";
 import { InfoBlock } from "components/ui/InfoBlock";
 import { Requisites } from "components/Requisites";
 
-const Certificate: React.FC<{ src: string }> = ({ src }) => (
-  <a href={src} target="_blank">
-    <Image src={src} width="50%" loading="lazy" />
+const Certificate: React.FC<{ name: string }> = ({ name }) => (
+  <a href={`/images/about-company/full/${name}.jpg`} target="_blank">
+    <Image src={`/images/about-company/preview/${name}.jpg`} width="50%" />
   </a>
 );
 
@@ -33,8 +33,8 @@ export const AboutCompanyPage = () => (
     </InfoBlock>
     <Requisites />
     <InfoBlock title="Сертификаты">
-      <Certificate src="/images/about-company/санитарно-эпидемиологическое_заключение.jpg" />
-      <Certificate src="/images/about-company/сертифкат_соответвтсия_EAC.jpg" />
+      <Certificate name="санитарно-эпидемиологическое_заключение" />
+      <Certificate name="сертифкат_соответвтсия_EAC" />
     </InfoBlock>
   </>
 );
