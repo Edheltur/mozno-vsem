@@ -3,11 +3,12 @@ import { Box, Heading, Text } from "grommet";
 
 interface IProps {
   title?: string;
+  maxWidth?: string;
 }
 
-export const InfoBlock: React.FC<IProps> = ({ title, children }) => (
+export const InfoBlock: React.FC<IProps> = ({ title, maxWidth, children }) => (
   <Box
-    width={{ max: "medium" }}
+    width={{ max: maxWidth ?? "medium" }}
     margin={{ horizontal: "medium", top: "small" }}
   >
     {title && (
