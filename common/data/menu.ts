@@ -1695,6 +1695,7 @@ const rawItemsById = {
     ],
   },
   "125": {
+    deleted: true,
     title: "Запеканка из индейки с грибами и цветной капустой",
     price: 450,
     weight: 300,
@@ -1709,6 +1710,7 @@ const rawItemsById = {
     ],
   },
   "126": {
+    deleted: true,
     title: "Запеканка из форели с брокколи",
     price: 520,
     weight: 300,
