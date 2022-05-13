@@ -23,8 +23,6 @@ const rawCategoriesBySlug = {
     title: "Новинки",
     items: [
       itemsById["146"],
-      itemsById["147"],
-      itemsById["148"],
       itemsById["145"],
       itemsById["90"],
       itemsById["144"],
@@ -37,13 +35,7 @@ const rawCategoriesBySlug = {
   },
   soups: {
     title: "Супы",
-    items: [
-      itemsById["146"],
-      itemsById["147"],
-      itemsById["148"],
-      itemsById["54"],
-      itemsById["98"],
-    ],
+    items: [itemsById["146"], itemsById["54"], itemsById["98"]],
   },
   fish: {
     title: "Рыба",
@@ -72,7 +64,6 @@ const rawCategoriesBySlug = {
       itemsById["23"],
       itemsById["3"],
       itemsById["49"],
-      itemsById["9"],
       itemsById["48"],
       itemsById["86"],
       itemsById["90"],

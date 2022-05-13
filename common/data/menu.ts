@@ -166,6 +166,7 @@ const rawItemsById = {
     nutrition: { whey: 15.8, fats: 7.7, carbs: 4, energyValue: 146.6 },
   },
   "9": {
+    deleted: true,
     title: "Перец фаршированный",
     price: 470,
     weight: 400,
@@ -2064,6 +2065,7 @@ const rawItemsById = {
     ],
   },
   "147": {
+    deleted: true,
     title: "Суп-пюре шпинат",
     price: 340,
     weight: 500,
@@ -2071,6 +2073,7 @@ const rawItemsById = {
     ingredients: ["куриный бульон", "шпинат", "кокосовое молоко", "соль"],
   },
   "148": {
+    deleted: true,
     title: "Суп-пюре овощной",
     price: 320,
     weight: 500,
