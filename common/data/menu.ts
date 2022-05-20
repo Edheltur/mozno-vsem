@@ -1144,6 +1144,7 @@ const rawItemsById = {
     ],
   },
   "86": {
+    deleted: true,
     title: "Рулет с черносливом",
     price: 660,
     weight: 500,
@@ -1635,6 +1636,7 @@ const rawItemsById = {
     ],
   },
   "121": {
+    deleted: true,
     title: "Куриное бедро в брусничном соусе",
     price: 450,
     weight: 500,
