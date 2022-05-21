@@ -2054,7 +2054,7 @@ const rawItemsById = {
     ],
   },
   "146": {
-    title: "Говяжий бульон",
+    title: "Бульон говяжий замороженный",
     price: 200,
     weight: 500,
     image: "bulyon-kuritsa.jpg",
