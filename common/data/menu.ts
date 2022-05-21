@@ -1682,7 +1682,7 @@ const rawItemsById = {
     price: 350,
     weight: 240,
     amount: 4,
-    image: "empty.jpg",
+    image: "blini-kurinoye-serdce.jpg",
     ingredients: [
       "яйцо",
       "мука рисовая",
