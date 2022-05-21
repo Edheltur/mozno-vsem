@@ -112,6 +112,11 @@ const rawCategoriesBySlug = {
     return {
       title: "Все блюда",
       items: uniq([
+        itemsById["144"],
+        itemsById["145"],
+        itemsById["79"],
+        itemsById["48"],
+        itemsById["49"],
         ...this["soups"].items,
         ...this["fish"].items,
         ...this["meat"].items,
