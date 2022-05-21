@@ -736,7 +736,7 @@ const rawItemsById = {
     title: "Бульон рыбный замороженный",
     price: 150,
     weight: 500,
-    image: "empty.jpg",
+    image: "bulyon-kuritsa.jpg",
     ingredients: ["вода", "красная рыба", "белая рыба", "соль"],
     nutrition: { whey: 2.9, fats: 0.7, carbs: 0, energyValue: 19.1 },
   },
@@ -1729,6 +1729,7 @@ const rawItemsById = {
     ],
   },
   "127": {
+    deleted: true,
     title: "Купаты из курицы и индейки со шпинатом и сыром",
     price: 600,
     weight: 400,
@@ -2056,7 +2057,7 @@ const rawItemsById = {
     title: "Говяжий бульон",
     price: 200,
     weight: 500,
-    image: "empty.jpg",
+    image: "bulyon-kuritsa.jpg",
     ingredients: [
       "говядина",
       "лук",
