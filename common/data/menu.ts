@@ -2093,6 +2093,20 @@ const rawItemsById = {
       "лавровый лист",
     ],
   },
+  "149": {
+    title: "Оладьи кабачковые",
+    price: 300,
+    weight: 220,
+    amount: 4,
+    image: "empty.jpg",
+    ingredients: [
+      "кабачок",
+      "яйцо куриное",
+      "сыр",
+      "мука уневерсальная б/г",
+      "соль",
+    ],
+  },
 } as const;
 
 export const itemsById: Readonly<Record<TMenuItemId, TMenuItem>> = mapObject(
