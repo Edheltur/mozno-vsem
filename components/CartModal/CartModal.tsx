@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "grommet";
+import { Button, Paragraph } from "grommet";
 import { Trash } from "grommet-icons";
 
 import { useAppState } from "store";
@@ -63,8 +63,11 @@ export const CartModal = () => {
           primary
           label="Оформить заказ"
           onClick={handle.checkout}
+          disabled
           type="submit"
         />
+        <br />
+        <Paragraph size="small">Заказы временно недоступны</Paragraph>
       </Modal.Controls>
     </Modal>
   );
